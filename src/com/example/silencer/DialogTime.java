@@ -31,8 +31,9 @@ public class DialogTime extends DialogFragment implements OnClickListener{
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 		      Bundle savedInstanceState) {
-		    getDialog().setTitle("×àñ");
+
 		    View v = inflater.inflate(R.layout.dialog_time, null);
+            getDialog().setTitle(getResources().getString(R.string.time));
 		    tp = (TimePicker) v.findViewById (R.id.timePicker1);
 		    tp.setOnTimeChangedListener(new TimeListener());
 		    tp.setIs24HourView(true);

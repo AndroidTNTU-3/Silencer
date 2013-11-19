@@ -14,7 +14,8 @@ public final class R {
         public static final int black=0x7f040000;
         public static final int cyan=0x7f040001;
         public static final int deepblue=0x7f040002;
-        public static final int white=0x7f040003;
+        public static final int lightgray=0x7f040003;
+        public static final int white=0x7f040004;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f050000;
@@ -23,53 +24,56 @@ public final class R {
     public static final class drawable {
         public static final int background_clock=0x7f020000;
         public static final int background_main=0x7f020001;
-        public static final int button_primary_selector=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int rect=0x7f020004;
+        public static final int background_main2=0x7f020002;
+        public static final int button_dark2_selector=0x7f020003;
+        public static final int button_dark_selector=0x7f020004;
+        public static final int button_primary_selector=0x7f020005;
+        public static final int icon=0x7f020006;
+        public static final int rect=0x7f020007;
     }
     public static final class id {
         public static final int action_settings=0x7f090029;
-        public static final int afterDuringBlock=0x7f090017;
-        public static final int but_dialog1_cancel=0x7f090021;
-        public static final int but_dialog1_set=0x7f090020;
-        public static final int buttonDelete=0x7f09001f;
-        public static final int buttonFromDate=0x7f09000a;
-        public static final int buttonSetTask=0x7f090019;
-        public static final int buttonSetTaskEdit=0x7f09001e;
-        public static final int buttonToDate=0x7f09000e;
+        public static final int afterDuringBlock=0x7f090016;
+        public static final int but_dialog1_cancel=0x7f090020;
+        public static final int but_dialog1_set=0x7f09001f;
+        public static final int buttonDelete=0x7f09001e;
+        public static final int buttonFromDate=0x7f090009;
+        public static final int buttonSetTask=0x7f090018;
+        public static final int buttonSetTaskEdit=0x7f09001d;
+        public static final int buttonToDate=0x7f09000d;
         public static final int buttonV=0x7f090003;
         public static final int button_add=0x7f090002;
-        public static final int button_from=0x7f09000b;
-        public static final int button_fromEdit=0x7f09001a;
-        public static final int button_time_set=0x7f090024;
-        public static final int button_to=0x7f09000f;
-        public static final int button_toEdit=0x7f09001b;
+        public static final int button_from=0x7f09000a;
+        public static final int button_fromEdit=0x7f090019;
+        public static final int button_time_set=0x7f090023;
+        public static final int button_to=0x7f09000e;
+        public static final int button_toEdit=0x7f09001a;
         public static final int clock=0x7f090001;
-        public static final int duringBlock=0x7f090014;
+        public static final int duringBlock=0x7f090013;
+        public static final int imageView=0x7f090028;
         public static final int linearLayout1=0x7f090000;
-        public static final int listView1=0x7f090005;
-        public static final int regulations2Label=0x7f090016;
-        public static final int regulationsLabel=0x7f090013;
-        public static final int separator=0x7f090012;
-        public static final int switch1=0x7f090015;
-        public static final int switch1Edit=0x7f09001c;
-        public static final int switch2=0x7f090018;
-        public static final int switch2Edit=0x7f09001d;
-        public static final int tableLayout1=0x7f090007;
-        public static final int tableRow1=0x7f090008;
-        public static final int tableRow2=0x7f09000c;
-        public static final int tableRow3=0x7f090010;
-        public static final int tableRow4=0x7f090011;
-        public static final int taskLabel=0x7f090006;
-        public static final int textTest=0x7f090004;
-        public static final int textView1=0x7f090025;
-        public static final int textView2=0x7f09000d;
-        public static final int textView3=0x7f090022;
-        public static final int textViewFrom=0x7f090009;
-        public static final int textViewSound=0x7f090027;
-        public static final int textViewSoundAfter=0x7f090028;
-        public static final int textViewTo=0x7f090026;
-        public static final int timePicker1=0x7f090023;
+        public static final int listView1=0x7f090004;
+        public static final int regulations2Label=0x7f090015;
+        public static final int regulationsLabel=0x7f090012;
+        public static final int separator=0x7f090011;
+        public static final int switch1=0x7f090014;
+        public static final int switch1Edit=0x7f09001b;
+        public static final int switch2=0x7f090017;
+        public static final int switch2Edit=0x7f09001c;
+        public static final int tableLayout1=0x7f090006;
+        public static final int tableRow1=0x7f090007;
+        public static final int tableRow2=0x7f09000b;
+        public static final int tableRow3=0x7f09000f;
+        public static final int tableRow4=0x7f090010;
+        public static final int taskLabel=0x7f090005;
+        public static final int textView1=0x7f090024;
+        public static final int textView2=0x7f09000c;
+        public static final int textView3=0x7f090021;
+        public static final int textViewFrom=0x7f090008;
+        public static final int textViewSound=0x7f090026;
+        public static final int textViewSoundAfter=0x7f090027;
+        public static final int textViewTo=0x7f090025;
+        public static final int timePicker1=0x7f090022;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -91,17 +95,18 @@ public final class R {
         public static final int app_name=0x7f060003;
         public static final int delete=0x7f060004;
         public static final int during=0x7f060005;
-        public static final int from_time=0x7f060006;
-        public static final int hello_world=0x7f060007;
-        public static final int setTask=0x7f060008;
-        public static final int setTime=0x7f060009;
-        public static final int soundOn=0x7f06000a;
-        public static final int taskLabel=0x7f06000b;
-        public static final int taskLabelEdit=0x7f06000c;
-        public static final int time=0x7f06000d;
-        public static final int title_activity_task_pane=0x7f06000e;
-        public static final int title_activity_task_pane_edit=0x7f06000f;
-        public static final int to_time=0x7f060010;
+        public static final int edit=0x7f060006;
+        public static final int from_time=0x7f060007;
+        public static final int hello_world=0x7f060008;
+        public static final int setTask=0x7f060009;
+        public static final int setTime=0x7f06000a;
+        public static final int soundOn=0x7f06000b;
+        public static final int taskLabel=0x7f06000c;
+        public static final int taskLabelEdit=0x7f06000d;
+        public static final int time=0x7f06000e;
+        public static final int title_activity_task_pane=0x7f06000f;
+        public static final int title_activity_task_pane_edit=0x7f060010;
+        public static final int to_time=0x7f060011;
     }
     public static final class style {
         /** 
@@ -116,6 +121,8 @@ public final class R {
         /**  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
-        public static final int HabraThemeButton=0x7f070002;
+        public static final int DarkThemeButton=0x7f070002;
+        public static final int DarkThemeButton2=0x7f070003;
+        public static final int HabraThemeButton=0x7f070004;
     }
 }

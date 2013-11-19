@@ -46,7 +46,7 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 	
 	DBHelper dbHelper;
 	DialogTime dialogtime;
-	int id;
+	long id;
 	SQLiteDatabase db;
 	
 	Time timeStart;	
@@ -78,8 +78,8 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 		Intent intent = getIntent();
 	    
 		//row number
-		id = intent.getIntExtra("id", 0) + 1;
-		
+		id = intent.getLongExtra("id", 0);
+        Log.d(LOG_TAG, "row selected, ID = " + id);
 	    dialogtime = new DialogTime();
 		
 	    dbHelper = new DBHelper(this);

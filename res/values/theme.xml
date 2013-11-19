@@ -4,4 +4,13 @@
      <style name="HabraThemeButton" parent="@android:style/Widget.Button">
     	<item name="android:background">@drawable/button_primary_selector</item>
 	</style>
+    <style name="DarkThemeButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/button_dark_selector</item>
+    </style>
+    <style name="DarkThemeButton2" parent="@android:style/Widget.Button">
+    <item name="android:background">@drawable/button_dark2_selector</item>
+    </style>
+
+
+
 </resources>

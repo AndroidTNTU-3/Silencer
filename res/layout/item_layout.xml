@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_clock">
+    android:paddingLeft="10dp"
+    android:background="@drawable/button_dark_selector">
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="From" 
+        android:text="@string/from_time"
+        android:textColor="@color/lightgray"
         android:textStyle="bold"/>
 
     <TextView
@@ -16,6 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/textView1"
         android:layout_alignParentTop="true"
+        android:textColor="@color/lightgray"
         android:text="TextView" />
 
     <TextView
@@ -24,7 +27,8 @@
         android:layout_height="wrap_content"
         android:paddingLeft="8dp"
         android:layout_toRightOf="@+id/textViewFrom"
-        android:text="To" 
+        android:text="@string/to_time"
+        android:textColor="@color/lightgray"
         android:textStyle="bold"/>
 
     <TextView
@@ -33,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/textView2"
+        android:textColor="@color/lightgray"
         android:text="TextView" />
 
     <TextView
@@ -42,6 +47,7 @@
         android:paddingLeft="8dp"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/textViewTo"
+        android:textColor="@color/lightgray"
         android:text="TextView" />
 
     <TextView
@@ -51,6 +57,14 @@
         android:paddingLeft="8dp"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/textViewSound"
+        android:textColor="@color/lightgray"
         android:text="TextView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_toRightOf="@+id/textViewSoundAfter"
+        android:background="@drawable/icon"/>
 
 </RelativeLayout>
