@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TaskPane" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/taskLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/taskLabel"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"/>
+            "
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textViewFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/from_time" />
+
+            <Button
+                android:id="@+id/buttonFromDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button_from"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to_time" />
+
+            <Button
+                android:id="@+id/buttonToDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button_to"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TableRow>
+    </TableLayout>
+    
+        <LinearLayout
+            android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="2dp"
+        android:orientation="vertical" 
+        android:layout_below="@+id/tableLayout1"
+        android:background="@drawable/rect">
+    </LinearLayout>
+    
+                <TextView
+            android:id="@+id/regulationsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separator"
+            android:text="@string/during"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"/>
+
+     <LinearLayout
+                    android:id="@+id/duringBlock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/regulationsLabel"
+                    android:layout_below="@+id/regulationsLabel"
+                    android:orientation="vertical" >
+
+                    <Switch
+                        android:id="@+id/switch1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/soundOn" />
+
+     </LinearLayout>
+       
+                <TextView
+            android:id="@+id/regulations2Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/duringBlock"
+            android:text="@string/afterDuring"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"/>
+
+     	<LinearLayout
+                    android:id="@+id/afterDuringBlock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/regulationsLabel"
+                    android:layout_below="@+id/regulations2Label"
+                    android:orientation="vertical" >
+
+                    <Switch
+                        android:id="@+id/switch2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/soundOn" />
+
+     	</LinearLayout>
+
+     	<LinearLayout
+     	    android:layout_width="match_parent"
+     	    android:layout_height="wrap_content"
+     	    android:layout_below="@+id/afterDuringBlock"
+     	    android:layout_marginTop="10dp" 
+     	    android:gravity="center_horizontal">
+
+     		<Button
+     		    android:id="@+id/buttonSetTask"
+     		    android:layout_width="wrap_content"
+     		    android:layout_height="wrap_content"
+     		    android:text="@string/setTask" />
+
+     	</LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+# incremental data. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1384788188178 5049 07c4849839390aa2189ff443a1fd36e2e5eadb80 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\TaskPane.java
+1384843179034 4641 57a84f3de0bfc4c88692627c33cf263883c39e30 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\MainActivity.java
+1384771404662 1363 c09b5f1cef092fc7990f44bf52bc26755d6043c3 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\DBAdapter.java
+1384771459552 1491 ebcf6577442100d96637284531bed48fa1cdddcb C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\DBHelper.java
+1384698561637 2261 dae7ad646451df4aebbe4a7a2956c7db430bb132 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\DialogTime.java
+1384844739989 6238 02c084f9ca19bf60be04e54a74542b4e4ef6c9ef C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\TaskPaneEdit.java
