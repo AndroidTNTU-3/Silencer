@@ -17,7 +17,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/textView1"
-        android:layout_alignParentTop="true"
         android:textColor="@color/lightgray"
         android:text="TextView" />
 
@@ -35,7 +34,6 @@
         android:id="@+id/textViewTo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/textView2"
         android:textColor="@color/lightgray"
         android:text="TextView" />
@@ -45,26 +43,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="8dp"
-        android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/textViewTo"
         android:textColor="@color/lightgray"
-        android:text="TextView" />
+        android:text="" />
 
     <TextView
         android:id="@+id/textViewSoundAfter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="8dp"
-        android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/textViewSound"
         android:textColor="@color/lightgray"
-        android:text="TextView" />
+        android:text="" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:layout_toRightOf="@+id/textViewSoundAfter"
-        android:background="@drawable/icon"/>
+        android:layout_gravity="center_vertical"
+        android:id="@+id/imageZoom"
+        android:layout_toLeftOf="@+id/checkBox"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_alignParentRight="true" />
 
 </RelativeLayout>

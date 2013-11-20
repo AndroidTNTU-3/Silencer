@@ -22,8 +22,15 @@ public class MainActivity extends Activity implements OnClickListener{
 	Button viewList;
 	ListView myList;
 	TaskPane taskPane;
-	TextView from;
+	TextView labelfrom;
+    TextView labelto;
     Intent intentEdit;
+
+    CharSequence mfrom = "";
+    String mto;
+
+    Time fromTime;
+    Time toTime;
 
 	DBAdapter myDb;
 	SimpleCursorAdapter myCursorAdapter;
@@ -39,14 +46,15 @@ public class MainActivity extends Activity implements OnClickListener{
 		clock.setText(getTime());
 		btn_add = (Button) findViewById(R.id.button_add);
 		btn_add.setOnClickListener(this);
-		viewList = (Button) findViewById(R.id.buttonV);
-		viewList.setOnClickListener(this);
+        labelto = (TextView) findViewById(R.id.textTimeMainTo);
+        labelfrom = (TextView) findViewById(R.id.textTimeMainFrom);
+		//viewList = (Button) findViewById(R.id.buttonV);
+		//viewList.setOnClickListener(this);
 		myList = (ListView) findViewById(R.id.listView1);
-		myList.setOnItemClickListener(new listItemListener());
+		//myList.setOnItemClickListener(new listItemListener());
         intentEdit = new Intent(this, TaskPaneEdit.class);
-		
 		openDB();
-		
+
 		Cursor cursor = myDb.getAllRows();
 
 		startManagingCursor(cursor);
@@ -95,31 +103,20 @@ public class MainActivity extends Activity implements OnClickListener{
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		switch(v.getId()){
 		case  R.id.button_add:
 			Intent intent = new Intent(this, TaskPane.class);
 			startActivity(intent);
-		break;
-		case  R.id.buttonV:
-			Intent intentEdit = new Intent(this, TaskPaneEdit.class);
-			intentEdit.putExtra("id", selectedID);
-			startActivity(intentEdit);
-			//fromDbToList();
-			
 		break;
 		}
 
 	}
 	
 	private class listItemListener implements OnItemClickListener{
-
-		
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View v, int position,
 				long id) {
 			//Get selected item ID
-			from = (TextView) v.findViewById(R.id.textViewFrom);
 			selectedID = position;
             intentEdit.putExtra("id", id);
             startActivity(intentEdit);
@@ -130,9 +127,16 @@ public class MainActivity extends Activity implements OnClickListener{
 			// TODO Auto-generated method stub
 			
 		}
-
-		
-		
 	}
+
+    public void setTime(String from, String to){
+        mfrom = from;
+        mto = to;
+
+        //labelfrom.setText("asdas");
+        //labelto.setText(_from);
+        Log.d(LOG_TAG, "from" + mfrom);
+        Log.d(LOG_TAG, "to" + mto);
+    }
 	  
 }
