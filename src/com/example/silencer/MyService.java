@@ -3,7 +3,9 @@ package com.example.silencer;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.IBinder;
 import android.util.Log;
 
@@ -21,6 +23,9 @@ public class MyService extends Service {
     PendingIntent piOnStop;
     Intent intentOfSound;
     Intent intentOnSound;
+    AudioManager sound;
+    boolean flag = false;
+    Context context;
 
 
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -30,9 +35,16 @@ public class MyService extends Service {
         Calendar timeFromDB = Calendar.getInstance();
         timeFromDB.setTimeInMillis(timeStart);
         int minut = timeFromDB.get(Calendar.MINUTE);
-        soundOff(timeStart);
-        soundOn(timeStop);
-        Log.d(LOG_TAG, "Hour: " + String.valueOf(minut));
+
+        context = getApplicationContext();
+        sound = (AudioManager)context.getSystemService(Context.AUDIO_SERVICE);
+
+        //test rules when system state changed
+        if (sound.getRingerMode() != AudioManager.RINGER_MODE_SILENT) {
+            soundOff(timeStart);
+            soundOn(timeStop);
+        } else soundOff(timeStart);
+
         return super.onStartCommand(intent, flags, startId);
 
     }
@@ -40,6 +52,7 @@ public class MyService extends Service {
     private void soundOff(long startTime) {
 
         intentOfSound = new Intent(this, offSoundResiver.class);
+        intentOfSound.putExtra("flag", flag);
         piOnStart = PendingIntent.getBroadcast(this,0,intentOfSound,PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarmS = (AlarmManager)getSystemService(ALARM_SERVICE);
         alarmS.setRepeating(AlarmManager.RTC_WAKEUP, startTime, AlarmManager.INTERVAL_DAY, piOnStart);
@@ -49,6 +62,7 @@ public class MyService extends Service {
     private void soundOn(long stopTime) {
 
         intentOnSound = new Intent(this, onSoundResiver.class);
+        intentOfSound.putExtra("flag", flag);
         piOnStop = PendingIntent.getBroadcast(this,0,intentOnSound,PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarmE = (AlarmManager)getSystemService(ALARM_SERVICE);
         alarmE.setRepeating(AlarmManager.RTC_WAKEUP, stopTime, AlarmManager.INTERVAL_DAY, piOnStop);

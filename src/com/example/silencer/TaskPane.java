@@ -1,11 +1,13 @@
 package com.example.silencer;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Formatter;
 
 import com.example.silencer.DialogTime.TimeDialogListener;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.DialogFragment;
@@ -32,15 +34,22 @@ Button buttonToDate;
 Button buttonSet;
 Switch switchSound;
 Switch switchSoundAfter;
+Switch switchEnable;
 
 int hourStart =0;
 int minutStart = 0;
 int hourStop =0;
 int minutStop = 0;
-int temphour = 0;
 int buttonId=0;
+
+long timeFrom;
+long timeTo;
+Calendar timeFromCalendar;
+Calendar timeToCalendar;
+
 boolean sound = false;
 boolean soundAfter = false;
+boolean enable = false;
 
 
 SimpleDateFormat sdf;
@@ -65,6 +74,7 @@ final String LOG_TAG = "myLogs";
 		buttonSet = (Button) findViewById(R.id.buttonSetTask);
 		switchSound = (Switch) findViewById(R.id.switch1);
 		switchSoundAfter = (Switch) findViewById(R.id.switch2);
+        switchEnable = (Switch) findViewById(R.id.switch3);
 		buttonFromTime.setText(getTime());
 		buttonToTime.setText(getTime());
 		buttonFromDate.setText(getDate());
@@ -74,6 +84,7 @@ final String LOG_TAG = "myLogs";
 		buttonSet.setOnClickListener(new ButtonListener());
 		switchSound.setOnCheckedChangeListener(new switchListener());
 		switchSoundAfter.setOnCheckedChangeListener(new switchListener());
+        switchEnable.setOnCheckedChangeListener(new switchListener());
 		dialogtime = new DialogTime();
 		
 	    dbHelper = new DBHelper(this);
@@ -81,6 +92,9 @@ final String LOG_TAG = "myLogs";
 	    
 	    timeStart = new Time();
 	    timeStop = new Time();
+
+        timeFromCalendar = Calendar.getInstance();
+        timeToCalendar = Calendar.getInstance();
 	}
 	
 	//Get Time
@@ -126,13 +140,26 @@ final String LOG_TAG = "myLogs";
 			    
 			    // connect to DB
 			    SQLiteDatabase db = dbHelper.getWritableDatabase();
-			    cv.put("timeStart", timeStart.format("%k:%M"));
-			    cv.put("timeStop", timeStop.format("%k:%M"));
+			    cv.put("timeStart", timeFrom);
+			    cv.put("timeStop", timeTo);
 			    cv.put("sound", sound); 
-			    cv.put("soundAfter", soundAfter); 			    
+			    cv.put("soundAfter", soundAfter);
+                cv.put("enabled", enable);
 			    
 			    long rowID = db.insert("mytable", null, cv);
 			    Log.d(LOG_TAG, "row inserted, ID = " + rowID);
+
+
+                Intent intent = new Intent();
+
+                intent.putExtra("from", timeFrom);
+                intent.putExtra("to", timeTo);
+                intent.putExtra("enable", enable);
+
+
+                setResult(RESULT_OK, intent);
+                finish();
+
 			break;			
 			
 			}
@@ -158,6 +185,13 @@ final String LOG_TAG = "myLogs";
 			    	soundAfter = false;
 			    }
 			break;
+                case  R.id.switch3:
+                    if(isChecked) {
+                        enable = true;
+                    } else {
+                        enable = false;
+                    }
+                    break;
 			}
 			
 		}
@@ -173,6 +207,9 @@ final String LOG_TAG = "myLogs";
 			{
 				hourStart = Hour;
 				minutStart = Minut;
+                timeFromCalendar.set(Calendar.HOUR_OF_DAY, Hour);
+                timeFromCalendar.set(Calendar.MINUTE, Minut);
+                timeFrom = timeFromCalendar.getTimeInMillis();
 				timeStart.set(0, minutStart, hourStart, 0, 0, 0);
 				buttonFromTime.setText(timeStart.format("%k:%M"));
 			}
@@ -181,6 +218,9 @@ final String LOG_TAG = "myLogs";
 			{
 				hourStop = Hour;
 				minutStop = Minut;
+                timeToCalendar.set(Calendar.HOUR_OF_DAY, Hour);
+                timeToCalendar.set(Calendar.MINUTE, Minut);
+                timeTo = timeToCalendar.getTimeInMillis();
 				timeStop.set(0, minutStop, hourStop, 0, 0, 0);
 				buttonToTime.setText(timeStop.format("%k:%M"));
 			}

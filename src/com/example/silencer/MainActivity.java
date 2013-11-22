@@ -1,5 +1,6 @@
 package com.example.silencer;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -15,27 +16,37 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.Calendar;
 
 public class MainActivity extends Activity implements OnClickListener{
 	TextView clock;
 	Button btn_add;
-	Button viewList;
+    Button start;
 	ListView myList;
 	TaskPane taskPane;
 	TextView labelfrom;
     TextView labelto;
     Intent intentEdit;
 
-    CharSequence mfrom = "";
-    String mto;
+    SharedPreferences sPref;
+    boolean enable = false;
 
-    Time fromTime;
-    Time toTime;
+    long timeFrom;
+    long timeTo;
+    Calendar settedTimeFrom;
+    Calendar settedTimeTo;
+    Calendar timeFromDB;
+    Calendar timeToDB;
 
 	DBAdapter myDb;
 	SimpleCursorAdapter myCursorAdapter;
 	final String LOG_TAG = "myLogs";
-	
+    final String FROM_TIME = "from_time";
+    final String FROM_TO = "to_time";
+
+
 	int selectedID;
 	
 	@Override
@@ -45,24 +56,31 @@ public class MainActivity extends Activity implements OnClickListener{
 		clock = (TextView) findViewById(R.id.clock);
 		clock.setText(getTime());
 		btn_add = (Button) findViewById(R.id.button_add);
+        start = (Button) findViewById(R.id.button_start);
 		btn_add.setOnClickListener(this);
+        start.setOnClickListener(this);
         labelto = (TextView) findViewById(R.id.textTimeMainTo);
         labelfrom = (TextView) findViewById(R.id.textTimeMainFrom);
-		//viewList = (Button) findViewById(R.id.buttonV);
-		//viewList.setOnClickListener(this);
 		myList = (ListView) findViewById(R.id.listView1);
-		//myList.setOnItemClickListener(new listItemListener());
+        myList.setFocusable(true);
+        myList.setOnItemClickListener(new listItemListener());
         intentEdit = new Intent(this, TaskPaneEdit.class);
 		openDB();
 
 		Cursor cursor = myDb.getAllRows();
 
-		startManagingCursor(cursor);
+        settedTimeFrom = Calendar.getInstance();
+        settedTimeTo = Calendar.getInstance();
+        timeFromDB = Calendar.getInstance(); //time from DB (set in TimePicker from)
+        timeToDB = Calendar.getInstance(); //time from DB (set in TimePicker to)
+
+        startManagingCursor(cursor);
 		String[] fromFieldNames = new String[] 
-				{DBAdapter.KEY_FROM_TIME, DBAdapter.KEY_TO_TIME, DBAdapter.KEY_SOUND, DBAdapter.KEY_SOUND_AFTER};
+				{DBAdapter.KEY_FROM_TIME, DBAdapter.KEY_TO_TIME, DBAdapter.KEY_SOUND, DBAdapter.KEY_SOUND_AFTER, DBAdapter.KEY_ENABLED};
 		int[] toViewIDs = new int[]
-				{R.id.textViewFrom,     R.id.textViewTo,           R.id.textViewSound,     R.id.textViewSoundAfter};
-		
+				{R.id.textViewFrom, R.id.textViewTo, R.id.textViewSound, R.id.textViewSoundAfter};
+
+
 		myCursorAdapter = new MyCursorAdapter(
 						this,					// Context
 						R.layout.item_layout,	// Row layout template
@@ -70,9 +88,9 @@ public class MainActivity extends Activity implements OnClickListener{
 						fromFieldNames,			// DB Column names
 						toViewIDs				// View IDs to put information in
 						);		
-		myList.setAdapter(myCursorAdapter);		
+		myList.setAdapter(myCursorAdapter);
+
 	}
-	
 
 
 	private void openDB() {
@@ -106,20 +124,56 @@ public class MainActivity extends Activity implements OnClickListener{
 		switch(v.getId()){
 		case  R.id.button_add:
 			Intent intent = new Intent(this, TaskPane.class);
-			startActivity(intent);
+            startActivityForResult(intent, 1);
 		break;
+        case  R.id.button_start:
+           Intent serviceIntent = new Intent(this, MyService.class);
+            serviceIntent.putExtra("timeStart", timeFrom);
+            serviceIntent.putExtra("timeStop", timeTo);
+            startService(serviceIntent);
+
+        break;
 		}
 
 	}
-	
-	private class listItemListener implements OnItemClickListener{
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (data == null) {return;}
+        timeFrom = data.getLongExtra("from", 0); //setted time in mills
+        timeTo = data.getLongExtra("to", 0); //setted time in mills
+        enable = data.getBooleanExtra("enable", false);
+
+        settedTimeFrom.setTimeInMillis(System.currentTimeMillis()); // get current time
+        settedTimeTo.setTimeInMillis(System.currentTimeMillis());   // get current time
+        timeFromDB.setTimeInMillis(timeFrom);                       //object Calendar in mills
+        timeToDB.setTimeInMillis(timeTo);                           //object Calendar in mills
+
+        settedTimeFrom.set(Calendar.HOUR_OF_DAY, timeFromDB.get(Calendar.HOUR_OF_DAY)); //Set silence time from
+        settedTimeFrom.set(Calendar.MINUTE, timeFromDB.get(Calendar.MINUTE));           //Set silence time from
+
+        settedTimeTo.set(Calendar.HOUR_OF_DAY, timeToDB.get(Calendar.HOUR_OF_DAY)); //Set silence time to
+        settedTimeTo.set(Calendar.MINUTE, timeToDB.get(Calendar.MINUTE));           //Set silence time to
+
+        String startTime = String.valueOf(settedTimeFrom.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(settedTimeFrom.get(Calendar.MINUTE));
+        String stopTime = String.valueOf(settedTimeTo.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(settedTimeTo.get(Calendar.MINUTE));
+
+
+        if(enable){
+        labelfrom.setText(startTime);
+        labelto.setText(stopTime);
+        //saveText(); //commit to preference
+        }
+    }
+
+    private class listItemListener implements OnItemClickListener{
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View v, int position,
 				long id) {
 			//Get selected item ID
 			selectedID = position;
             intentEdit.putExtra("id", id);
-            startActivity(intentEdit);
+            startActivityForResult(intentEdit, 1);
             Log.d(LOG_TAG, "row inserted, ID = " + id);
 		}
 
@@ -129,14 +183,13 @@ public class MainActivity extends Activity implements OnClickListener{
 		}
 	}
 
-    public void setTime(String from, String to){
-        mfrom = from;
-        mto = to;
 
-        //labelfrom.setText("asdas");
-        //labelto.setText(_from);
-        Log.d(LOG_TAG, "from" + mfrom);
-        Log.d(LOG_TAG, "to" + mto);
-    }
+   /* private void saveText(){
+        sPref = getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor ed = sPref.edit();
+        ed.putLong(FROM_TIME, timeFrom);
+        ed.putLong(FROM_TO, timeTo);
+        ed.commit();
+    }*/
 	  
 }

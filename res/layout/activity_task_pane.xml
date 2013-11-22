@@ -23,7 +23,7 @@
             android:background="@color/deepblue"
             android:textColor="@color/black"
             android:gravity="center_horizontal"/>
-            "
+
 
     </LinearLayout>
 
@@ -177,10 +177,37 @@
 
      	</LinearLayout>
 
+    <TextView
+        android:id="@+id/regulations3Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/afterDuringBlock"
+        android:text="@string/onTime"
+        android:background="@color/deepblue"
+        android:textColor="@color/lightgray"
+        android:gravity="center_horizontal"/>
+    <LinearLayout
+        android:id="@+id/afterEnableBlock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/regulationsLabel"
+        android:layout_below="@+id/regulations3Label"
+        android:orientation="vertical" >
+
+        <Switch
+            android:id="@+id/switch3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/deepblue"
+            android:paddingTop="4dp"
+            android:text="@string/enable" />
+
+    </LinearLayout>
+
      	<LinearLayout
      	    android:layout_width="match_parent"
      	    android:layout_height="wrap_content"
-     	    android:layout_below="@+id/afterDuringBlock"
+     	    android:layout_below="@+id/afterEnableBlock"
      	    android:layout_marginTop="10dp" 
      	    android:gravity="center_horizontal">
 

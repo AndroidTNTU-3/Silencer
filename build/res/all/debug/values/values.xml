@@ -24,8 +24,10 @@
     <string name="delete">Delete</string>
     <string name="during">During</string>
     <string name="edit">Edit</string>
+    <string name="enable">Enable</string>
     <string name="from_time">From:</string>
     <string name="hello_world">Hello world!</string>
+    <string name="onTime">Set Time</string>
     <string name="setTask">Set</string>
     <string name="setTime">Set</string>
     <string name="soundOn">Sound</string>

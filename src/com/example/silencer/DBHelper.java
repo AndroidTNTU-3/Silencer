@@ -35,10 +35,11 @@ public class DBHelper extends SQLiteOpenHelper{
 	          + "soundAfter boolean" + ");");*/
 	     db.execSQL("create table " + DATABASE_TABLE + " ( "
           + KEY_ROWID + " integer primary key autoincrement," 
-          + "timeStart date,"
-          + "timeStop date,"
+          + "timeStart long,"
+          + "timeStop long,"
           + "sound boolean,"
-          + "soundAfter boolean" + ");");	      
+          + "soundAfter boolean,"
+          + "enabled boolean" + ");");
 	    }
 	    
 	    

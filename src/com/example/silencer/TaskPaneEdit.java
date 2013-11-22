@@ -1,5 +1,6 @@
 package com.example.silencer;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import com.example.silencer.DialogTime.TimeDialogListener;
@@ -30,6 +31,7 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 	Button buttonDel;
 	Switch switchSound;
 	Switch switchSoundAfter;
+    Switch switchEnable;
 	final String LOG_TAG = "myLogs";
 	
 	int hourStart =0;
@@ -40,17 +42,25 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 	int buttonId=0;
 	boolean sound = false;
 	boolean soundAfter = false;
+    boolean enable = false;
 	boolean changeFromTime = false;
 	boolean changeToTime = false;
 	
 	
 	DBHelper dbHelper;
 	DialogTime dialogtime;
-	int id;
+	long id;
 	SQLiteDatabase db;
 	
 	Time timeStart;	
-	Time timeStop;	
+	Time timeStop;
+
+    long timeFrom;
+    long timeTo;
+    Calendar setTimeFrom = Calendar.getInstance();
+    Calendar setTimeTo = Calendar.getInstance();
+    String startTime;
+    String stopTime;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +75,7 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 		buttonDel = (Button) findViewById(R.id.buttonDelete);
 		switchSound = (Switch) findViewById(R.id.switch1Edit);
 		switchSoundAfter = (Switch) findViewById(R.id.switch2Edit);
+        switchEnable = (Switch) findViewById(R.id.switch3Edit);
 	    buttonFromDate.setText(getDate());
 	    buttonToDate.setText(getDate());
 		buttonToDate.setText(getDate());	
@@ -74,11 +85,11 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 		buttonDel.setOnClickListener(new ButtonListener());
 		switchSound.setOnCheckedChangeListener(new switchListener());
 		switchSoundAfter.setOnCheckedChangeListener(new switchListener());
-		
+        switchEnable.setOnCheckedChangeListener(new switchListener());
 		Intent intent = getIntent();
 	    
 		//row number
-		id = intent.getIntExtra("id", 0);
+		id = intent.getLongExtra("id", 0);
         Log.d(LOG_TAG, "row selected, ID = " + id);
 	    dialogtime = new DialogTime();
 		
@@ -94,14 +105,28 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 	      int timeStopColIndex = c.getColumnIndex("timeStop");
 	      int soundColIndex = c.getColumnIndex("sound");
 	      int soundAfterColIndex = c.getColumnIndex("soundAfter");
-	      buttonFromTime.setText(c.getString(timeStartColIndex));
-	      buttonToTime.setText(c.getString(timeStopColIndex));
+          int enableColIndex = c.getColumnIndex("enabled");
+          long fromTime = c.getLong(timeStartColIndex);
+          long toTime = c.getLong(timeStopColIndex);
 
+
+
+          setTimeFrom.setTimeInMillis(fromTime);
+          setTimeTo.setTimeInMillis(toTime);
+
+          startTime = String.valueOf(setTimeFrom.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(setTimeFrom.get(Calendar.MINUTE));
+          stopTime = String.valueOf(setTimeTo.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(setTimeTo.get(Calendar.MINUTE));
+
+	      buttonFromTime.setText(startTime);
+	      buttonToTime.setText(stopTime);
+          timeFrom = fromTime;
+          timeTo = toTime;
 	      sound = (c.getInt(soundColIndex) != 0);
 	      soundAfter = (c.getInt(soundAfterColIndex) != 0);
-	      
+          enable = (c.getInt(enableColIndex) != 0);
 	      switchSound.setChecked(sound);
 	      switchSoundAfter.setChecked(soundAfter);
+          switchEnable.setChecked(enable);
 	      
 		    timeStart = new Time();
 		    timeStop = new Time();
@@ -141,14 +166,25 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 					ContentValues cv = new ContentValues();					  
 				    // connect to DB
 
-					if(changeFromTime) cv.put("timeStart", timeStart.format("%k:%M"));
-					if(changeToTime) cv.put("timeStop", timeStop.format("%k:%M"));
+					if(changeFromTime) cv.put("timeStart", timeFrom);
+					if(changeToTime) cv.put("timeStop", timeTo);
 				    cv.put("sound", sound); 
-				    cv.put("soundAfter", soundAfter); 			    
-				    
-				    long rowID = db.update("mytable", cv, "_id = ?",
+				    cv.put("soundAfter", soundAfter);
+                    cv.put("enabled", enable);
+
+                    long rowID = db.update("mytable", cv, "_id = ?",
 				            new String[] { String.valueOf(id) });
-				  Log.d(LOG_TAG, "row inserted, ID = " + rowID);
+				    Log.d(LOG_TAG, "row inserted, ID = " + rowID);
+                    Intent intent = new Intent();
+
+                    intent.putExtra("from", timeFrom);
+                    intent.putExtra("to", timeTo);
+                    intent.putExtra("enable", enable);
+
+
+                    setResult(RESULT_OK, intent);
+                    finish();
+
 				break;	
 				case  R.id.buttonDelete:							    			    
 				  long rowID1 = db.delete("mytable", "_id = " + id, null);
@@ -173,12 +209,19 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 				    }
 				break;
 				case  R.id.switch2Edit:
-					if(isChecked) {
-						soundAfter = true;
-				    } else {
-				    	soundAfter = false;
-				    }
-				break;
+                        if(isChecked) {
+                            soundAfter = true;
+                        } else {
+                            soundAfter = false;
+                        }
+                        break;
+                    case  R.id.switch3Edit:
+                        if(isChecked) {
+                            enable = true;
+                        } else {
+                            enable = false;
+                        }
+                        break;
 				}
 				
 			}
@@ -195,7 +238,11 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 					hourStart = Hour;
 					minutStart = Minut;
 					timeStart.set(0, minutStart, hourStart, 0, 0, 0);
-					buttonFromTime.setText(timeStart.format("%k:%M"));
+                    setTimeFrom.set(Calendar.HOUR_OF_DAY, Hour);
+                    setTimeFrom.set(Calendar.MINUTE, Minut);
+                    timeFrom = setTimeFrom.getTimeInMillis();
+                    startTime = String.valueOf(setTimeFrom.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(setTimeFrom.get(Calendar.MINUTE));
+					buttonFromTime.setText(startTime);
 					changeFromTime = true;
 				}
 				break;
@@ -204,7 +251,11 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 					hourStop = Hour;
 					minutStop = Minut;
 					timeStop.set(0, minutStop, hourStop, 0, 0, 0);
-					buttonToTime.setText(timeStop.format("%k:%M"));
+                    setTimeTo.set(Calendar.HOUR_OF_DAY, Hour);
+                    setTimeTo.set(Calendar.MINUTE, Minut);
+                    timeTo = setTimeTo.getTimeInMillis();
+                    stopTime = String.valueOf(setTimeTo.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(setTimeTo.get(Calendar.MINUTE));
+					buttonToTime.setText(stopTime);
 					changeToTime = true;
 				}
 				break;

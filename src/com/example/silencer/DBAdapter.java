@@ -11,6 +11,7 @@ public class DBAdapter {
 	public static final String KEY_TO_TIME = "timeStop";
 	public static final String KEY_SOUND = "sound";
 	public static final String KEY_SOUND_AFTER = "soundAfter";
+    public static final String KEY_ENABLED = "enabled";
 	
 	public static final String DATABASE_NAME = "taskDB";
 	public static final String DATABASE_TABLE = "mytable";
@@ -24,7 +25,7 @@ public class DBAdapter {
 	private DBHelper myDBHelper;
 	private SQLiteDatabase db;
 	
-	public static final String[] ALL_KEYS = new String[] {KEY_ROWID, KEY_FROM_TIME, KEY_TO_TIME, KEY_SOUND, KEY_SOUND_AFTER};
+	public static final String[] ALL_KEYS = new String[] {KEY_ROWID, KEY_FROM_TIME, KEY_TO_TIME, KEY_SOUND, KEY_SOUND_AFTER, KEY_ENABLED};
 	
 	public DBAdapter(Context ctx) {
 		this.context = ctx;

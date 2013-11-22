@@ -1,9 +1,14 @@
 # incremental data. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1384788188178 5049 07c4849839390aa2189ff443a1fd36e2e5eadb80 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\TaskPane.java
-1384843179034 4641 57a84f3de0bfc4c88692627c33cf263883c39e30 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\MainActivity.java
-1384771404662 1363 c09b5f1cef092fc7990f44bf52bc26755d6043c3 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\DBAdapter.java
-1384771459552 1491 ebcf6577442100d96637284531bed48fa1cdddcb C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\DBHelper.java
-1384698561637 2261 dae7ad646451df4aebbe4a7a2956c7db430bb132 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\DialogTime.java
-1384844739989 6238 02c084f9ca19bf60be04e54a74542b4e4ef6c9ef C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\TaskPaneEdit.java
+1385025987459 6364 187eb562307377d037da41655e69e13a2d8a4329 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\TaskPane.java
+1385117649671 818 9eb7dad99bf8e69dd5a02b09b98b4f2ab1de9fb0 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\offSoundResiver.java
+1385043454892 6449 0a8255fded2ecc0bebcd5d6ab07396731f95a059 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\MainActivity.java
+1384977325142 1433 0c38a4481c8abdb262e8fd159bc686d9eda98c59 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\DBAdapter.java
+1385117649695 729 de3002c1db5748983bfbe50fb769cab13cbf5a6e C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\onSoundResiver.java
+1385022306963 6252 e4115acf996c0d9ad89f93101bbfab1b2079062e C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\MyCursorAdapter.java
+1385017212960 1516 e108ea85a18fc8d82f79a531706e601140a528f9 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\DBHelper.java
+1384856730483 2303 74fa4f72573d0270e64462af1b11d28bf13ffb8e C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\DialogTime.java
+1385124994198 2531 f4edcbd3a408a8009ef25f518b1959a0fb1f1ee0 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\MyService.java
+1385115952149 529 8420472798511961b80317f9e45ead59fdd37f49 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\stateSoundResiver.java
+1385026072773 8657 695259e2fbcc73bc68b04b0a85221d0c353eebd7 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\TaskPaneEdit.java
