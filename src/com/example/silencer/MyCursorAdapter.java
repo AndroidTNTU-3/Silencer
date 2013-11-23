@@ -2,10 +2,12 @@ package com.example.silencer;
 
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,19 +60,29 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
     }
 
 
-    public void bindView(View view, Context _context, Cursor _cursor) {
+    public void bindView(View view, final Context _context, final Cursor _cursor) {
+
+        final Context context =  (MainActivity) _context;
+        final Activity ma = (MainActivity) _context;
         int id_id = cursor.getColumnIndex( DBAdapter.KEY_ROWID );
         int idfromTime = cursor.getColumnIndex( DBAdapter.KEY_FROM_TIME );
         int idtoTime = cursor.getColumnIndex( DBAdapter.KEY_TO_TIME );
         int idsound = cursor.getColumnIndex( DBAdapter.KEY_SOUND );
         int idsoundAfter = cursor.getColumnIndex( DBAdapter.KEY_SOUND_AFTER );
         int idEnable = cursor.getColumnIndex( DBAdapter.KEY_ENABLED );
-        final int id = cursor.getInt(id_id);
+        final long id = cursor.getInt(id_id);
         final long fromTime = cursor.getLong(idfromTime);
         final long toTime = cursor.getLong(idtoTime);
         final int sound = cursor.getInt(idsound);
-        int soundAfter = cursor.getInt(idsoundAfter);
-        int enable = cursor.getInt(idEnable);
+        final int soundAfter = cursor.getInt(idsoundAfter);
+        final int enable = cursor.getInt(idEnable);
+
+        DBHelper dbHelper = new DBHelper(context);
+        final SQLiteDatabase db = dbHelper.getWritableDatabase();
+        String sql = "SELECT * FROM mytable WHERE _id=" + String.valueOf(id)+";";
+        Cursor c = db.rawQuery(sql, null);
+        c.moveToFirst();
+
 
         setTimeFrom.setTimeInMillis(fromTime);
         setTimeTo.setTimeInMillis(toTime);
@@ -85,7 +97,7 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
         //TextView textsoundAfter = (TextView) view.findViewById(R.id.textViewSoundAfter);
         ImageView im = (ImageView) view.findViewById(R.id.imageZoom);
         ImageView checked = (ImageView) view.findViewById(R.id.imageCheck);
-        //CheckBox checkBox = (CheckBox) view.findViewById(R.id.checkBox);
+        final CheckBox checkBox = (CheckBox) view.findViewById(R.id.checkBoxEnable);
         textfrom.setText(startTime);
         textto.setText(stopTime);
         //textsound.setText(String.valueOf(sound));
@@ -100,62 +112,57 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
         else checked.setVisibility(View.INVISIBLE);
 
 
-       /* if (enable == 1) checkBox.setChecked(true);
-        else checkBox.setChecked(false);*/
+        if (enable == 1) checkBox.setChecked(true);
+        else checkBox.setChecked(false);
         //select rows on ListView
-       /* view.setOnClickListener(new View.OnClickListener() {
+      view.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
 
                 Log.d(LOG_TAG, "id = " + id);
                 intentEdit = new Intent(context, TaskPaneEdit.class);
                 intentEdit.putExtra("id", id);
-                startActivityForResult(intentEdit, 1);
+                context.startActivity(intentEdit);
 
             }
-        });*/
+        });
 
 
 
-       /* checkBox.setOnClickListener(new View.OnClickListener() {
+      checkBox.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 Log.d(LOG_TAG, "time = ");
-             // MainActivity main = new MainActivity();
-              //textMainto.setText("asdasd");
-                //main.setTime(fromTime, toTime, sound);
+                ContentValues cv = new ContentValues();
+
+
 
                 if(checkBox.isChecked()) {
-                    list.onTimeSetted(fromTime, toTime);
                    // itemChecked.set(pos, true);
-                   // Log.d(LOG_TAG, "time = " + fromTime);
+
+
+                    cv.put("timeStart", fromTime);
+                    cv.put("timeStop", toTime);
+                    cv.put("sound", sound);
+                    cv.put("soundAfter", soundAfter);
+                    cv.put("enabled", 1);
+                    long rowID = db.update("mytable", cv, "_id = ?",
+                            new String[] { String.valueOf(id) });
+                    Log.d(LOG_TAG, "row inserted, ID = " + rowID);
+                    ((MainActivity) _context).setTime(fromTime, toTime);
 
                 }
                 else if (!checkBox.isChecked()) {
                   //  itemChecked.set(pos, false);
-
+                    cv.put("enabled", 0);
+                    long rowID = db.update("mytable", cv, "_id = ?",
+                            new String[] { String.valueOf(id) });
                 }
             }
-        });*/
+        });
 
     }
 
-
-  /* @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder;
-
-        View rowView = convertView;
-        String s = from[position];
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        rowView = inflater.inflate(R.layout.item_layout, null, true);
-        holder = new ViewHolder();
-        int b =  cursor.getInt(cursor.getColumnIndex(DBAdapter.KEY_SOUND));
-
-     //   if (b == 1) holder.imageView.setImageResource(R.drawable.icon);
-        return rowView;
-
-    }*/
 
     @Override
     public View newView(Context _context, Cursor _cursor, ViewGroup parent) {

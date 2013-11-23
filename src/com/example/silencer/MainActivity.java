@@ -184,6 +184,29 @@ public class MainActivity extends Activity implements OnClickListener{
 	}
 
 
+    public void setTime(long fromTime, long toTime){
+        timeFrom = fromTime;
+        timeTo = toTime;
+        settedTimeFrom.setTimeInMillis(System.currentTimeMillis()); // get current time
+        settedTimeTo.setTimeInMillis(System.currentTimeMillis());   // get current time
+        timeFromDB.setTimeInMillis(timeFrom);                       //object Calendar in mills
+        timeToDB.setTimeInMillis(timeTo);                           //object Calendar in mills
+
+        settedTimeFrom.set(Calendar.HOUR_OF_DAY, timeFromDB.get(Calendar.HOUR_OF_DAY)); //Set silence time from
+        settedTimeFrom.set(Calendar.MINUTE, timeFromDB.get(Calendar.MINUTE));           //Set silence time from
+
+        settedTimeTo.set(Calendar.HOUR_OF_DAY, timeToDB.get(Calendar.HOUR_OF_DAY)); //Set silence time to
+        settedTimeTo.set(Calendar.MINUTE, timeToDB.get(Calendar.MINUTE));           //Set silence time to
+
+        String startTime = String.valueOf(settedTimeFrom.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(settedTimeFrom.get(Calendar.MINUTE));
+        String stopTime = String.valueOf(settedTimeTo.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(settedTimeTo.get(Calendar.MINUTE));
+
+        labelfrom.setText(startTime);
+        labelto.setText(stopTime);
+    }
+
+
+
    /* private void saveText(){
         sPref = getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor ed = sPref.edit();

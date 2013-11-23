@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.os.IBinder;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -34,12 +35,15 @@ public class MyService extends Service {
         timeStop = intent.getLongExtra("timeStop", 0);
         Calendar timeFromDB = Calendar.getInstance();
         timeFromDB.setTimeInMillis(timeStart);
+
         int minut = timeFromDB.get(Calendar.MINUTE);
+        Log.d(LOG_TAG, "minut: " + minut);
 
         context = getApplicationContext();
+        Toast.makeText(context, "Start service", Toast.LENGTH_LONG).show();
         sound = (AudioManager)context.getSystemService(Context.AUDIO_SERVICE);
 
-        //test rules when system state changed
+      //  test rules when system state changed
         if (sound.getRingerMode() != AudioManager.RINGER_MODE_SILENT) {
             soundOff(timeStart);
             soundOn(timeStop);
