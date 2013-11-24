@@ -12,16 +12,250 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed7c693f-f869-4748-9001-5bb4e428bf99" name="Default" comment="Added Service and Resivers">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/silencer/DBAdapter.java" afterPath="$PROJECT_DIR$/src/com/example/silencer/DBAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/silencer/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/example/silencer/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/silencer/MyCursorAdapter.java" afterPath="$PROJECT_DIR$/src/com/example/silencer/MyCursorAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/source/r/debug/com/example/silencer/R.java" afterPath="$PROJECT_DIR$/build/source/r/debug/com/example/silencer/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/silencer/TaskPane.java" afterPath="$PROJECT_DIR$/src/com/example/silencer/TaskPane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/silencer/TaskPaneEdit.java" afterPath="$PROJECT_DIR$/src/com/example/silencer/TaskPaneEdit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/layout/activity_task_pane.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/layout/activity_task_pane.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_task_pane.xml" afterPath="$PROJECT_DIR$/res/layout/activity_task_pane.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/layout/activity_task_pane_edit.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/layout/activity_task_pane_edit.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_task_pane_edit.xml" afterPath="$PROJECT_DIR$/res/layout/activity_task_pane_edit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/drawable-hdpi/check.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/ic_launcher-web.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/drawable-hdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/drawable-mdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/drawable-xhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/drawable-xxhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/drawable-hdpi/nosound.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/drawable-hdpi/sound.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/ComAndroidSupportAppcompatV71800_aar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/java/edu/tntu/silenceapp/DBAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/java/edu/tntu/silenceapp/DBHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/java/edu/tntu/silenceapp/DialogTime.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/java/edu/tntu/silenceapp/MainActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/java/edu/tntu/silenceapp/MyCursorAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/java/edu/tntu/silenceapp/MyService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/java/edu/tntu/silenceapp/OffSoundReceiver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/java/edu/tntu/silenceapp/OnSoundReceiver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silence.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/Silenceapp.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/java/edu/tntu/silenceapp/StateSoundReceiver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/java/edu/tntu/silenceapp/TaskPane.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/java/edu/tntu/silenceapp/TaskPaneEdit.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/layout/activity_main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/layout/activity_task_pane.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/layout/activity_task_pane_edit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/drawable-hdpi/background_clock.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/drawable-hdpi/background_main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/drawable-hdpi/background_main2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/drawable-hdpi/button_dark2_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/drawable-hdpi/button_dark_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/drawable-hdpi/button_primary_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/values/colors.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/layout/dialog_time.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/values/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/values-w820dp/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/layout/item_layout.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/menu/main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/proguard-rules.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/drawable-hdpi/rect.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/values/strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/values/styles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_18_0_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/menu/task_pane.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/menu/task_pane_edit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Silenceapp/src/main/res/values/theme.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Silencer.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/DBAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/DBHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/DialogTime$TimeDialogListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/DialogTime$TimeListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/DialogTime.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/MainActivity$listItemListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/MainActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/TaskPane$ButtonListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/TaskPane$switchListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/TaskPane.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/TaskPaneEdit$ButtonListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/TaskPaneEdit$switchListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/example/silencer/TaskPaneEdit.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/dexedLibs/android-support-v4-48c3d4a254555c49a1b8ccb18cf131b2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/dexedLibs/android-support-v4-cc4e27b5c3bb017577390eb1aa9690eb.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/jarlist.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/res/crunch/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/res/crunch/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/res/crunch/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/res/crunch/drawable-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/resources.ap_" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/apk/Silencer-debug-unaligned.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/CallBackSetTime.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/DBAdapter$DatabaseHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/DBAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/DBHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/DialogTime$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/DialogTime$TimeDialogListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/DialogTime$TimeListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/DialogTime.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/MainActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/MainActivity$listItemListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/MainActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/MyCursorAdapter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/MyCursorAdapter$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/MyCursorAdapter$ViewHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/MyCursorAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/MyService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/TaskPane$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/TaskPane$ButtonListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/TaskPane$switchListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/TaskPane.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/TaskPaneEdit$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/TaskPaneEdit$ButtonListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/TaskPaneEdit$switchListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/TaskPaneEdit.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/offSoundResiver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/onSoundResiver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/debug/com/example/silencer/stateSoundResiver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/incremental/aidl/debug/dependency.store" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/incremental/aidl/debug/inputs.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/incremental/aidl/debug/outputs.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/incremental/dex/debug/inputs.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/incremental/dex/debug/outputs.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/incremental/mergeAssets/debug/inputs.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/incremental/mergeAssets/debug/merger.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/incremental/mergeAssets/debug/outputs.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/incremental/mergeResources/debug/inputs.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/incremental/mergeResources/debug/merger.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/incremental/mergeResources/debug/outputs.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/Silencer-debug.ap_" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/Silencer-debug.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/manifests/debug/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable-hdpi/check.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable-hdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable-hdpi/nosound.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable-hdpi/sound.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable-mdpi/check.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable-mdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable-mdpi/nosound.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable-mdpi/sound.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable-xhdpi/check.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable-xhdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable-xhdpi/nosound.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable-xhdpi/sound.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable-xxhdpi/check.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable-xxhdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable-xxhdpi/nosound.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable-xxhdpi/sound.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable/background_clock.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable/background_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable/background_main2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable/button_dark2_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable/button_dark_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable/button_primary_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable/rect.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/layout-land/dialog1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/layout/activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/layout/activity_task_pane.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/layout/activity_task_pane_edit.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/layout/dialog_time.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/layout/item_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/menu/main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/menu/task_pane.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/menu/task_pane_edit.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/values-sw720dp-land/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/values-v11/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/values-v14/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/res/all/debug/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/source/buildConfig/debug/com/example/silencer/BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/source/r/debug/com/example/silencer/R.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/example/silencer/BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/example/silencer/R.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ic_launcher-web.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/android-support-v4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/proguard-project.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/check.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/nosound.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/sound.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/check.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/nosound.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/sound.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/check.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/nosound.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/sound.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/check.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/nosound.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/sound.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/background_clock.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/background_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/background_main2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/button_dark2_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/button_dark_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/button_primary_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/rect.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/layout-land/dialog1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/layout/activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/layout/activity_task_pane.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/layout/activity_task_pane_edit.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/layout/dialog_time.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/layout/item_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/menu/main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/menu/task_pane.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/menu/task_pane_edit.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/values-sw600dp/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/values-sw720dp-land/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/values-v11/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/values-v14/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/values/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/values/theme.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/example/silencer/DBAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/example/silencer/DBHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/example/silencer/DialogTime.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/example/silencer/MainActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/example/silencer/MyCursorAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/example/silencer/MyService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/example/silencer/TaskPane.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/example/silencer/TaskPaneEdit.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/example/silencer/offSoundResiver.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/example/silencer/onSoundResiver.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/example/silencer/stateSoundResiver.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Silencer.iml" afterPath="$PROJECT_DIR$/Silencer.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradlew.bat" afterPath="$PROJECT_DIR$/gradlew.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Silencer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,53 +324,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/silencer/MainActivity.java">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Silenceapp/src/main/java/edu/tntu/silenceapp/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1181" selection-end="1181" vertical-scroll-proportion="0.0" vertical-offset="1762" max-vertical-offset="3162">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyCursorAdapter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/example/silencer/MyCursorAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="0" selection-start="4301" selection-end="4301" vertical-scroll-proportion="0.41578948" vertical-offset="1695" max-vertical-offset="2448">
-              <folding>
-                <element signature="e#3336#3649#0" expanded="true" />
-                <element signature="e#3638#3639#0" expanded="true" />
-                <element signature="e#3687#4706#0" expanded="true" />
-                <element signature="e#4695#4696#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskPaneEdit.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/silencer/TaskPaneEdit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="170" column="54" selection-start="5201" selection-end="5201" vertical-scroll-proportion="0.0" vertical-offset="3313" max-vertical-offset="3876">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/silencer/DBAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="0" selection-start="2659" selection-end="2659" vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="2431">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskPane.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/silencer/TaskPane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="36" selection-start="3573" selection-end="3573" vertical-scroll-proportion="0.0" vertical-offset="3054" max-vertical-offset="3434">
+            <state line="24" column="9" selection-start="719" selection-end="719" vertical-scroll-proportion="0.13333334" vertical-offset="72" max-vertical-offset="3546">
               <folding />
             </state>
           </provider>
@@ -180,6 +371,10 @@
           <value>
             <list>
               <ExternalProjectPojo>
+                <option name="name" value="Silenceapp" />
+                <option name="path" value="$PROJECT_DIR$/Silenceapp" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
                 <option name="name" value="Silencer" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
@@ -194,19 +389,13 @@
           <value>
             <list>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the Android dependencies of the project" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="androidDependencies" />
+                <option name="name" value="prepareDefaultFlavorReleaseDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Assembles all variants of all applications and secondary packages." />
+                <option name="description" value="Installs and runs instrumentation tests for all flavors on connected devices." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="assemble" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles all Debug builds" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="assembleDebug" />
+                <option name="name" value="connectedInstrumentTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles all Release builds" />
@@ -214,9 +403,109 @@
                 <option name="name" value="assembleRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Assembles the Test build for the Debug build" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="assembleTest" />
+                <option name="name" value="generateDefaultFlavorDebugBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDefaultFlavorDebugSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="proguardDefaultFlavorRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="validateDebugSigning" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs and runs the tests for Build 'DefaultFlavorDebug' on connected devices." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="connectedInstrumentTestDefaultFlavorDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dexDefaultFlavorRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preDefaultFlavorDebugBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDefaultFlavorReleaseAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeDefaultFlavorTestAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="packageDefaultFlavorTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDefaultFlavorTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the Test build for the DefaultFlavorDebug build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="uninstallDefaultFlavorTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dexDefaultFlavorDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDefaultFlavorDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstall all applications." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="uninstallAll" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDefaultFlavorTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the Debug build for flavor DefaultFlavor" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="installDefaultFlavorDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDefaultFlavorReleaseManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all variants of all applications and secondary packages." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the Test build for the DefaultFlavorDebug build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDefaultFlavorTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all device checks on currently connected devices." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="connectedCheck" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDefaultFlavorTestTestManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="clean" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project." />
@@ -229,69 +518,30 @@
                 <option name="name" value="buildDependents" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project and all projects it depends on." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="buildNeeded" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs all checks." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="check" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Deletes the build directory." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="clean" />
+                <option name="name" value="processDefaultFlavorDebugManifest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileDebug" />
+                <option name="name" value="preDefaultFlavorTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileDebugAidl" />
+                <option name="name" value="mergeDefaultFlavorTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the Test build for the DefaultFlavorDebug build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="installDefaultFlavorTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the Debug build for flavor DefaultFlavor" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="uninstallDefaultFlavorDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileDebugRenderscript" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileLint" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileReleaseAidl" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileReleaseRenderscript" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileTestAidl" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileTestRenderscript" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs all device checks on currently connected devices." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="connectedCheck" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Installs and runs the tests for Build 'Debug' on connected devices." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="connectedInstrumentTest" />
+                <option name="name" value="processDefaultFlavorReleaseResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs all device checks using Device Providers and Test Servers." />
@@ -300,49 +550,120 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="dexDebug" />
+                <option name="name" value="generateDefaultFlavorTestBuildConfig" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="dexRelease" />
+                <option name="name" value="processDefaultFlavorReleaseJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="dexTest" />
+                <option name="name" value="compileLint" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="generateDebugBuildConfig" />
+                <option name="name" value="preDefaultFlavorReleaseBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the Release build for flavor DefaultFlavor" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDefaultFlavorRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="generateDebugSources" />
+                <option name="name" value="packageDefaultFlavorRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="generateReleaseBuildConfig" />
+                <option name="name" value="generateDefaultFlavorReleaseBuildConfig" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="generateReleaseSources" />
+                <option name="name" value="preBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the Release build for flavor DefaultFlavor" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="uninstallDefaultFlavorRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="generateTestBuildConfig" />
+                <option name="name" value="lintDefaultFlavorDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="generateTestSources" />
+                <option name="name" value="lintDefaultFlavorRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Installs the Debug build" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="installDebug" />
+                <option name="name" value="mergeDefaultFlavorDebugResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Installs the Test build for the Debug build" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="installTest" />
+                <option name="name" value="processDefaultFlavorTestJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the Android dependencies of the project" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="androidDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDefaultFlavorTestRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all the Test applications" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDefaultFlavorTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:appcompat-v7:18.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportAppcompatV71800Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs and runs instrumentation tests using all Device Providers." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="deviceInstrumentTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDefaultFlavorDebugRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the Debug build for flavor DefaultFlavor" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDefaultFlavorDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareDefaultFlavorTestDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDefaultFlavorDebugAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the signing info for each variant" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="signingReport" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDefaultFlavorDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDefaultFlavorReleaseSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs lint on all variants." />
@@ -351,143 +672,398 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="lintDebug" />
+                <option name="name" value="mergeDefaultFlavorDebugAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="lintRelease" />
+                <option name="name" value="compileDefaultFlavorReleaseRenderscript" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="lintTest" />
+                <option name="name" value="lintDefaultFlavorTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="mergeDebugAssets" />
+                <option name="name" value="mergeDefaultFlavorReleaseResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="mergeDebugResources" />
+                <option name="name" value="compileDefaultFlavorRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="mergeReleaseAssets" />
+                <option name="name" value="mergeDefaultFlavorReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="mergeReleaseResources" />
+                <option name="name" value="processDefaultFlavorDebugJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="mergeTestAssets" />
+                <option name="name" value="packageDefaultFlavorDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="mergeTestResources" />
+                <option name="name" value="dexDefaultFlavorTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="packageDebug" />
+                <option name="name" value="prepareDefaultFlavorDebugDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="packageRelease" />
+                <option name="name" value="compileDefaultFlavorTestAidl" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Assembles all Debug builds" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="packageTest" />
+                <option name="name" value="assembleDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Assembles all builds for flavor DefaultFlavor" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDefaultFlavor" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Silenceapp">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the Android dependencies of the project" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="androidDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all variants of all applications and secondary packages." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all Debug builds" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="assembleDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all builds for flavor DefaultFlavor" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="assembleDefaultFlavor" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the Debug build for flavor DefaultFlavor" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="assembleDefaultFlavorDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the Release build for flavor DefaultFlavor" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="assembleDefaultFlavorRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the Test build for the DefaultFlavorDebug build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="assembleDefaultFlavorTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all Release builds" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="assembleRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all the Test applications" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="assembleTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="compileDefaultFlavorDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="compileDefaultFlavorDebugAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="compileDefaultFlavorDebugRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="compileDefaultFlavorRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="compileDefaultFlavorReleaseAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="compileDefaultFlavorReleaseRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="compileDefaultFlavorTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="compileDefaultFlavorTestAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="compileDefaultFlavorTestRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="compileLint" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all device checks on currently connected devices." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="connectedCheck" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs and runs instrumentation tests for all flavors on connected devices." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="connectedInstrumentTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs and runs the tests for Build 'DefaultFlavorDebug' on connected devices." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="connectedInstrumentTestDefaultFlavorDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all device checks using Device Providers and Test Servers." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="deviceCheck" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs and runs instrumentation tests using all Device Providers." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="deviceInstrumentTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="dexDefaultFlavorDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="dexDefaultFlavorRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="dexDefaultFlavorTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="generateDefaultFlavorDebugBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="generateDefaultFlavorDebugSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="generateDefaultFlavorReleaseBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="generateDefaultFlavorReleaseSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="generateDefaultFlavorTestBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="generateDefaultFlavorTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the Debug build for flavor DefaultFlavor" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="installDefaultFlavorDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the Test build for the DefaultFlavorDebug build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="installDefaultFlavorTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on all variants." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="lint" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="lintDefaultFlavorDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="lintDefaultFlavorRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="lintDefaultFlavorTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="mergeDefaultFlavorDebugAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="mergeDefaultFlavorDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="mergeDefaultFlavorReleaseAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="mergeDefaultFlavorReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="mergeDefaultFlavorTestAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="mergeDefaultFlavorTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="packageDefaultFlavorDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="packageDefaultFlavorRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="packageDefaultFlavorTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
                 <option name="name" value="preBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="preDebugBuild" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="preDefaultFlavorDebugBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="preReleaseBuild" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="preDefaultFlavorReleaseBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="preTestBuild" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="preDefaultFlavorTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareDebugDependencies" />
+                <option name="description" value="Prepare com.android.support:appcompat-v7:18.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="prepareComAndroidSupportAppcompatV71800Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareReleaseDependencies" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="prepareDefaultFlavorDebugDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareTestDependencies" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="prepareDefaultFlavorReleaseDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processDebugJavaRes" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="prepareDefaultFlavorTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processDebugManifest" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="processDefaultFlavorDebugJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processDebugResources" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="processDefaultFlavorDebugManifest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processReleaseJavaRes" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="processDefaultFlavorDebugResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processReleaseManifest" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="processDefaultFlavorReleaseJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processReleaseResources" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="processDefaultFlavorReleaseManifest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processTestJavaRes" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="processDefaultFlavorReleaseResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processTestResources" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="processDefaultFlavorTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processTestTestManifest" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="processDefaultFlavorTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="processDefaultFlavorTestTestManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="proguardDefaultFlavorRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the signing info for each variant" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
                 <option name="name" value="signingReport" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Uninstall all applications." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
                 <option name="name" value="uninstallAll" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Uninstalls the Debug build" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="uninstallDebug" />
+                <option name="description" value="Uninstalls the Debug build for flavor DefaultFlavor" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="uninstallDefaultFlavorDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Uninstalls the Release build" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="uninstallRelease" />
+                <option name="description" value="Uninstalls the Release build for flavor DefaultFlavor" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="uninstallDefaultFlavorRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Uninstalls the Test build for the Debug build" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="uninstallTest" />
+                <option name="description" value="Uninstalls the Test build for the DefaultFlavorDebug build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
+                <option name="name" value="uninstallDefaultFlavorTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Silenceapp" />
                 <option name="name" value="validateDebugSigning" />
               </ExternalTaskPojo>
             </list>
@@ -497,8 +1073,8 @@
     </option>
     <option name="modificationStamps">
       <map>
+        <entry key="$PROJECT_DIR$" value="1385293671993" />
         <entry key="C:\Users\Alex\AndroidStudioProjects\Silencer" value="1384847858476" />
-        <entry key="$PROJECT_DIR$" value="1384847858476" />
         <entry key="E:\Silencer\Silencer" value="1384847858476" />
       </map>
     </option>
@@ -526,10 +1102,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="64" />
+    <option name="y" value="-4" />
+    <option name="width" value="1303" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -587,11 +1163,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Silenceapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Silencer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Silencer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Silenceapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="silencer" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -602,6 +1196,18 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Silencer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Silenceapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -619,29 +1225,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
+              <option name="myItemId" value="Silenceapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Silencer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Silencer" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="silenceapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -657,8 +1257,7 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="A233" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
     <property name="FullScreen" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
@@ -675,7 +1274,7 @@
       <recent name="com.example.silencer" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Application.Silencer">
+  <component name="RunManager" selected="Android Application.Silenceapp">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -783,6 +1382,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
@@ -797,10 +1397,11 @@
       <method />
     </configuration>
     <configuration default="false" name="Silencer" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="Silencer" />
+      <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
@@ -816,8 +1417,30 @@
       <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
-    <list size="1">
+    <configuration default="false" name="Silenceapp" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="Silenceapp" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
+      <method />
+    </configuration>
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Android Application.Silencer" />
+      <item index="1" class="java.lang.String" itemvalue="Android Application.Silenceapp" />
     </list>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -884,36 +1507,43 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2659091" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4004603" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20440637" sideWeight="0.500846" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32427844" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3106961" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3101852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15227273" sideWeight="0.49915397" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26735833" sideWeight="0.49915397" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32427844" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2659091" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USERS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -939,135 +1569,10 @@
         <state line="1528" column="21" selection-start="59357" selection-end="59357" vertical-scroll-proportion="0.6031746" vertical-offset="24529" max-vertical-offset="29495" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/Silenceapp/src/main/java/edu/tntu/silenceapp/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="37" selection-start="1920" selection-end="1920" vertical-scroll-proportion="1.5441697" vertical-offset="61" max-vertical-offset="1139">
-          <folding>
-            <element signature="e#692#710#0" expanded="false" />
-            <element signature="e#908#926#0" expanded="false" />
-            <element signature="e#1254#1288#0" expanded="false" />
-            <element signature="e#1416#1455#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/offSoundResiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="37" selection-start="611" selection-end="611" vertical-scroll-proportion="0.6263158" vertical-offset="0" max-vertical-offset="459">
+        <state line="24" column="9" selection-start="719" selection-end="719" vertical-scroll-proportion="0.13333334" vertical-offset="72" max-vertical-offset="3546">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="345" selection-end="345" vertical-scroll-proportion="0.2236842" vertical-offset="51" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/item_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="554" selection-end="554" vertical-scroll-proportion="0.6461988" vertical-offset="0" max-vertical-offset="1054">
-          <folding>
-            <element signature="e#442#461#0" expanded="false" />
-            <element signature="e#1231#1248#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="17" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.0" vertical-offset="1009" max-vertical-offset="1547">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/onSoundResiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="8" selection-start="668" selection-end="695" vertical-scroll-proportion="0.0" vertical-offset="62" max-vertical-offset="442">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/MyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="30" selection-start="1438" selection-end="1438" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1181" selection-end="1181" vertical-scroll-proportion="0.0" vertical-offset="1762" max-vertical-offset="3162">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/DBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="38" selection-start="1071" selection-end="1334" vertical-scroll-proportion="0.7605263" vertical-offset="357" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_task_pane.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="118" column="34" selection-start="4251" selection-end="4251" vertical-scroll-proportion="0.0" vertical-offset="2158" max-vertical-offset="3247">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_task_pane_edit.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="133" column="0" selection-start="4834" selection-end="4834" vertical-scroll-proportion="0.0" vertical-offset="2206" max-vertical-offset="2941">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/DBAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="0" selection-start="2659" selection-end="2659" vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="2431">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/TaskPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="36" selection-start="3573" selection-end="3573" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="3434">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/TaskPaneEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="54" selection-start="5201" selection-end="5201" vertical-scroll-proportion="0.0" vertical-offset="3313" max-vertical-offset="3876">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/MyCursorAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="0" selection-start="4301" selection-end="4301" vertical-scroll-proportion="0.41578948" vertical-offset="1695" max-vertical-offset="2448">
-          <folding>
-            <element signature="e#3336#3649#0" expanded="true" />
-            <element signature="e#3638#3639#0" expanded="true" />
-            <element signature="e#3687#4706#0" expanded="true" />
-            <element signature="e#4695#4696#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

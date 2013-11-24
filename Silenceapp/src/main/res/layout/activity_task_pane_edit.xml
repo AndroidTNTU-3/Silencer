@@ -1,0 +1,222 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/black"
+    tools:context=".TaskPane">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/taskLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/deepblue"
+            android:gravity="center_horizontal"
+            android:text="@string/taskLabelEdit"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/lightgray"
+                android:text="@string/from_time" />
+
+            <Button
+                android:id="@+id/buttonFromDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/lightgray"
+                style="@style/DarkThemeButton"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button_fromEdit"
+                android:textColor="@color/lightgray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DarkThemeButton"
+                android:text="Button" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:textColor="@color/lightgray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to_time" />
+
+            <Button
+                android:id="@+id/buttonToDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/lightgray"
+                style="@style/DarkThemeButton"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button_toEdit"
+                android:textColor="@color/lightgray"
+                style="@style/DarkThemeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="2dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/tableLayout1"
+        android:background="@drawable/rect"></LinearLayout>
+
+    <TextView
+        android:id="@+id/regulationsLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/separator"
+        android:text="@string/during"
+        android:background="@color/deepblue"
+        android:textColor="@color/lightgray"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/duringBlock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/regulationsLabel"
+        android:layout_below="@+id/regulationsLabel"
+        android:orientation="vertical">
+
+        <Switch
+            android:id="@+id/switch1Edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightgray"
+            android:text="@string/soundOn" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/regulations2Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/duringBlock"
+        android:text="@string/afterDuring"
+        android:background="@color/deepblue"
+        android:textColor="@color/lightgray"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/afterDuringBlock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/regulationsLabel"
+        android:layout_below="@+id/regulations2Label"
+        android:orientation="vertical">
+
+        <Switch
+            android:id="@+id/switch2Edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightgray"
+            android:text="@string/soundOn" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/regulations3Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/afterDuringBlock"
+        android:text="@string/onTime"
+        android:background="@color/deepblue"
+        android:textColor="@color/lightgray"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/afterEnableBlock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/regulationsLabel"
+        android:layout_below="@+id/regulations3Label"
+        android:orientation="vertical">
+
+        <Switch
+            android:id="@+id/switch3Edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightgray"
+            android:text="@string/enable" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/afterEnableBlock"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/buttonSetTaskEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightgray"
+            style="@style/DarkThemeButton"
+            android:text="@string/setTask" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightgray"
+            style="@style/DarkThemeButton"
+            android:text="@string/delete" />
+
+    </LinearLayout>
+
+</RelativeLayout>

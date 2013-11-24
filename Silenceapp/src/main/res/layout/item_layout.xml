@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/from_time"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="15dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/textViewFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textView1"
+        android:textColor="@color/black"
+        android:paddingTop="15dp"
+        android:fontFamily="sans-serif-light"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingTop="15dp"
+        android:layout_toRightOf="@+id/textViewFrom"
+        android:text="@string/to_time"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-light" />
+
+    <TextView
+        android:id="@+id/textViewTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textView2"
+        android:textColor="@color/black"
+        android:paddingTop="15dp"
+        android:fontFamily="sans-serif-light"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:layout_toRightOf="@+id/textViewTo"
+        android:textColor="@color/lightgray"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textViewSoundAfter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:layout_toRightOf="@+id/textViewSound"
+        android:textColor="@color/lightgray"
+        android:text="" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/imageZoom"
+        android:layout_toLeftOf="@+id/imageCheck"
+        android:paddingTop="15dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:id="@+id/imageCheck"
+        android:paddingTop="15dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ChB"
+        android:id="@+id/checkBoxEnable"
+        android:layout_toRightOf="@+id/textViewSoundAfter" />
+
+
+</RelativeLayout>

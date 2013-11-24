@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Silenceapp/Silenceapp.iml" filepath="$PROJECT_DIR$/Silenceapp/Silenceapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/Silencer.iml" filepath="$PROJECT_DIR$/Silencer.iml" />
     </modules>
   </component>
