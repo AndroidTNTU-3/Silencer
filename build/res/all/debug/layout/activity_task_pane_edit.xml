@@ -115,75 +115,20 @@
         android:layout_below="@+id/tableLayout1"
         android:background="@drawable/rect">
     </LinearLayout>
-    
-                <TextView
-            android:id="@+id/regulationsLabel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/separator"
-            android:text="@string/during"
-            android:background="@color/deepblue"
-            android:textColor="@color/lightgray"
-            android:gravity="center_horizontal"/>
-
-     <LinearLayout
-                    android:id="@+id/duringBlock"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/regulationsLabel"
-                    android:layout_below="@+id/regulationsLabel"
-                    android:orientation="vertical" >
-
-                    <Switch
-                        android:id="@+id/switch1Edit"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/lightgray"
-                        android:text="@string/soundOn" />
-
-     </LinearLayout>
-       
-                <TextView
-            android:id="@+id/regulations2Label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/duringBlock"
-            android:text="@string/afterDuring"
-            android:background="@color/deepblue"
-            android:textColor="@color/lightgray"
-            android:gravity="center_horizontal"/>
-
-     	<LinearLayout
-                    android:id="@+id/afterDuringBlock"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/regulationsLabel"
-                    android:layout_below="@+id/regulations2Label"
-                    android:orientation="vertical" >
-
-                    <Switch
-                        android:id="@+id/switch2Edit"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/lightgray"
-                        android:text="@string/soundOn" />
-
-     	</LinearLayout>
 
     <TextView
         android:id="@+id/regulations3Label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/afterDuringBlock"
         android:text="@string/onTime"
         android:background="@color/deepblue"
         android:textColor="@color/lightgray"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/separator" />
     <LinearLayout
         android:id="@+id/afterEnableBlock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/regulationsLabel"
         android:layout_below="@+id/regulations3Label"
         android:orientation="vertical" >
 

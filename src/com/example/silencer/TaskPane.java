@@ -8,6 +8,7 @@ import java.util.Formatter;
 import com.example.silencer.DialogTime.TimeDialogListener;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.DialogFragment;
@@ -32,8 +33,6 @@ Button buttonToTime;
 Button buttonFromDate;
 Button buttonToDate;
 Button buttonSet;
-Switch switchSound;
-Switch switchSoundAfter;
 Switch switchEnable;
 
 int hourStart =0;
@@ -53,7 +52,8 @@ boolean enable = false;
 
 
 SimpleDateFormat sdf;
-DBHelper dbHelper;
+
+DBAdapter myDb;
 
 DialogTime dialogtime;
 
@@ -72,8 +72,6 @@ final String LOG_TAG = "myLogs";
 		buttonFromDate = (Button) findViewById(R.id.buttonFromDate);
 		buttonToDate = (Button) findViewById(R.id.buttonToDate);
 		buttonSet = (Button) findViewById(R.id.buttonSetTask);
-		switchSound = (Switch) findViewById(R.id.switch1);
-		switchSoundAfter = (Switch) findViewById(R.id.switch2);
         switchEnable = (Switch) findViewById(R.id.switch3);
 		buttonFromTime.setText(getTime());
 		buttonToTime.setText(getTime());
@@ -82,12 +80,12 @@ final String LOG_TAG = "myLogs";
 		buttonFromTime.setOnClickListener(new ButtonListener());
 		buttonToTime.setOnClickListener(new ButtonListener());
 		buttonSet.setOnClickListener(new ButtonListener());
-		switchSound.setOnCheckedChangeListener(new switchListener());
-		switchSoundAfter.setOnCheckedChangeListener(new switchListener());
         switchEnable.setOnCheckedChangeListener(new switchListener());
 		dialogtime = new DialogTime();
-		
-	    dbHelper = new DBHelper(this);
+
+
+        openDB();
+
 	    sdf = new SimpleDateFormat("HH:mm:ss");
 	    
 	    timeStart = new Time();
@@ -134,10 +132,10 @@ final String LOG_TAG = "myLogs";
 			dialogtime.show(getFragmentManager(), "dlg1");
 			break;
 			case  R.id.buttonSetTask:
-				ContentValues cv = new ContentValues();
-				
-				Date d = new Date();
-			    
+                Date d = new Date();
+                myDb.insertRow(timeFrom, timeTo, 0, enable);
+				/*ContentValues cv = new ContentValues();
+
 			    // connect to DB
 			    SQLiteDatabase db = dbHelper.getWritableDatabase();
 			    cv.put("timeStart", timeFrom);
@@ -147,7 +145,9 @@ final String LOG_TAG = "myLogs";
                 cv.put("enabled", enable);
 			    
 			    long rowID = db.insert("mytable", null, cv);
-			    Log.d(LOG_TAG, "row inserted, ID = " + rowID);
+			    Log.d(LOG_TAG, "row inserted, ID = " + rowID);*/
+
+
 
                 Intent intent = new Intent();
 
@@ -169,20 +169,7 @@ final String LOG_TAG = "myLogs";
 		@Override
 		public void onCheckedChanged(CompoundButton v, boolean isChecked) {
 			switch(v.getId()){
-			case  R.id.switch1:
-				if(isChecked) {
-					sound = true;
-			    } else {
-			    	sound = false;
-			    }
-			break;
-			case  R.id.switch2:
-				if(isChecked) {
-					soundAfter = true;
-			    } else {
-			    	soundAfter = false;
-			    }
-			break;
+
                 case  R.id.switch3:
                     if(isChecked) {
                         enable = true;
@@ -226,5 +213,9 @@ final String LOG_TAG = "myLogs";
 		}
 	}
 
+    private void openDB() {
+        myDb = new DBAdapter(this);
+        myDb.open();
+    }
 
 }

@@ -45,6 +45,8 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
     String startTime;
     String stopTime;
 
+    DBAdapter myDb;
+
     public MyCursorAdapter(Context _context, int _layout, Cursor _c, String[] _from, int[] _to) {
         super(_context, _layout, _c, _from, _to);
         layout = _layout;
@@ -74,11 +76,13 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
         final long toTime = cursor.getLong(idtoTime);
         final int enable = cursor.getInt(idEnable);
 
-        DBHelper dbHelper = new DBHelper(context);
-        final SQLiteDatabase db = dbHelper.getWritableDatabase();
+        /*DBHelper dbHelper = new DBHelper(context);
+        final SQLiteDatabase db = dbHelper.getWritableDatabase();*/
+
+        openDB();
+
         String sql = "SELECT * FROM mytable WHERE _id=" + String.valueOf(id)+";";
-        Cursor c = db.rawQuery(sql, null);
-        c.moveToFirst();
+        myDb.getRowQuery(sql);
 
         setTimeFrom.setTimeInMillis(fromTime);
         setTimeTo.setTimeInMillis(toTime);
@@ -124,20 +128,16 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
                 if(checkBox.isChecked()) {
                    // itemChecked.set(pos, true);
 
-                    cv.put("timeStart", fromTime);
-                    cv.put("timeStop", toTime);
-                    cv.put("enabled", 1);
-                    long rowID = db.update("mytable", cv, "_id = ?",
-                            new String[] { String.valueOf(id) });
-                    Log.d(LOG_TAG, "row inserted, ID = " + rowID);
+                    myDb.updateRow(id, fromTime, toTime, 0, 1);
                     ((MainActivity) _context).setTime(fromTime, toTime);
 
                 }
                 else if (!checkBox.isChecked()) {
                   //  itemChecked.set(pos, false);
-                    cv.put("enabled", 0);
+                    /*cv.put("enabled", 0);
                     long rowID = db.update("mytable", cv, "_id = ?",
-                            new String[] { String.valueOf(id) });
+                            new String[] { String.valueOf(id) });*/
+                    myDb.updateRow(id, fromTime, toTime,0, 0);
                 }
             }
         });
@@ -151,6 +151,11 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
         View view = inflater.inflate(layout, parent, false);
         return view;
 
+    }
+
+    private void openDB() {
+        myDb = new DBAdapter(context);
+        myDb.open();
     }
 
 }

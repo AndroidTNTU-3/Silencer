@@ -30,8 +30,6 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 	Button buttonToDate;
 	Button buttonSet;
 	Button buttonDel;
-	Switch switchSound;
-	Switch switchSoundAfter;
     Switch switchEnable;
 	final String LOG_TAG = "myLogs";
 	
@@ -48,10 +46,10 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 	boolean changeToTime = false;
 	
 	
-	DBHelper dbHelper;
+
 	DialogTime dialogtime;
 	long id;
-	SQLiteDatabase db;
+    DBAdapter myDb;
 	
 	Time timeStart;	
 	Time timeStop;
@@ -75,8 +73,6 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 		buttonToDate = (Button) findViewById(R.id.buttonToDate);
 		buttonSet = (Button) findViewById(R.id.buttonSetTaskEdit);
 		buttonDel = (Button) findViewById(R.id.buttonDelete);
-		switchSound = (Switch) findViewById(R.id.switch1Edit);
-		switchSoundAfter = (Switch) findViewById(R.id.switch2Edit);
         switchEnable = (Switch) findViewById(R.id.switch3Edit);
 
 	    buttonFromDate.setText(getDate());
@@ -86,8 +82,6 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 		buttonToTime.setOnClickListener(new ButtonListener());
 		buttonSet.setOnClickListener(new ButtonListener());
 		buttonDel.setOnClickListener(new ButtonListener());
-		switchSound.setOnCheckedChangeListener(new switchListener());
-		switchSoundAfter.setOnCheckedChangeListener(new switchListener());
         switchEnable.setOnCheckedChangeListener(new switchListener());
 		Intent intent = getIntent();
 	    
@@ -95,19 +89,16 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 		id = intent.getLongExtra("id", 0);
         Log.d(LOG_TAG, "row selected, ID = " + id);
 	    dialogtime = new DialogTime();
-		
-	    dbHelper = new DBHelper(this);
-	    db = dbHelper.getWritableDatabase();
+
+        openDB();
+
 	    String sql = "SELECT * FROM mytable WHERE _id=" + String.valueOf(id)+";";
-	    Cursor c = db.rawQuery(sql, null);
-	    c.moveToFirst();
+        Cursor c = myDb.getRowQuery(sql);
 
 	        // number of column into query
 	      int idColIndex = c.getColumnIndex("_id");
 	      int timeStartColIndex = c.getColumnIndex("timeStart");
 	      int timeStopColIndex = c.getColumnIndex("timeStop");
-	      int soundColIndex = c.getColumnIndex("sound");
-	      int soundAfterColIndex = c.getColumnIndex("soundAfter");
           int enableColIndex = c.getColumnIndex("enabled");
           long fromTime = c.getLong(timeStartColIndex);
           long toTime = c.getLong(timeStopColIndex);
@@ -123,11 +114,7 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 	      buttonToTime.setText(stopTime);
           timeFrom = fromTime;
           timeTo = toTime;
-	      sound = (c.getInt(soundColIndex) != 0);
-	      soundAfter = (c.getInt(soundAfterColIndex) != 0);
           enable = (c.getInt(enableColIndex) != 0);
-	      switchSound.setChecked(sound);
-	      switchSoundAfter.setChecked(soundAfter);
           switchEnable.setChecked(enable);
 	      
 		    timeStart = new Time();
@@ -164,18 +151,21 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 				dialogtime.show(getFragmentManager(), "dlg1");
 				break;
 				case  R.id.buttonSetTaskEdit:
-					ContentValues cv = new ContentValues();					  
+
+					//ContentValues cv = new ContentValues();
 				    // connect to DB
 
-					if(changeFromTime) cv.put("timeStart", timeFrom);
+					/*if(changeFromTime) cv.put("timeStart", timeFrom);
 					if(changeToTime) cv.put("timeStop", timeTo);
 				    cv.put("sound", sound); 
 				    cv.put("soundAfter", soundAfter);
                     cv.put("enabled", enable);
 
                     long rowID = db.update("mytable", cv, "_id = ?",
-				            new String[] { String.valueOf(id) });
-				    Log.d(LOG_TAG, "row inserted, ID = " + rowID);
+				            new String[] { String.valueOf(id) });*/
+                    int val = enable? 1 : 0;
+                    myDb.updateRow(id, timeFrom, timeTo,0, 1);
+
                     Intent intent = new Intent();
 
                     intent.putExtra("from", timeFrom);
@@ -186,9 +176,8 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
                     finish();
 
 				break;	
-				case  R.id.buttonDelete:							    			    
-				  long rowID1 = db.delete("mytable", "_id = " + id, null);
-				  Log.d(LOG_TAG, "row deleted, ID = " + rowID1);
+				case  R.id.buttonDelete:
+                    myDb.deleteRow(id);
 				break;
 				}
 			}
@@ -199,20 +188,6 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 			@Override
 			public void onCheckedChanged(CompoundButton v, boolean isChecked) {
 				switch(v.getId()){
-				case  R.id.switch1Edit:
-					if(isChecked) {
-						sound = true;
-				    } else {
-				    	sound = false;
-				    }
-				break;
-				case  R.id.switch2Edit:
-                        if(isChecked) {
-                            soundAfter = true;
-                        } else {
-                            soundAfter = false;
-                        }
-                        break;
                     case  R.id.switch3Edit:
                         if(isChecked) {
                             enable = true;
@@ -260,4 +235,9 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 			}
 		}
 
+
+    private void openDB() {
+        myDb = new DBAdapter(this);
+        myDb.open();
+    }
 }

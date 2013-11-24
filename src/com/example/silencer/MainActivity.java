@@ -44,7 +44,6 @@ public class MainActivity extends Activity implements OnClickListener{
     final String FROM_TIME = "from_time";
     final String FROM_TO = "to_time";
 
-
 	int selectedID;
 	
 	@Override
