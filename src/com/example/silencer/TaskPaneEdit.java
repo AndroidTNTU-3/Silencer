@@ -1,5 +1,6 @@
 package com.example.silencer;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -61,6 +62,7 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
     Calendar setTimeTo = Calendar.getInstance();
     String startTime;
     String stopTime;
+    SimpleDateFormat sdf;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -76,9 +78,10 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 		switchSound = (Switch) findViewById(R.id.switch1Edit);
 		switchSoundAfter = (Switch) findViewById(R.id.switch2Edit);
         switchEnable = (Switch) findViewById(R.id.switch3Edit);
+
 	    buttonFromDate.setText(getDate());
 	    buttonToDate.setText(getDate());
-		buttonToDate.setText(getDate());	
+
 		buttonFromTime.setOnClickListener(new ButtonListener());
 		buttonToTime.setOnClickListener(new ButtonListener());
 		buttonSet.setOnClickListener(new ButtonListener());
@@ -109,13 +112,12 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
           long fromTime = c.getLong(timeStartColIndex);
           long toTime = c.getLong(timeStopColIndex);
 
-
-
           setTimeFrom.setTimeInMillis(fromTime);
           setTimeTo.setTimeInMillis(toTime);
 
-          startTime = String.valueOf(setTimeFrom.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(setTimeFrom.get(Calendar.MINUTE));
-          stopTime = String.valueOf(setTimeTo.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(setTimeTo.get(Calendar.MINUTE));
+          sdf = new SimpleDateFormat("HH:mm");
+          startTime = sdf.format(setTimeFrom.getTime());
+          stopTime = sdf.format(setTimeTo.getTime());
 
 	      buttonFromTime.setText(startTime);
 	      buttonToTime.setText(stopTime);
@@ -133,8 +135,7 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 	      
 	}
 	
-	
-	
+
 	//Get Data
 	private CharSequence getDate() {
 		Date d = new Date();
@@ -181,7 +182,6 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
                     intent.putExtra("to", timeTo);
                     intent.putExtra("enable", enable);
 
-
                     setResult(RESULT_OK, intent);
                     finish();
 
@@ -189,9 +189,7 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 				case  R.id.buttonDelete:							    			    
 				  long rowID1 = db.delete("mytable", "_id = " + id, null);
 				  Log.d(LOG_TAG, "row deleted, ID = " + rowID1);
-				break;	
-				
-				
+				break;
 				}
 			}
 
@@ -237,11 +235,11 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 				{
 					hourStart = Hour;
 					minutStart = Minut;
-					timeStart.set(0, minutStart, hourStart, 0, 0, 0);
+
                     setTimeFrom.set(Calendar.HOUR_OF_DAY, Hour);
                     setTimeFrom.set(Calendar.MINUTE, Minut);
                     timeFrom = setTimeFrom.getTimeInMillis();
-                    startTime = String.valueOf(setTimeFrom.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(setTimeFrom.get(Calendar.MINUTE));
+                    startTime = sdf.format(setTimeFrom.getTime());
 					buttonFromTime.setText(startTime);
 					changeFromTime = true;
 				}
@@ -250,11 +248,11 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 				{
 					hourStop = Hour;
 					minutStop = Minut;
-					timeStop.set(0, minutStop, hourStop, 0, 0, 0);
+
                     setTimeTo.set(Calendar.HOUR_OF_DAY, Hour);
                     setTimeTo.set(Calendar.MINUTE, Minut);
                     timeTo = setTimeTo.getTimeInMillis();
-                    stopTime = String.valueOf(setTimeTo.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(setTimeTo.get(Calendar.MINUTE));
+                    stopTime = sdf.format(setTimeTo.getTime());
 					buttonToTime.setText(stopTime);
 					changeToTime = true;
 				}

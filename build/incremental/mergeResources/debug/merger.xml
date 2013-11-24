@@ -2,174 +2,174 @@
 <merger>
 
     <dataSet config="main" >
-        <source path="C:\Users\Alex\AndroidStudioProjects\Silencer\res" >
+        <source path="E:\Silencer\Silencer\res" >
             <file
                 name="background_clock"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable\background_clock.xml"
+                path="E:\Silencer\Silencer\res\drawable\background_clock.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="background_main"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable\background_main.xml"
+                path="E:\Silencer\Silencer\res\drawable\background_main.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="background_main2"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable\background_main2.xml"
+                path="E:\Silencer\Silencer\res\drawable\background_main2.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="button_dark2_selector"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable\button_dark2_selector.xml"
+                path="E:\Silencer\Silencer\res\drawable\button_dark2_selector.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="button_dark_selector"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable\button_dark_selector.xml"
+                path="E:\Silencer\Silencer\res\drawable\button_dark_selector.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="button_primary_selector"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable\button_primary_selector.xml"
+                path="E:\Silencer\Silencer\res\drawable\button_primary_selector.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="icon"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable\icon.png"
+                path="E:\Silencer\Silencer\res\drawable\icon.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="rect"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable\rect.xml"
+                path="E:\Silencer\Silencer\res\drawable\rect.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="check"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-hdpi\check.png"
+                path="E:\Silencer\Silencer\res\drawable-hdpi\check.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="icon"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-hdpi\icon.png"
+                path="E:\Silencer\Silencer\res\drawable-hdpi\icon.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="nosound"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-hdpi\nosound.png"
+                path="E:\Silencer\Silencer\res\drawable-hdpi\nosound.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="sound"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-hdpi\sound.png"
+                path="E:\Silencer\Silencer\res\drawable-hdpi\sound.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="check"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-mdpi\check.png"
+                path="E:\Silencer\Silencer\res\drawable-mdpi\check.png"
                 qualifiers="mdpi"
                 type="drawable" />
             <file
                 name="icon"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-mdpi\icon.png"
+                path="E:\Silencer\Silencer\res\drawable-mdpi\icon.png"
                 qualifiers="mdpi"
                 type="drawable" />
             <file
                 name="nosound"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-mdpi\nosound.png"
+                path="E:\Silencer\Silencer\res\drawable-mdpi\nosound.png"
                 qualifiers="mdpi"
                 type="drawable" />
             <file
                 name="sound"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-mdpi\sound.png"
+                path="E:\Silencer\Silencer\res\drawable-mdpi\sound.png"
                 qualifiers="mdpi"
                 type="drawable" />
             <file
                 name="check"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-xhdpi\check.png"
+                path="E:\Silencer\Silencer\res\drawable-xhdpi\check.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
                 name="icon"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-xhdpi\icon.png"
+                path="E:\Silencer\Silencer\res\drawable-xhdpi\icon.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
                 name="nosound"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-xhdpi\nosound.png"
+                path="E:\Silencer\Silencer\res\drawable-xhdpi\nosound.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
                 name="sound"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-xhdpi\sound.png"
+                path="E:\Silencer\Silencer\res\drawable-xhdpi\sound.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
                 name="check"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-xxhdpi\check.png"
+                path="E:\Silencer\Silencer\res\drawable-xxhdpi\check.png"
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
                 name="icon"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-xxhdpi\icon.png"
+                path="E:\Silencer\Silencer\res\drawable-xxhdpi\icon.png"
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
                 name="nosound"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-xxhdpi\nosound.png"
+                path="E:\Silencer\Silencer\res\drawable-xxhdpi\nosound.png"
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
                 name="sound"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-xxhdpi\sound.png"
+                path="E:\Silencer\Silencer\res\drawable-xxhdpi\sound.png"
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
                 name="activity_main"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\layout\activity_main.xml"
+                path="E:\Silencer\Silencer\res\layout\activity_main.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_task_pane"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\layout\activity_task_pane.xml"
+                path="E:\Silencer\Silencer\res\layout\activity_task_pane.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_task_pane_edit"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\layout\activity_task_pane_edit.xml"
+                path="E:\Silencer\Silencer\res\layout\activity_task_pane_edit.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="dialog_time"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\layout\dialog_time.xml"
+                path="E:\Silencer\Silencer\res\layout\dialog_time.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="item_layout"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\layout\item_layout.xml"
+                path="E:\Silencer\Silencer\res\layout\item_layout.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="dialog1"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\layout-land\dialog1.xml"
+                path="E:\Silencer\Silencer\res\layout-land\dialog1.xml"
                 qualifiers="land"
                 type="layout" />
             <file
                 name="main"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\menu\main.xml"
+                path="E:\Silencer\Silencer\res\menu\main.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="task_pane"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\menu\task_pane.xml"
+                path="E:\Silencer\Silencer\res\menu\task_pane.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="task_pane_edit"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\menu\task_pane_edit.xml"
+                path="E:\Silencer\Silencer\res\menu\task_pane_edit.xml"
                 qualifiers=""
                 type="menu" />
             <file
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\values\colors.xml"
+                path="E:\Silencer\Silencer\res\values\colors.xml"
                 qualifiers="" >
                 <color name="white" >#FFFFFF
                 </color>
@@ -183,7 +183,7 @@
                 </color>
             </file>
             <file
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\values\dimens.xml"
+                path="E:\Silencer\Silencer\res\values\dimens.xml"
                 qualifiers="" >
                 <dimen name="activity_horizontal_margin" >16dp
                 </dimen>
@@ -191,7 +191,7 @@
                 </dimen>
             </file>
             <file
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\values\strings.xml"
+                path="E:\Silencer\Silencer\res\values\strings.xml"
                 qualifiers="" >
                 <string name="time" >Time
                 </string>
@@ -217,9 +217,9 @@
                 </string>
                 <string name="title_activity_task_pane_edit" >TaskPaneEdit
                 </string>
-                <string name="edit" >Edit
-                </string>
                 <string name="taskLabelEdit" >Edit Task
+                </string>
+                <string name="edit" >Edit
                 </string>
                 <string name="app_name" >Silencer
                 </string>
@@ -227,15 +227,15 @@
                 </string>
                 <string name="delete" >Delete
                 </string>
-                <string name="hello_world" >Hello world!
-                </string>
                 <string name="soundOn" >Sound
+                </string>
+                <string name="hello_world" >Hello world!
                 </string>
                 <string name="setTask" >Set
                 </string>
             </file>
             <file
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\values\styles.xml"
+                path="E:\Silencer\Silencer\res\values\styles.xml"
                 qualifiers="" >
 
                 <style
@@ -257,7 +257,7 @@
                 </style>
             </file>
             <file
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\values\theme.xml"
+                path="E:\Silencer\Silencer\res\values\theme.xml"
                 qualifiers="" >
 
                 <style
@@ -285,13 +285,13 @@
                 </style>
             </file>
             <file
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\values-sw720dp-land\dimens.xml"
+                path="E:\Silencer\Silencer\res\values-sw720dp-land\dimens.xml"
                 qualifiers="sw720dp-land" >
                 <dimen name="activity_horizontal_margin" >128dp
                 </dimen>
             </file>
             <file
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\values-v11\styles.xml"
+                path="E:\Silencer\Silencer\res\values-v11\styles.xml"
                 qualifiers="v11" >
 
                 <style
@@ -302,7 +302,7 @@
                 </style>
             </file>
             <file
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\values-v14\styles.xml"
+                path="E:\Silencer\Silencer\res\values-v14\styles.xml"
                 qualifiers="v14" >
 
                 <style
@@ -313,10 +313,10 @@
                 </style>
             </file>
         </source>
-        <source path="C:\Users\Alex\AndroidStudioProjects\Silencer\build\res\rs\debug" />
+        <source path="E:\Silencer\Silencer\build\res\rs\debug" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="C:\Users\Alex\AndroidStudioProjects\Silencer\build-types\debug\res" />
+        <source path="E:\Silencer\Silencer\build-types\debug\res" />
     </dataSet>
 
 </merger>

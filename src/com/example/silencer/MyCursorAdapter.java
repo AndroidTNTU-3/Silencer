@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.example.silencer.DBAdapter;
 import com.example.silencer.R;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import static android.support.v4.app.ActivityCompat.startActivity;
@@ -67,14 +68,10 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
         int id_id = cursor.getColumnIndex( DBAdapter.KEY_ROWID );
         int idfromTime = cursor.getColumnIndex( DBAdapter.KEY_FROM_TIME );
         int idtoTime = cursor.getColumnIndex( DBAdapter.KEY_TO_TIME );
-        int idsound = cursor.getColumnIndex( DBAdapter.KEY_SOUND );
-        int idsoundAfter = cursor.getColumnIndex( DBAdapter.KEY_SOUND_AFTER );
         int idEnable = cursor.getColumnIndex( DBAdapter.KEY_ENABLED );
         final long id = cursor.getInt(id_id);
         final long fromTime = cursor.getLong(idfromTime);
         final long toTime = cursor.getLong(idtoTime);
-        final int sound = cursor.getInt(idsound);
-        final int soundAfter = cursor.getInt(idsoundAfter);
         final int enable = cursor.getInt(idEnable);
 
         DBHelper dbHelper = new DBHelper(context);
@@ -83,33 +80,18 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
         Cursor c = db.rawQuery(sql, null);
         c.moveToFirst();
 
-
         setTimeFrom.setTimeInMillis(fromTime);
         setTimeTo.setTimeInMillis(toTime);
 
-        startTime = String.valueOf(setTimeFrom.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(setTimeFrom.get(Calendar.MINUTE));
-        stopTime = String.valueOf(setTimeTo.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(setTimeTo.get(Calendar.MINUTE));
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+        startTime = sdf.format(setTimeFrom.getTime());
+        stopTime = sdf.format(setTimeTo.getTime());
 
         TextView textfrom = (TextView) view.findViewById(R.id.textViewFrom);
         TextView textto = (TextView) view.findViewById(R.id.textViewTo);
-        final TextView textMainto = (TextView) view.findViewById(R.id.textTimeMainTo);
-        //TextView textsound = (TextView) view.findViewById(R.id.textViewSound);
-        //TextView textsoundAfter = (TextView) view.findViewById(R.id.textViewSoundAfter);
-        ImageView im = (ImageView) view.findViewById(R.id.imageZoom);
-        ImageView checked = (ImageView) view.findViewById(R.id.imageCheck);
         final CheckBox checkBox = (CheckBox) view.findViewById(R.id.checkBoxEnable);
         textfrom.setText(startTime);
         textto.setText(stopTime);
-        //textsound.setText(String.valueOf(sound));
-        //textsoundAfter.setText(String.valueOf(soundAfter));
-
-        /*if (sound == 1) im.setVisibility(ImageView.VISIBLE);
-        else im.setVisibility(ImageView.INVISIBLE);*/
-        if (sound == 1) im.setImageDrawable(context.getResources().getDrawable(R.drawable.sound));
-        else im.setImageDrawable(context.getResources().getDrawable(R.drawable.nosound));
-        checked.setImageDrawable(context.getResources().getDrawable(R.drawable.check));
-        if (enable == 1) checked.setVisibility(View.VISIBLE);
-        else checked.setVisibility(View.INVISIBLE);
 
 
         if (enable == 1) checkBox.setChecked(true);
@@ -124,27 +106,26 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
                 intentEdit.putExtra("id", id);
                 context.startActivity(intentEdit);
 
+
+
             }
         });
-
-
 
       checkBox.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Log.d(LOG_TAG, "time = ");
                 ContentValues cv = new ContentValues();
-
+                Intent serviceIntent = new Intent(context, MyService.class);
+                serviceIntent.putExtra("timeStart", fromTime);
+                serviceIntent.putExtra("timeStop", toTime);
+                context.startService(serviceIntent);
 
 
                 if(checkBox.isChecked()) {
                    // itemChecked.set(pos, true);
 
-
                     cv.put("timeStart", fromTime);
                     cv.put("timeStop", toTime);
-                    cv.put("sound", sound);
-                    cv.put("soundAfter", soundAfter);
                     cv.put("enabled", 1);
                     long rowID = db.update("mytable", cv, "_id = ?",
                             new String[] { String.valueOf(id) });

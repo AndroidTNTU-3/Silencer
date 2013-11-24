@@ -26,8 +26,6 @@ public class MainActivity extends Activity implements OnClickListener{
     Button start;
 	ListView myList;
 	TaskPane taskPane;
-	TextView labelfrom;
-    TextView labelto;
     Intent intentEdit;
 
     SharedPreferences sPref;
@@ -59,8 +57,7 @@ public class MainActivity extends Activity implements OnClickListener{
         start = (Button) findViewById(R.id.button_start);
 		btn_add.setOnClickListener(this);
         start.setOnClickListener(this);
-        labelto = (TextView) findViewById(R.id.textTimeMainTo);
-        labelfrom = (TextView) findViewById(R.id.textTimeMainFrom);
+
 		myList = (ListView) findViewById(R.id.listView1);
         myList.setFocusable(true);
         myList.setOnItemClickListener(new listItemListener());
@@ -76,9 +73,9 @@ public class MainActivity extends Activity implements OnClickListener{
 
         startManagingCursor(cursor);
 		String[] fromFieldNames = new String[] 
-				{DBAdapter.KEY_FROM_TIME, DBAdapter.KEY_TO_TIME, DBAdapter.KEY_SOUND, DBAdapter.KEY_SOUND_AFTER, DBAdapter.KEY_ENABLED};
+				{DBAdapter.KEY_FROM_TIME, DBAdapter.KEY_TO_TIME, DBAdapter.KEY_ENABLED};
 		int[] toViewIDs = new int[]
-				{R.id.textViewFrom, R.id.textViewTo, R.id.textViewSound, R.id.textViewSoundAfter};
+				{R.id.textViewFrom, R.id.textViewTo};
 
 
 		myCursorAdapter = new MyCursorAdapter(
@@ -154,16 +151,6 @@ public class MainActivity extends Activity implements OnClickListener{
 
         settedTimeTo.set(Calendar.HOUR_OF_DAY, timeToDB.get(Calendar.HOUR_OF_DAY)); //Set silence time to
         settedTimeTo.set(Calendar.MINUTE, timeToDB.get(Calendar.MINUTE));           //Set silence time to
-
-        String startTime = String.valueOf(settedTimeFrom.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(settedTimeFrom.get(Calendar.MINUTE));
-        String stopTime = String.valueOf(settedTimeTo.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(settedTimeTo.get(Calendar.MINUTE));
-
-
-        if(enable){
-        labelfrom.setText(startTime);
-        labelto.setText(stopTime);
-        //saveText(); //commit to preference
-        }
     }
 
     private class listItemListener implements OnItemClickListener{
@@ -197,12 +184,6 @@ public class MainActivity extends Activity implements OnClickListener{
 
         settedTimeTo.set(Calendar.HOUR_OF_DAY, timeToDB.get(Calendar.HOUR_OF_DAY)); //Set silence time to
         settedTimeTo.set(Calendar.MINUTE, timeToDB.get(Calendar.MINUTE));           //Set silence time to
-
-        String startTime = String.valueOf(settedTimeFrom.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(settedTimeFrom.get(Calendar.MINUTE));
-        String stopTime = String.valueOf(settedTimeTo.get(Calendar.HOUR_OF_DAY)) + ":" + String.valueOf(settedTimeTo.get(Calendar.MINUTE));
-
-        labelfrom.setText(startTime);
-        labelto.setText(stopTime);
     }
 
 

@@ -12,35 +12,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed7c693f-f869-4748-9001-5bb4e428bf99" name="Default" comment="Added Service and Resivers">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/res/all/debug/drawable-hdpi/check.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/res/all/debug/drawable-mdpi/check.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/res/all/debug/drawable-xhdpi/check.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/res/all/debug/drawable-xxhdpi/check.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/check.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/check.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/check.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/check.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/silencer/offSoundResiver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/silencer/onSoundResiver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/silencer/stateSoundResiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/silencer/DBAdapter.java" afterPath="$PROJECT_DIR$/src/com/example/silencer/DBAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/silencer/DBHelper.java" afterPath="$PROJECT_DIR$/src/com/example/silencer/DBHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/silencer/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/example/silencer/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/silencer/MyCursorAdapter.java" afterPath="$PROJECT_DIR$/src/com/example/silencer/MyCursorAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/silencer/MyService.java" afterPath="$PROJECT_DIR$/src/com/example/silencer/MyService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/source/r/debug/com/example/silencer/R.java" afterPath="$PROJECT_DIR$/build/source/r/debug/com/example/silencer/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/silencer/TaskPane.java" afterPath="$PROJECT_DIR$/src/com/example/silencer/TaskPane.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/silencer/TaskPaneEdit.java" afterPath="$PROJECT_DIR$/src/com/example/silencer/TaskPaneEdit.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/layout/activity_main.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/layout/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/res/layout/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/layout/activity_task_pane.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/layout/activity_task_pane.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_task_pane.xml" afterPath="$PROJECT_DIR$/res/layout/activity_task_pane.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/layout/activity_task_pane_edit.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/layout/activity_task_pane_edit.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable/background_clock.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/drawable/background_clock.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable/background_main.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/drawable/background_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable/background_main2.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/drawable/background_main2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable/button_dark2_selector.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/drawable/button_dark2_selector.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable/button_dark_selector.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/drawable/button_dark_selector.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable/button_primary_selector.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/drawable/button_primary_selector.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/layout-land/dialog1.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/layout-land/dialog1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/layout/dialog_time.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/layout/dialog_time.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/layout/item_layout.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/layout/item_layout.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/item_layout.xml" afterPath="$PROJECT_DIR$/res/layout/item_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/menu/main.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/menu/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/drawable/rect.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/drawable/rect.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/menu/task_pane.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/menu/task_pane.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/menu/task_pane_edit.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/menu/task_pane_edit.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/values/values.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/values-sw720dp-land/values.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/values-sw720dp-land/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/values-v11/values.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/values-v11/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/res/all/debug/values-v14/values.xml" afterPath="$PROJECT_DIR$/build/res/all/debug/values-v14/values.xml" />
     </list>
     <ignored path="Silencer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,25 +111,7 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/silencer/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="14" selection-start="3948" selection-end="3948" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="3111">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskPane.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/silencer/TaskPane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="18" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="4046">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskPaneEdit.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/silencer/TaskPaneEdit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="49" selection-start="2185" selection-end="2185" vertical-scroll-proportion="0.0" vertical-offset="1292" max-vertical-offset="4607">
+            <state line="27" column="22" selection-start="788" selection-end="788" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="3179">
               <folding />
             </state>
           </provider>
@@ -139,19 +120,29 @@
       <file leaf-file-name="MyService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/silencer/MyService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="33" selection-start="1060" selection-end="1060" vertical-scroll-proportion="0.45936397" vertical-offset="250" max-vertical-offset="1309">
+            <state line="70" column="35" selection-start="2284" selection-end="2284" vertical-scroll-proportion="1.4473684" vertical-offset="470" max-vertical-offset="1360">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stateSoundResiver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/silencer/stateSoundResiver.java">
+      <file leaf-file-name="MyCursorAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/silencer/MyCursorAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="38" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="131" column="66" selection-start="4498" selection-end="4498" vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="2261">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="85" column="17" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.0" vertical-offset="1009" max-vertical-offset="1547">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,16 +150,16 @@
       <file leaf-file-name="onSoundResiver.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/silencer/onSoundResiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="59" selection-start="554" selection-end="585" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+            <state line="22" column="8" selection-start="668" selection-end="695" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="527">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="offSoundResiver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/silencer/offSoundResiver.java">
+      <file leaf-file-name="TaskPane.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/silencer/TaskPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="36" selection-start="782" selection-end="782" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+            <state line="155" column="50" selection-start="4478" selection-end="4478" vertical-scroll-proportion="0.0" vertical-offset="2635" max-vertical-offset="3604">
               <folding />
             </state>
           </provider>
@@ -529,38 +520,39 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="1384847858476" />
         <entry key="C:\Users\Alex\AndroidStudioProjects\Silencer" value="1384847858476" />
+        <entry key="$PROJECT_DIR$" value="1384847858476" />
+        <entry key="E:\Silencer\Silencer" value="1384847858476" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_task_pane.xml" />
-        <option value="$PROJECT_DIR$/res/layout/item_layout.xml" />
         <option value="$PROJECT_DIR$/src/com/example/silencer/DBHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/example/silencer/MyCursorAdapter.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_task_pane_edit.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/silencer/TaskPane.java" />
-        <option value="$PROJECT_DIR$/src/com/example/silencer/TaskPaneEdit.java" />
-        <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/src/com/example/silencer/TimeCatcher.java" />
-        <option value="$PROJECT_DIR$/src/com/example/silencer/MainActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/example/silencer/stateSoundResiver.java" />
         <option value="$PROJECT_DIR$/src/com/example/silencer/onSoundResiver.java" />
         <option value="$PROJECT_DIR$/src/com/example/silencer/offSoundResiver.java" />
         <option value="$PROJECT_DIR$/src/com/example/silencer/MyService.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/layout/item_layout.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/silencer/TaskPaneEdit.java" />
+        <option value="$PROJECT_DIR$/src/com/example/silencer/TaskPane.java" />
+        <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/silencer/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/silencer/MyCursorAdapter.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -588,7 +580,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -675,26 +666,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Silencer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Silencer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-mdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -707,7 +681,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="a2" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="A233" />
     <property name="FullScreen" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
@@ -753,6 +727,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -778,19 +765,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -921,11 +895,19 @@
       <created>1385047504856</created>
       <updated>1385047504856</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added set time via CheckBox on ListView">
+      <created>1385190718283</created>
+      <updated>1385190718283</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Changes in item_layout.xml">
+      <created>1385191223754</created>
+      <updated>1385191223754</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -938,20 +920,20 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20440637" sideWeight="0.500846" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3256617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3187572" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32427844" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3106961" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20869033" sideWeight="0.49915397" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32451093" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15227273" sideWeight="0.49915397" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32427844" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2677696" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2663126" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -967,17 +949,14 @@
     <MESSAGE value="Update UI: extended MyCursorAdapter&#10;Code: solved minor bags" />
     <MESSAGE value="Update DB: add field &quot;enabled&quot;&#10;CursorAdapter: structure modified&#10;Code: solved minor bags" />
     <MESSAGE value="Added Service and Resivers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Service and Resivers" />
+    <MESSAGE value="Added set time via CheckBox on ListView" />
+    <MESSAGE value="Changes in item_layout.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes in item_layout.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/android/app/ActivityThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2067" column="51" selection-start="86303" selection-end="86303" vertical-scroll-proportion="1.3227513" vertical-offset="32145" max-vertical-offset="84609" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/silencer/DBHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="28" selection-start="1261" selection-end="1261" vertical-scroll-proportion="1.0793651" vertical-offset="0" max-vertical-offset="918">
@@ -993,6 +972,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_task_pane_edit.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="188" column="0" selection-start="7176" selection-end="7176" vertical-scroll-proportion="0.10147601" vertical-offset="3141" max-vertical-offset="3876">
           <folding>
@@ -1014,32 +996,13 @@
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_task_pane.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="0" selection-start="4598" selection-end="4695" vertical-scroll-proportion="0.6918819" vertical-offset="1801" max-vertical-offset="3893">
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/MyCursorAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="44" selection-start="5724" selection-end="5724" vertical-scroll-proportion="1.8650887" vertical-offset="1042" max-vertical-offset="2958">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/TaskPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="18" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3638">
+        <state line="128" column="0" selection-start="4598" selection-end="4695" vertical-scroll-proportion="0.6918819" vertical-offset="1801" max-vertical-offset="3893">
           <folding />
         </state>
       </provider>
@@ -1049,68 +1012,93 @@
         <state line="1528" column="21" selection-start="59357" selection-end="59357" vertical-scroll-proportion="0.6031746" vertical-offset="24529" max-vertical-offset="29495" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/TaskPaneEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="49" selection-start="2185" selection-end="2185" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4607">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="45" column="44" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1734">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="37" selection-start="1920" selection-end="1920" vertical-scroll-proportion="1.5441697" vertical-offset="61" max-vertical-offset="1139">
           <folding>
-            <element signature="e#692#710#0" expanded="true" />
-            <element signature="e#908#926#0" expanded="true" />
-            <element signature="e#1254#1288#0" expanded="true" />
-            <element signature="e#1416#1455#0" expanded="true" />
+            <element signature="e#692#710#0" expanded="false" />
+            <element signature="e#908#926#0" expanded="false" />
+            <element signature="e#1254#1288#0" expanded="false" />
+            <element signature="e#1416#1455#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/stateSoundResiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="38" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/onSoundResiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="59" selection-start="554" selection-end="585" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/silencer/offSoundResiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="36" selection-start="782" selection-end="782" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+        <state line="19" column="37" selection-start="611" selection-end="611" vertical-scroll-proportion="0.6263158" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/onSoundResiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="8" selection-start="668" selection-end="695" vertical-scroll-proportion="0.0" vertical-offset="62" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="34" selection-start="345" selection-end="345" vertical-scroll-proportion="0.2236842" vertical-offset="51" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/TaskPaneEdit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="0" selection-start="4494" selection-end="4494" vertical-scroll-proportion="0.0" vertical-offset="657" max-vertical-offset="4216">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/item_layout.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="554" selection-end="554" vertical-scroll-proportion="0.6461988" vertical-offset="0" max-vertical-offset="1054">
+          <folding>
+            <element signature="e#442#461#0" expanded="true" />
+            <element signature="e#1231#1248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="17" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.0" vertical-offset="1009" max-vertical-offset="1547">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/silencer/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="14" selection-start="3948" selection-end="3948" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="3111">
+        <state line="27" column="22" selection-start="788" selection-end="788" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="3179">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/MyCursorAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="66" selection-start="4498" selection-end="4498" vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="2261">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/silencer/TaskPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="50" selection-start="4478" selection-end="4478" vertical-scroll-proportion="0.0" vertical-offset="1989" max-vertical-offset="3604">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/silencer/MyService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="33" selection-start="1060" selection-end="1060" vertical-scroll-proportion="0.45936397" vertical-offset="250" max-vertical-offset="1309">
+        <state line="70" column="35" selection-start="2284" selection-end="2284" vertical-scroll-proportion="1.4473684" vertical-offset="470" max-vertical-offset="1360">
           <folding />
         </state>
       </provider>

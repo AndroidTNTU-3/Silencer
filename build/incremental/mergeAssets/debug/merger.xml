@@ -2,10 +2,10 @@
 <merger>
 
     <dataSet config="main" >
-        <source path="C:\Users\Alex\AndroidStudioProjects\Silencer\assets" />
+        <source path="E:\Silencer\Silencer\assets" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="C:\Users\Alex\AndroidStudioProjects\Silencer\build-types\debug\assets" />
+        <source path="E:\Silencer\Silencer\build-types\debug\assets" />
     </dataSet>
 
 </merger>

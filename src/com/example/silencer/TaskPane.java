@@ -149,13 +149,11 @@ final String LOG_TAG = "myLogs";
 			    long rowID = db.insert("mytable", null, cv);
 			    Log.d(LOG_TAG, "row inserted, ID = " + rowID);
 
-
                 Intent intent = new Intent();
 
                 intent.putExtra("from", timeFrom);
                 intent.putExtra("to", timeTo);
                 intent.putExtra("enable", enable);
-
 
                 setResult(RESULT_OK, intent);
                 finish();
