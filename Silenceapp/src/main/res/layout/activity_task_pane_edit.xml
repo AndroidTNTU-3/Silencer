@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/black"
+    android:background="@color/lightgray"
     tools:context=".TaskPane">
 
     <LinearLayout
@@ -19,10 +19,10 @@
             android:id="@+id/taskLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/deepblue"
             android:gravity="center_horizontal"
             android:text="@string/taskLabelEdit"
-            android:textColor="@color/white" />
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
 
     </LinearLayout>
 
@@ -42,23 +42,22 @@
                 android:id="@+id/textViewFrom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/lightgray"
+                android:textColor="@color/black"
+                android:textSize="20sp"
                 android:text="@string/from_time" />
 
             <Button
                 android:id="@+id/buttonFromDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/lightgray"
-                style="@style/DarkThemeButton"
+                android:textColor="@color/black"
                 android:text="Button" />
 
             <Button
                 android:id="@+id/button_fromEdit"
-                android:textColor="@color/lightgray"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/DarkThemeButton"
                 android:text="Button" />
 
         </TableRow>
@@ -70,7 +69,7 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:textColor="@color/lightgray"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/to_time" />
@@ -79,14 +78,12 @@
                 android:id="@+id/buttonToDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/lightgray"
-                style="@style/DarkThemeButton"
+                android:textColor="@color/black"
                 android:text="Button" />
 
             <Button
                 android:id="@+id/button_toEdit"
-                android:textColor="@color/lightgray"
-                style="@style/DarkThemeButton"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Button" />
@@ -119,8 +116,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/separator"
         android:text="@string/during"
-        android:background="@color/deepblue"
-        android:textColor="@color/lightgray"
+        android:textColor="@color/black"
         android:gravity="center_horizontal" />
 
     <LinearLayout
@@ -135,7 +131,7 @@
             android:id="@+id/switch1Edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/lightgray"
+            android:textColor="@color/black"
             android:text="@string/soundOn" />
 
     </LinearLayout>
@@ -146,8 +142,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/duringBlock"
         android:text="@string/afterDuring"
-        android:background="@color/deepblue"
-        android:textColor="@color/lightgray"
+        android:textColor="@color/black"
         android:gravity="center_horizontal" />
 
     <LinearLayout
@@ -162,7 +157,7 @@
             android:id="@+id/switch2Edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/lightgray"
+            android:textColor="@color/black"
             android:text="@string/soundOn" />
 
     </LinearLayout>
@@ -173,8 +168,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/afterDuringBlock"
         android:text="@string/onTime"
-        android:background="@color/deepblue"
-        android:textColor="@color/lightgray"
+        android:textColor="@color/black"
         android:gravity="center_horizontal" />
 
     <LinearLayout
@@ -189,7 +183,7 @@
             android:id="@+id/switch3Edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/lightgray"
+            android:textColor="@color/black"
             android:text="@string/enable" />
 
     </LinearLayout>
@@ -205,16 +199,14 @@
             android:id="@+id/buttonSetTaskEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/lightgray"
-            style="@style/DarkThemeButton"
+            android:textColor="@color/black"
             android:text="@string/setTask" />
 
         <Button
             android:id="@+id/buttonDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/lightgray"
-            style="@style/DarkThemeButton"
+            android:textColor="@color/black"
             android:text="@string/delete" />
 
     </LinearLayout>
