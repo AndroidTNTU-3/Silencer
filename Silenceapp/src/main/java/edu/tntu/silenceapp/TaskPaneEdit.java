@@ -185,6 +185,7 @@ public class TaskPaneEdit extends Activity implements DialogTime.TimeDialogListe
                 case R.id.buttonDelete:
                     long rowID1 = db.delete("mytable", "_id = " + id, null);
                     Log.d(LOG_TAG, "row deleted, ID = " + rowID1);
+                    finish();
                     break;
 
 

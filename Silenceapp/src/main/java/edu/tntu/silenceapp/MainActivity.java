@@ -10,12 +10,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.AdapterView;
+import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
-import android.widget.TextView;
 
 import java.util.Calendar;
 
@@ -27,7 +23,7 @@ public class MainActivity extends Activity implements OnClickListener {
     TaskPane taskPane;
     TextView labelfrom;
     TextView labelto;
-    Intent intentEdit;
+//    Intent intentEdit;
 
     SharedPreferences sPref;
     boolean enable = false;
@@ -61,7 +57,7 @@ public class MainActivity extends Activity implements OnClickListener {
         myList = (ListView) findViewById(R.id.listView1);
         myList.setFocusable(true);
         myList.setOnItemClickListener(new listItemListener());
-        intentEdit = new Intent(this, TaskPaneEdit.class);
+
         openDB();
 
         Cursor cursor = myDb.getAllRows();
@@ -164,6 +160,7 @@ public class MainActivity extends Activity implements OnClickListener {
         public void onItemClick(AdapterView<?> arg0, View v, int position,
                                 long id) {
             //Get selected item ID
+            Intent intentEdit = new Intent(getApplicationContext(), TaskPaneEdit.class);
             selectedID = position;
             intentEdit.putExtra("id", id);
             startActivityForResult(intentEdit, 1);

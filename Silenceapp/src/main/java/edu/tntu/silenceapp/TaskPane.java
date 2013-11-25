@@ -121,8 +121,6 @@ public class TaskPane extends Activity implements DialogTime.TimeDialogListener 
             buttonId = v.getId();
             switch (buttonId) {
                 case R.id.button_from:
-                    dialogtime.show(getFragmentManager(), "dlg1");
-                    break;
                 case R.id.button_to:
                     dialogtime.show(getFragmentManager(), "dlg1");
                     break;
@@ -132,6 +130,11 @@ public class TaskPane extends Activity implements DialogTime.TimeDialogListener 
                     Date d = new Date();
 
                     // connect to DB
+                    String packageName = v.getContext().getPackageName();
+                    Intent launchIntent = v.getContext().getPackageManager().getLaunchIntentForPackage(packageName);
+                    String className = launchIntent.getComponent().getClassName();
+                    launchIntent.resolveActivity(v.getContext().getPackageManager());
+
                     SQLiteDatabase db = dbHelper.getWritableDatabase();
                     cv.put("timeStart", timeFrom);
                     cv.put("timeStop", timeTo);
