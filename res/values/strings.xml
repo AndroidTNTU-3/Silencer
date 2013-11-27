@@ -21,4 +21,11 @@
     <string name="edit">Edit</string>
     <string name="enable">Enable</string>
     <string name="onTime">Set Time</string>
+    <string name="checkBoxMonday">Monday</string>
+    <string name="checkBoxTuesday">Tuesday</string>
+    <string name="checkBoxWednesday">Wednesday</string>
+    <string name="checkBoxThursday">Thursday</string>
+    <string name="checkBoxFriday">Friday</string>
+    <string name="checkBoxSaturday">Saturday</string>
+    <string name="checkBoxSunday">Sunday</string>
 </resources>

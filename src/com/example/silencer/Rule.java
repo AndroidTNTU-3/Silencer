@@ -1,5 +1,9 @@
 package com.example.silencer;
 
+/**
+ * Created by silvestr on 11/27/13.
+ */
+
 public class Rule {
 
     private long id;

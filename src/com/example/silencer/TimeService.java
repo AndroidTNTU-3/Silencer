@@ -10,8 +10,8 @@ public class TimeService {
     final String LOG_TAG = "myLogs";
     Context context;
 
-    TimeService(Context _context){
-        context =  _context;
+    TimeService(Context context){
+        this.context = context;
     }
     // get day of week
     public ArrayList<Integer> getWeek(int days){

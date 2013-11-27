@@ -171,7 +171,8 @@
      	    android:layout_height="wrap_content"
      	    android:layout_below="@+id/afterEnableBlock"
      	    android:layout_marginTop="10dp" 
-     	    android:gravity="center_horizontal">
+     	    android:gravity="center_horizontal"
+            android:id="@+id/linearLayout">
 
      		<Button
      		    android:id="@+id/buttonSetTask"
@@ -182,5 +183,77 @@
                 style="@style/DarkThemeButton2" />
 
      	</LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/duringBlock"
+        android:layout_below="@+id/linearLayout">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBoxMonday"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="17dp"
+            android:text="@string/checkBoxMonday"
+            android:textColor="@color/deepblue" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBoxTuesday"
+            android:layout_below="@+id/checkBoxMonday"
+            android:layout_alignParentLeft="true"
+            android:text="@string/checkBoxTuesday"
+            android:textColor="@color/deepblue" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkBoxWednesday"
+            android:id="@+id/checkBoxWednesday"
+            android:layout_below="@+id/checkBoxTuesday"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/deepblue" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkBoxThursday"
+            android:id="@+id/checkBoxThursday"
+            android:layout_below="@+id/checkBoxWednesday"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/deepblue" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkBoxFriday"
+            android:id="@+id/checkBoxFriday"
+            android:layout_below="@+id/checkBoxThursday"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/deepblue" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkBoxSaturday"
+            android:id="@+id/checkBoxSaturday"
+            android:layout_below="@+id/checkBoxFriday"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/deepblue" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkBoxSunday"
+            android:id="@+id/checkBoxSunday"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/deepblue" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
