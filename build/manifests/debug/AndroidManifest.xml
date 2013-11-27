@@ -41,13 +41,13 @@
 
 
         <receiver
-            android:name=".onSoundResiver" >
+            android:name="com.example.silencer.onSoundResiver" >
         </receiver>
         <receiver
-            android:name=".offSoundResiver" >
+            android:name="com.example.silencer.offSoundResiver" >
         </receiver>
         <receiver
-            android:name=".stateSoundResiver">
+            android:name="com.example.silencer.stateSoundResiver">
             <intent-filter>
                 <action android:name="android.media.RINGER_MODE_CHANGED" />
              </intent-filter>

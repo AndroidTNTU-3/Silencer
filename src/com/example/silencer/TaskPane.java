@@ -194,6 +194,8 @@ final String LOG_TAG = "myLogs";
 				minutStart = Minut;
                 timeFromCalendar.set(Calendar.HOUR_OF_DAY, Hour);
                 timeFromCalendar.set(Calendar.MINUTE, Minut);
+                timeFromCalendar.set(Calendar.SECOND, 0);
+                timeFromCalendar.set(Calendar.MILLISECOND, 0);
                 timeFrom = timeFromCalendar.getTimeInMillis();
 				timeStart.set(0, minutStart, hourStart, 0, 0, 0);
 				buttonFromTime.setText(timeStart.format("%k:%M"));
@@ -205,6 +207,9 @@ final String LOG_TAG = "myLogs";
 				minutStop = Minut;
                 timeToCalendar.set(Calendar.HOUR_OF_DAY, Hour);
                 timeToCalendar.set(Calendar.MINUTE, Minut);
+                timeToCalendar.set(Calendar.SECOND, 0);
+                timeToCalendar.set(Calendar.MILLISECOND, 0);
+
                 timeTo = timeToCalendar.getTimeInMillis();
 				timeStop.set(0, minutStop, hourStop, 0, 0, 0);
 				buttonToTime.setText(timeStop.format("%k:%M"));

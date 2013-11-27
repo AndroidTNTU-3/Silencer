@@ -213,6 +213,8 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 
                     setTimeFrom.set(Calendar.HOUR_OF_DAY, Hour);
                     setTimeFrom.set(Calendar.MINUTE, Minut);
+                    setTimeFrom.set(Calendar.SECOND, 0);
+                    setTimeFrom.set(Calendar.MILLISECOND, 0);
                     timeFrom = setTimeFrom.getTimeInMillis();
                     startTime = sdf.format(setTimeFrom.getTime());
 					buttonFromTime.setText(startTime);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/E:/Silencer/Silencer/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Alex/AndroidStudioProjects/Silencer/res/values/colors.xml -->
     <eat-comment />
 
     <color name="black">#000000</color>
@@ -9,12 +9,12 @@
     <color name="deepblue">#ff6064ff</color>
     <color name="lightgray">#fff0f0f0</color>
     <color name="white">#FFFFFF</color>
-    <!-- From: file:/E:/Silencer/Silencer/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/Alex/AndroidStudioProjects/Silencer/res/values/dimens.xml -->
     <eat-comment />
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/E:/Silencer/Silencer/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Alex/AndroidStudioProjects/Silencer/res/values/strings.xml -->
     <eat-comment />
 
     <string name="action_settings">Settings</string>
@@ -37,7 +37,7 @@
     <string name="title_activity_task_pane">TaskPane</string>
     <string name="title_activity_task_pane_edit">TaskPaneEdit</string>
     <string name="to_time">To:</string>
-    <!-- From: file:/E:/Silencer/Silencer/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Alex/AndroidStudioProjects/Silencer/res/values/styles.xml -->
     <eat-comment />
 
     <style name="AppBaseTheme" parent="android:Theme.Light">
@@ -51,7 +51,7 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    <!-- From: file:/E:/Silencer/Silencer/res/values/theme.xml -->
+    <!-- From: file:/C:/Users/Alex/AndroidStudioProjects/Silencer/res/values/theme.xml -->
     <eat-comment />
 
     <style name="DarkThemeButton" parent="@android:style/Widget.Button">

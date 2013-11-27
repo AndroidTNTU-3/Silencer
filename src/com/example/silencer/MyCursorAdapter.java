@@ -118,26 +118,20 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
       checkBox.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                ContentValues cv = new ContentValues();
-                Intent serviceIntent = new Intent(context, MyService.class);
-                serviceIntent.putExtra("timeStart", fromTime);
-                serviceIntent.putExtra("timeStop", toTime);
-                context.startService(serviceIntent);
-
 
                 if(checkBox.isChecked()) {
-                   // itemChecked.set(pos, true);
-
-                    myDb.updateRow(id, fromTime, toTime, 0, 1);
-                    ((MainActivity) _context).setTime(fromTime, toTime);
+                    //set object rule from service;
+                    Rule rule = new Rule(id, fromTime, toTime, 10, true);
+                    //update DB
+                    myDb.updateRow(id, fromTime, toTime, 10, 1);
+                    ((MainActivity) _context).setRule(rule);
+                   // ((MainActivity) _context).setTime(fromTime, toTime);
 
                 }
                 else if (!checkBox.isChecked()) {
-                  //  itemChecked.set(pos, false);
-                    /*cv.put("enabled", 0);
-                    long rowID = db.update("mytable", cv, "_id = ?",
-                            new String[] { String.valueOf(id) });*/
+                    Rule rule = new Rule(id, fromTime, toTime, 0, false);
                     myDb.updateRow(id, fromTime, toTime,0, 0);
+                    ((MainActivity) _context).setRule(rule);
                 }
             }
         });

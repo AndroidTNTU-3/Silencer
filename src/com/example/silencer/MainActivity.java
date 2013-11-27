@@ -1,5 +1,6 @@
 package com.example.silencer;
 
+import android.content.ContentValues;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
@@ -45,6 +46,11 @@ public class MainActivity extends Activity implements OnClickListener{
     final String FROM_TO = "to_time";
 
 	int selectedID;
+    MyService service;
+
+    boolean flag_startServis = true;
+
+    Rule rule;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +91,8 @@ public class MainActivity extends Activity implements OnClickListener{
 						toViewIDs				// View IDs to put information in
 						);		
 		myList.setAdapter(myCursorAdapter);
+
+        service = new MyService();
 
 	}
 
@@ -169,23 +177,18 @@ public class MainActivity extends Activity implements OnClickListener{
 		}
 	}
 
+    public void setRule(Rule _rule){
+        rule = _rule;
+        ContentValues cv = new ContentValues();
+            Intent serviceIntent = new Intent(this, MyService.class);
+            serviceIntent.putExtra("timeStart", rule.getStartTime());
+            serviceIntent.putExtra("timeStop", rule.getStopTime());
+            serviceIntent.putExtra("id", rule.getId());
+            serviceIntent.putExtra("enable", rule.isEnable());
+            serviceIntent.putExtra("days", rule.getDays());
+            this.startService(serviceIntent);
 
-    public void setTime(long fromTime, long toTime){
-        timeFrom = fromTime;
-        timeTo = toTime;
-        settedTimeFrom.setTimeInMillis(System.currentTimeMillis()); // get current time
-        settedTimeTo.setTimeInMillis(System.currentTimeMillis());   // get current time
-        timeFromDB.setTimeInMillis(timeFrom);                       //object Calendar in mills
-        timeToDB.setTimeInMillis(timeTo);                           //object Calendar in mills
-
-        settedTimeFrom.set(Calendar.HOUR_OF_DAY, timeFromDB.get(Calendar.HOUR_OF_DAY)); //Set silence time from
-        settedTimeFrom.set(Calendar.MINUTE, timeFromDB.get(Calendar.MINUTE));           //Set silence time from
-
-        settedTimeTo.set(Calendar.HOUR_OF_DAY, timeToDB.get(Calendar.HOUR_OF_DAY)); //Set silence time to
-        settedTimeTo.set(Calendar.MINUTE, timeToDB.get(Calendar.MINUTE));           //Set silence time to
     }
-
-
 
    /* private void saveText(){
         sPref = getPreferences(MODE_PRIVATE);

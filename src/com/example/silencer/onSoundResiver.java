@@ -14,7 +14,6 @@ public class onSoundResiver extends BroadcastReceiver {
     final String LOG_TAG = "myLogs";
     @Override
     public void onReceive(Context context, Intent intent) {
-
        AudioManager sound = (AudioManager)context.getSystemService(Context.AUDIO_SERVICE);
 
         sound.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
