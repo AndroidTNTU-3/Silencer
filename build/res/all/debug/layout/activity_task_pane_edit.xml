@@ -139,38 +139,26 @@
             android:textColor="@color/lightgray"
             android:text="@string/enable" />
 
+
     </LinearLayout>
-     	<LinearLayout
-     	    android:layout_width="match_parent"
-     	    android:layout_height="wrap_content"
-            android:id="@+id/buttonSetBlock"
-     	    android:layout_below="@+id/afterEnableBlock"
-     	    android:layout_marginTop="10dp" 
-     	    android:gravity="center_horizontal">
 
-     		<Button
-     		    android:id="@+id/buttonSetTaskEdit"
-     		    android:layout_width="wrap_content"
-     		    android:layout_height="wrap_content"
-                android:textColor="@color/lightgray"
-                style="@style/DarkThemeButton"
-     		    android:text="@string/setTask" />
+    <TextView
+        android:id="@+id/regulations4Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/afterEnableBlock"
+        android:text="@string/SetWeek"
+        android:background="@color/deepblue"
+        android:textColor="@color/lightgray"
+        android:gravity="center_horizontal"/>
 
-     		<Button
-     		    android:id="@+id/buttonDelete"
-     		    android:layout_width="wrap_content"
-     		    android:layout_height="wrap_content"
-                android:textColor="@color/lightgray"
-                style="@style/DarkThemeButton"
-     		    android:text="@string/delete" />
-
-     	</LinearLayout>
 
     <RelativeLayout
+        android:id="@+id/weekDaysLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/duringBlock"
-        android:layout_below="@+id/buttonSetBlock">
+        android:layout_below="@+id/afterEnableBlock">
 
         <CheckBox
             android:layout_width="wrap_content"
@@ -237,5 +225,72 @@
             android:layout_toRightOf="@+id/checkBoxSaturdayEdit" />
 
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutLabelMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weekDaysLayout"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/modeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/deepblue"
+            android:gravity="center_horizontal"
+            android:text="@string/SetMode"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutMode"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/linearLayoutLabelMode"
+        android:layout_height="wrap_content">
+
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkBoxVibrate"
+            android:textColor="@color/deepblue"
+            android:id="@+id/checkBoxVibrate" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkBoxNoSound"
+            android:textColor="@color/deepblue"
+            android:id="@+id/checkBoxNoSound" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSetBlock"
+        android:layout_below="@+id/layoutMode"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/buttonSetTaskEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightgray"
+            style="@style/DarkThemeButton"
+            android:text="@string/setTask" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightgray"
+            style="@style/DarkThemeButton"
+            android:text="@string/delete" />
+
+    </LinearLayout>
 
 </RelativeLayout><!-- From: file:/C:/Users/Alex/AndroidStudioProjects/Silencer/res/layout/activity_task_pane_edit.xml -->

@@ -41,12 +41,6 @@
                 android:textSize="36dp"
                 android:textStyle="bold"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="start service"
-                android:id="@+id/button_start" />
-
         </LinearLayout>
 
     </LinearLayout>

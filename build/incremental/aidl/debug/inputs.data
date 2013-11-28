@@ -2,11 +2,11 @@
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
 1385634329898 10626 099ea3655e7d8eaf2b2c7a7c3dee732856efeb2c C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\TaskPane.java
-1385553142798 6449 4e4f6b8f850899ad5a4596c00bbe70ab12a2394f C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\MainActivity.java
+1385640555944 5947 75a786aec5f1934d7f315dbfa78201ea397ef2fa C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\MainActivity.java
 1385392809775 4385 dea66b48c030bb29b9179257d1460c1e52fc1d81 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\DBAdapter.java
 1385533448735 727 8c503c73a6b15e38df3768b8ee61cdb32d4f9e2d C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\onSoundResiver.java
 1385017212960 1516 e108ea85a18fc8d82f79a531706e601140a528f9 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\DBHelper.java
-1385632087580 6743 3ccc06c0dfba7c426cc99c09cb96d843577ee5ba C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\MyService.java
+1385642516753 7236 30877447d2b3cf8761d50477cbea0eb33a569a35 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\MyService.java
 1385117649671 818 9eb7dad99bf8e69dd5a02b09b98b4f2ab1de9fb0 C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\offSoundResiver.java
 1385628719486 5151 14c81fc9c88495f7caa2ae52c830925ef43e0f9f C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\MyCursorAdapter.java
 1384856730483 2303 74fa4f72573d0270e64462af1b11d28bf13ffb8e C:\Users\Alex\AndroidStudioProjects\Silencer\src\com\example\silencer\DialogTime.java

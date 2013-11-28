@@ -193,6 +193,8 @@
             <file
                 path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\values\strings.xml"
                 qualifiers="" >
+                <string name="checkBoxNoSound" >No Sound
+                </string>
                 <string name="time" >Time
                 </string>
                 <string name="action_settings" >Settings
@@ -229,7 +231,11 @@
                 </string>
                 <string name="title_activity_task_pane" >TaskPane
                 </string>
+                <string name="SetMode" >Set Mode
+                </string>
                 <string name="afterDuring" >After During
+                </string>
+                <string name="SetWeek" >Set WeekDay
                 </string>
                 <string name="enable" >Enable
                 </string>
@@ -246,6 +252,8 @@
                 <string name="delete" >Delete
                 </string>
                 <string name="soundOn" >Sound
+                </string>
+                <string name="checkBoxVibrate" >Vibrate
                 </string>
             </file>
             <file

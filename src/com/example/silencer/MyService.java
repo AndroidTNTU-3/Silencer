@@ -48,6 +48,7 @@ public class MyService extends Service {
         days = intent.getIntExtra("days", 0);
         startDay = Calendar.getInstance();
         startDay.setTimeInMillis(System.currentTimeMillis());
+        long currentTime = startDay.getTimeInMillis();
 
         Calendar timeFromDB = Calendar.getInstance();
         timeFromDB.setTimeInMillis(timeStart);
@@ -86,7 +87,7 @@ public class MyService extends Service {
         if (enable){
             ArrayList<Integer> week = new TimeService(context).getWeek(days);
 
-            if (week.size() !=0){
+            if (week.size() !=0){                               //if any selected day of week
                 Calendar calc = Calendar.getInstance();
                 calc.setTimeInMillis(timeStart);
                 Log.d(LOG_TAG, "---day of month: " + calc.get(Calendar.DAY_OF_MONTH));
@@ -116,6 +117,14 @@ public class MyService extends Service {
                     soundOn(timeStop, ruleID);
 
                 }
+            }else{                              //if none is selected start current set time
+                if (timeStart < currentTime){
+                    timeStart += AlarmManager.INTERVAL_DAY;
+                    timeStop += AlarmManager.INTERVAL_DAY;
+                }
+
+                soundOff(timeStart, ruleID);
+                soundOn(timeStop, ruleID);
             }
 
 
@@ -135,7 +144,7 @@ public class MyService extends Service {
         //PendingIntent piOnStart = PendingIntent.getBroadcast(this, (int)ruleID, intentOfSound,0);
         PendingIntent piOnStart = PendingIntent.getBroadcast(this, (int)ruleID, intentOfSound,PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarm = (AlarmManager)getSystemService(ALARM_SERVICE);
-        alarm.setRepeating(AlarmManager.RTC_WAKEUP, startTime, AlarmManager.INTERVAL_DAY, piOnStart);
+        alarm.setRepeating(AlarmManager.RTC_WAKEUP, startTime, AlarmManager.INTERVAL_DAY*7, piOnStart);
         Calendar weekalarm = Calendar.getInstance();
         weekalarm.setTimeInMillis(startTime);
 
@@ -147,7 +156,7 @@ public class MyService extends Service {
         //PendingIntent piOnStop = PendingIntent.getBroadcast(this,-(int) ruleID,intentOnSound,0);
         PendingIntent piOnStop = PendingIntent.getBroadcast(this, (int)ruleID, intentOnSound,PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarm = (AlarmManager)getSystemService(ALARM_SERVICE);
-        alarm.setRepeating(AlarmManager.RTC_WAKEUP, stopTime, AlarmManager.INTERVAL_DAY, piOnStop);
+        alarm.setRepeating(AlarmManager.RTC_WAKEUP, stopTime, AlarmManager.INTERVAL_DAY*7, piOnStop);
 
     }
 

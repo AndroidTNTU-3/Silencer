@@ -24,7 +24,6 @@ import java.util.Calendar;
 public class MainActivity extends Activity implements OnClickListener{
 	TextView clock;
 	Button btn_add;
-    Button start;
 	ListView myList;
 	TaskPane taskPane;
     Intent intentEdit;
@@ -46,9 +45,6 @@ public class MainActivity extends Activity implements OnClickListener{
     final String FROM_TO = "to_time";
 
 	int selectedID;
-    MyService service;
-
-    boolean flag_startServis = true;
 
     Rule rule;
 	
@@ -59,9 +55,7 @@ public class MainActivity extends Activity implements OnClickListener{
 		clock = (TextView) findViewById(R.id.clock);
 		clock.setText(getTime());
 		btn_add = (Button) findViewById(R.id.button_add);
-        start = (Button) findViewById(R.id.button_start);
 		btn_add.setOnClickListener(this);
-        start.setOnClickListener(this);
 
 		myList = (ListView) findViewById(R.id.listView1);
         myList.setFocusable(true);
@@ -91,8 +85,6 @@ public class MainActivity extends Activity implements OnClickListener{
 						toViewIDs				// View IDs to put information in
 						);		
 		myList.setAdapter(myCursorAdapter);
-
-        service = new MyService();
 
 	}
 
@@ -130,13 +122,6 @@ public class MainActivity extends Activity implements OnClickListener{
 			Intent intent = new Intent(this, TaskPane.class);
             startActivityForResult(intent, 1);
 		break;
-        case  R.id.button_start:
-           Intent serviceIntent = new Intent(this, MyService.class);
-            serviceIntent.putExtra("timeStart", timeFrom);
-            serviceIntent.putExtra("timeStop", timeTo);
-            startService(serviceIntent);
-
-        break;
 		}
 
 	}

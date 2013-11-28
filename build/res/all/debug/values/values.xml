@@ -17,16 +17,20 @@
     <!-- From: file:/C:/Users/Alex/AndroidStudioProjects/Silencer/res/values/strings.xml -->
     <eat-comment />
 
+    <string name="SetMode">Set Mode</string>
+    <string name="SetWeek">Set WeekDay</string>
     <string name="action_settings">Settings</string>
     <string name="addTask">Add Task</string>
     <string name="afterDuring">After During</string>
     <string name="app_name">Silencer</string>
     <string name="checkBoxFriday">Fr</string>
     <string name="checkBoxMonday">Mo</string>
+    <string name="checkBoxNoSound">No Sound</string>
     <string name="checkBoxSaturday">Sa</string>
     <string name="checkBoxSunday">Su</string>
     <string name="checkBoxThursday">Th</string>
     <string name="checkBoxTuesday">Tu</string>
+    <string name="checkBoxVibrate">Vibrate</string>
     <string name="checkBoxWednesday">We</string>
     <string name="delete">Delete</string>
     <string name="during">During</string>
