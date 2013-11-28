@@ -181,11 +181,17 @@
                 </color>
                 <color name="cyan" >#00FFFF
                 </color>
+                <color name="darkgray" >#ff7c7c7c
+                </color>
             </file>
             <file
                 path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\values\dimens.xml"
                 qualifiers="" >
+                <dimen name="text_size_days" >10dp
+                </dimen>
                 <dimen name="activity_horizontal_margin" >16dp
+                </dimen>
+                <dimen name="text_size_time" >20dp
                 </dimen>
                 <dimen name="activity_vertical_margin" >16dp
                 </dimen>
@@ -193,9 +199,9 @@
             <file
                 path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\values\strings.xml"
                 qualifiers="" >
-                <string name="checkBoxNoSound" >No Sound
-                </string>
                 <string name="time" >Time
+                </string>
+                <string name="checkBoxNoSound" >No Sound
                 </string>
                 <string name="action_settings" >Settings
                 </string>

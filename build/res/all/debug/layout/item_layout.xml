@@ -21,6 +21,7 @@
         android:layout_toRightOf="@+id/textView1"
         android:textColor="@color/deepblue"
         android:textStyle="bold"
+        android:textSize="@dimen/text_size_time"
         android:text="TextView" />
 
     <TextView
@@ -40,6 +41,7 @@
         android:paddingLeft="4dp"
         android:textColor="@color/deepblue"
         android:textStyle="bold"
+        android:textSize="@dimen/text_size_time"
         android:text="TextView"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/textView2" />
@@ -51,6 +53,100 @@
         android:id="@+id/checkBoxEnable"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_alignParentLeft="true">
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/checkBoxMonday"
+        android:id="@+id/Monday"
+        android:paddingTop="8dp"
+        android:textSize="@dimen/text_size_days"
+        android:textColor="@color/darkgray"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/checkBoxTuesday"
+            android:id="@+id/Tuesday"
+            android:paddingTop="8dp"
+            android:textSize="@dimen/text_size_days"
+            android:paddingLeft="2dp"
+            android:textColor="@color/darkgray"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/checkBoxWednesday"
+            android:id="@+id/Wednesday"
+            android:paddingTop="8dp"
+            android:textSize="@dimen/text_size_days"
+            android:paddingLeft="2dp"
+            android:textColor="@color/darkgray"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/checkBoxThursday"
+            android:id="@+id/Thursday"
+            android:paddingTop="8dp"
+            android:textSize="@dimen/text_size_days"
+            android:paddingLeft="2dp"
+            android:textColor="@color/darkgray"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/checkBoxFriday"
+            android:id="@+id/Friday"
+            android:paddingTop="8dp"
+            android:textSize="@dimen/text_size_days"
+            android:paddingLeft="2dp"
+            android:textColor="@color/darkgray"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/checkBoxSaturday"
+            android:id="@+id/Saturday"
+            android:paddingTop="8dp"
+            android:textSize="@dimen/text_size_days"
+            android:paddingLeft="2dp"
+            android:textColor="@color/darkgray"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/checkBoxSunday"
+            android:id="@+id/Sunday"
+            android:paddingTop="8dp"
+            android:textSize="@dimen/text_size_days"
+            android:paddingLeft="2dp"
+            android:textColor="@color/darkgray"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" />
+
+    </LinearLayout>
 
 
 </RelativeLayout>

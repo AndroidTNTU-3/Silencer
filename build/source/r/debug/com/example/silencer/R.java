@@ -13,13 +13,16 @@ public final class R {
     public static final class color {
         public static final int black=0x7f040000;
         public static final int cyan=0x7f040001;
-        public static final int deepblue=0x7f040002;
-        public static final int lightgray=0x7f040003;
-        public static final int white=0x7f040004;
+        public static final int darkgray=0x7f040002;
+        public static final int deepblue=0x7f040003;
+        public static final int lightgray=0x7f040004;
+        public static final int white=0x7f040005;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f050000;
         public static final int activity_vertical_margin=0x7f050001;
+        public static final int text_size_days=0x7f050002;
+        public static final int text_size_time=0x7f050003;
     }
     public static final class drawable {
         public static final int background_clock=0x7f020000;
@@ -35,7 +38,14 @@ public final class R {
         public static final int sound=0x7f02000a;
     }
     public static final class id {
-        public static final int action_settings=0x7f09003f;
+        public static final int Friday=0x7f090043;
+        public static final int Monday=0x7f09003f;
+        public static final int Saturday=0x7f090044;
+        public static final int Sunday=0x7f090045;
+        public static final int Thursday=0x7f090042;
+        public static final int Tuesday=0x7f090040;
+        public static final int Wednesday=0x7f090041;
+        public static final int action_settings=0x7f090046;
         public static final int afterDuringBlock=0x7f090013;
         public static final int afterEnableBlock=0x7f090015;
         public static final int but_dialog1_cancel=0x7f090037;

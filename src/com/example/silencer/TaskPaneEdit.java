@@ -261,6 +261,7 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 				break;	
 				case  R.id.buttonDelete:
                     myDb.deleteRow(id);
+                    finish();
 				break;
 				}
 			}

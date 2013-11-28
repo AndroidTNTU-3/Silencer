@@ -6,6 +6,7 @@
 
     <color name="black">#000000</color>
     <color name="cyan">#00FFFF</color>
+    <color name="darkgray">#ff7c7c7c</color>
     <color name="deepblue">#ff6064ff</color>
     <color name="lightgray">#fff0f0f0</color>
     <color name="white">#FFFFFF</color>
@@ -14,6 +15,8 @@
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_size_days">10dp</dimen>
+    <dimen name="text_size_time">20dp</dimen>
     <!-- From: file:/C:/Users/Alex/AndroidStudioProjects/Silencer/res/values/strings.xml -->
     <eat-comment />
 

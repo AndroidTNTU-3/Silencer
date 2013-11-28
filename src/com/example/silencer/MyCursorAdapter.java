@@ -6,6 +6,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
@@ -21,6 +22,7 @@ import com.example.silencer.DBAdapter;
 import com.example.silencer.R;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import static android.support.v4.app.ActivityCompat.startActivity;
@@ -98,6 +100,46 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
         final CheckBox checkBox = (CheckBox) view.findViewById(R.id.checkBoxEnable);
         textfrom.setText(startTime);
         textto.setText(stopTime);
+
+        TextView labelMo = (TextView) view.findViewById(R.id.Monday);
+        TextView labelTu = (TextView) view.findViewById(R.id.Tuesday);
+        TextView labelWe = (TextView) view.findViewById(R.id.Wednesday);
+        TextView labelTh = (TextView) view.findViewById(R.id.Thursday);
+        TextView labelFr = (TextView) view.findViewById(R.id.Friday);
+        TextView labelSa = (TextView) view.findViewById(R.id.Saturday);
+        TextView labelSu = (TextView) view.findViewById(R.id.Sunday);
+
+        //get week days
+        ArrayList<Integer> week = new TimeService(context).getWeek(date);
+        Resources resource = context.getResources();
+
+        if (week.size() !=0){
+            for (int i = 0; i < week.size(); i++){
+                switch(week.get(i)){
+                    case 1:
+                        labelMo.setTextColor(resource.getColor(R.color.deepblue));
+                        break;
+                    case 2:
+                        labelTu.setTextColor(resource.getColor(R.color.deepblue));
+                        break;
+                    case 3:
+                        labelWe.setTextColor(resource.getColor(R.color.deepblue));
+                        break;
+                    case 4:
+                        labelTh.setTextColor(resource.getColor(R.color.deepblue));
+                        break;
+                    case 5:
+                        labelFr.setTextColor(resource.getColor(R.color.deepblue));
+                        break;
+                    case 6:
+                        labelSa.setTextColor(resource.getColor(R.color.deepblue));
+                        break;
+                    case 7:
+                        labelSu.setTextColor(R.color.deepblue);
+                        break;
+                }
+            }
+        }
 
 
         if (enable == 1) checkBox.setChecked(true);
