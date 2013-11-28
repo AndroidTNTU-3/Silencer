@@ -197,15 +197,13 @@
                 </string>
                 <string name="action_settings" >Settings
                 </string>
-                <string name="to_time" >To:
+                <string name="checkBoxTuesday" >Tu
                 </string>
-                <string name="title_activity_task_pane" >TaskPane
-                </string>
-                <string name="afterDuring" >After During
+                <string name="checkBoxThursday" >Th
                 </string>
                 <string name="from_time" >From:
                 </string>
-                <string name="enable" >Enable
+                <string name="checkBoxFriday" >Fr
                 </string>
                 <string name="setTime" >Set
                 </string>
@@ -215,11 +213,31 @@
                 </string>
                 <string name="onTime" >Set Time
                 </string>
-                <string name="title_activity_task_pane_edit" >TaskPaneEdit
+                <string name="checkBoxSunday" >Su
                 </string>
                 <string name="edit" >Edit
                 </string>
                 <string name="taskLabelEdit" >Edit Task
+                </string>
+                <string name="hello_world" >Hello world!
+                </string>
+                <string name="setTask" >Set
+                </string>
+                <string name="checkBoxSaturday" >Sa
+                </string>
+                <string name="to_time" >To:
+                </string>
+                <string name="title_activity_task_pane" >TaskPane
+                </string>
+                <string name="afterDuring" >After During
+                </string>
+                <string name="enable" >Enable
+                </string>
+                <string name="checkBoxWednesday" >We
+                </string>
+                <string name="checkBoxMonday" >Mo
+                </string>
+                <string name="title_activity_task_pane_edit" >TaskPaneEdit
                 </string>
                 <string name="app_name" >Silencer
                 </string>
@@ -227,11 +245,7 @@
                 </string>
                 <string name="delete" >Delete
                 </string>
-                <string name="hello_world" >Hello world!
-                </string>
                 <string name="soundOn" >Sound
-                </string>
-                <string name="setTask" >Set
                 </string>
             </file>
             <file

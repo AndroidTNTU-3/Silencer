@@ -70,10 +70,12 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
         int id_id = cursor.getColumnIndex( DBAdapter.KEY_ROWID );
         int idfromTime = cursor.getColumnIndex( DBAdapter.KEY_FROM_TIME );
         int idtoTime = cursor.getColumnIndex( DBAdapter.KEY_TO_TIME );
+        int idDate = cursor.getColumnIndex( DBAdapter.KEY_DATE );
         int idEnable = cursor.getColumnIndex( DBAdapter.KEY_ENABLED );
         final long id = cursor.getInt(id_id);
         final long fromTime = cursor.getLong(idfromTime);
         final long toTime = cursor.getLong(idtoTime);
+        final int date = cursor.getInt(idDate);
         final int enable = cursor.getInt(idEnable);
 
         /*DBHelper dbHelper = new DBHelper(context);
@@ -110,8 +112,6 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
                 intentEdit.putExtra("id", id);
                 context.startActivity(intentEdit);
 
-
-
             }
         });
 
@@ -121,16 +121,16 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
 
                 if(checkBox.isChecked()) {
                     //set object rule from service;
-                    Rule rule = new Rule(id, fromTime, toTime, 10, true);
+                    Rule rule = new Rule(id, fromTime, toTime, date, true);
                     //update DB
-                    myDb.updateRow(id, fromTime, toTime, 10, 1);
+                    myDb.updateRow(id, fromTime, toTime, date, 1);
                     ((MainActivity) _context).setRule(rule);
                    // ((MainActivity) _context).setTime(fromTime, toTime);
 
                 }
                 else if (!checkBox.isChecked()) {
-                    Rule rule = new Rule(id, fromTime, toTime, 0, false);
-                    myDb.updateRow(id, fromTime, toTime,0, 0);
+                    Rule rule = new Rule(id, fromTime, toTime, date, false);
+                    myDb.updateRow(id, fromTime, toTime, date, 0);
                     ((MainActivity) _context).setRule(rule);
                 }
             }

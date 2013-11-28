@@ -143,6 +143,7 @@
      	<LinearLayout
      	    android:layout_width="match_parent"
      	    android:layout_height="wrap_content"
+            android:id="@+id/buttonSetBlock"
      	    android:layout_below="@+id/afterEnableBlock"
      	    android:layout_marginTop="10dp" 
      	    android:gravity="center_horizontal">
@@ -164,5 +165,77 @@
      		    android:text="@string/delete" />
 
      	</LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/duringBlock"
+        android:layout_below="@+id/buttonSetBlock">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBoxMondayEdit"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="17dp"
+            android:text="@string/checkBoxMonday"
+            android:textColor="@color/deepblue" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBoxTuesdayEdit"
+            android:text="@string/checkBoxTuesday"
+            android:textColor="@color/deepblue"
+            android:layout_alignTop="@+id/checkBoxMondayEdit"
+            android:layout_toRightOf="@+id/checkBoxMondayEdit" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkBoxWednesday"
+            android:id="@+id/checkBoxWednesdayEdit"
+            android:textColor="@color/deepblue"
+            android:layout_alignTop="@+id/checkBoxTuesdayEdit"
+            android:layout_toRightOf="@+id/checkBoxTuesdayEdit" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkBoxThursday"
+            android:id="@+id/checkBoxThursdayEdit"
+            android:textColor="@color/deepblue"
+            android:layout_alignTop="@+id/checkBoxWednesdayEdit"
+            android:layout_toRightOf="@+id/checkBoxWednesdayEdit" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkBoxFriday"
+            android:id="@+id/checkBoxFridayEdit"
+            android:textColor="@color/deepblue"
+            android:layout_below="@+id/checkBoxMondayEdit"
+            android:layout_alignParentLeft="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkBoxSaturday"
+            android:id="@+id/checkBoxSaturdayEdit"
+            android:textColor="@color/deepblue"
+            android:layout_below="@+id/checkBoxTuesdayEdit"
+            android:layout_alignLeft="@+id/checkBoxTuesdayEdit" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkBoxSunday"
+            android:id="@+id/checkBoxSundayEdit"
+            android:textColor="@color/deepblue"
+            android:layout_alignTop="@+id/checkBoxSaturdayEdit"
+            android:layout_toRightOf="@+id/checkBoxSaturdayEdit" />
+
+    </RelativeLayout>
 
 </RelativeLayout><!-- From: file:/C:/Users/Alex/AndroidStudioProjects/Silencer/res/layout/activity_task_pane_edit.xml -->

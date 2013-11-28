@@ -21,6 +21,13 @@
     <string name="addTask">Add Task</string>
     <string name="afterDuring">After During</string>
     <string name="app_name">Silencer</string>
+    <string name="checkBoxFriday">Fr</string>
+    <string name="checkBoxMonday">Mo</string>
+    <string name="checkBoxSaturday">Sa</string>
+    <string name="checkBoxSunday">Su</string>
+    <string name="checkBoxThursday">Th</string>
+    <string name="checkBoxTuesday">Tu</string>
+    <string name="checkBoxWednesday">We</string>
     <string name="delete">Delete</string>
     <string name="during">During</string>
     <string name="edit">Edit</string>

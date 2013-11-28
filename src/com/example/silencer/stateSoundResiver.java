@@ -14,6 +14,6 @@ public class stateSoundResiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         intent.getBooleanExtra("flag", false);
         intent.putExtra("flag",false);
-        Toast.makeText(context, "Sound CHANGED", Toast.LENGTH_LONG).show();
+        //Toast.makeText(context, "Sound CHANGED", Toast.LENGTH_LONG).show();
     }
 }

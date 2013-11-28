@@ -65,7 +65,7 @@ public class MyService extends Service {
         //startDay.set(Calendar.HOUR_OF_DAY, 0);
         startDay.set(Calendar.MINUTE, timeFromDB.get(Calendar.MINUTE));
         startDay.set(Calendar.HOUR_OF_DAY, timeFromDB.get(Calendar.HOUR_OF_DAY));
-        timeStart = startDay.getTimeInMillis();
+        long timeStart1 = startDay.getTimeInMillis();
         //startDayTime = startDay.getTimeInMillis();
         //timeStart = timeStart + startDayTime;
        // timeStop = timeStart + startDayTime;
@@ -73,7 +73,7 @@ public class MyService extends Service {
 
         startDay.set(Calendar.MINUTE, timeToDB.get(Calendar.MINUTE));
         startDay.set(Calendar.HOUR_OF_DAY, timeToDB.get(Calendar.HOUR_OF_DAY));
-        timeStop = startDay.getTimeInMillis();
+        long timeStop1 = startDay.getTimeInMillis();
 
         currentDayOfWeek = startDay.get(Calendar.DAY_OF_WEEK);
         Log.d(LOG_TAG, "---day of month: " + currentDayOfWeek);
@@ -90,26 +90,28 @@ public class MyService extends Service {
                 Calendar calc = Calendar.getInstance();
                 calc.setTimeInMillis(timeStart);
                 Log.d(LOG_TAG, "---day of month: " + calc.get(Calendar.DAY_OF_MONTH));
-                Log.d(LOG_TAG, "---day: " + calc.get(Calendar.DAY_OF_WEEK));
+                Log.d(LOG_TAG, "---day week: " + calc.get(Calendar.DAY_OF_WEEK));
                 Log.d(LOG_TAG, "---hour: " + calc.get(Calendar.HOUR_OF_DAY));
                 Log.d(LOG_TAG, "---minut: " + calc.get(Calendar.MINUTE));
 
                 for (int i = 0; i < week.size(); i++){
+                    Log.d(LOG_TAG, "---day of week in base: " + week.get(i));
                     if (week.get(i) < currentDayOfWeek){
-                        timeStart = timeStart + (7 - currentDayOfWeek + week.get(i))*AlarmManager.INTERVAL_DAY;
-                        timeStop = timeStop + (7 - currentDayOfWeek + week.get(i))*AlarmManager.INTERVAL_DAY;
+                        timeStart = timeStart1 + (7 - currentDayOfWeek + week.get(i))*AlarmManager.INTERVAL_DAY;
+                        timeStop = timeStop1 + (7 - currentDayOfWeek + week.get(i))*AlarmManager.INTERVAL_DAY;
                     }
                     else if (week.get(i) > currentDayOfWeek){
-                    timeStart = timeStart + (week.get(i) - currentDayOfWeek)*AlarmManager.INTERVAL_DAY;
-                    timeStop = timeStop + (week.get(i) - currentDayOfWeek)*AlarmManager.INTERVAL_DAY;
+                    timeStart = timeStart1 + (week.get(i) - currentDayOfWeek)*AlarmManager.INTERVAL_DAY;
+                    timeStop = timeStop1 + (week.get(i) - currentDayOfWeek)*AlarmManager.INTERVAL_DAY;
                     }
 
                     calc.setTimeInMillis(timeStart);
 
                     Log.d(LOG_TAG, "day of month: " + calc.get(Calendar.DAY_OF_MONTH));
-                    Log.d(LOG_TAG, "day: " + calc.get(Calendar.DAY_OF_WEEK));
+                    Log.d(LOG_TAG, "day week: " + calc.get(Calendar.DAY_OF_WEEK));
                     Log.d(LOG_TAG, "hour: " + calc.get(Calendar.HOUR_OF_DAY));
                     Log.d(LOG_TAG, "minut: " + calc.get(Calendar.MINUTE));
+
                     soundOff(timeStart, ruleID);
                     soundOn(timeStop, ruleID);
 

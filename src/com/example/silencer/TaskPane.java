@@ -51,13 +51,13 @@ public class TaskPane extends Activity implements TimeDialogListener{
     int minutStop = 0;
     int buttonId = 0;
 
-    String monday;
-    String tuesday;
-    String wednesday;
-    String thursday;
-    String friday;
-    String saturday;
-    String sunday;
+    String monday = "00000000";
+    String tuesday = "00000000";
+    String wednesday = "00000000";
+    String thursday = "00000000";
+    String friday = "00000000";
+    String saturday = "00000000";
+    String sunday = "00000000";
     String notCheckedDay = "00000000";
 
     int binaryMonday;
@@ -102,6 +102,7 @@ final String LOG_TAG = "myLogs";
         checkBoxFriday = (CheckBox) findViewById(R.id.checkBoxFriday);
         checkBoxSaturday = (CheckBox) findViewById(R.id.checkBoxSaturday);
         checkBoxSunday = (CheckBox) findViewById(R.id.checkBoxSunday);
+
 		buttonFromTime = (Button) findViewById(R.id.button_from);
 		buttonToTime = (Button) findViewById(R.id.button_to);
 		buttonFromDate = (Button) findViewById(R.id.buttonFromDate);
@@ -164,20 +165,6 @@ final String LOG_TAG = "myLogs";
 	private class ButtonListener implements OnClickListener{	
 	    @Override
 		public void onClick(View v) {
-            binaryMonday = Integer.parseInt(monday,2);
-            binaryTuesday = Integer.parseInt(tuesday,2);
-            binaryWednesday = Integer.parseInt(wednesday,2);
-            binaryThursday = Integer.parseInt(thursday,2);
-            binaryFriday = Integer.parseInt(friday,2);
-            binarySaturday = Integer.parseInt(saturday,2);
-            binarySunday = Integer.parseInt(sunday,2);
-
-            //загальна сума
-
-            result = binaryMonday + binaryTuesday + binaryWednesday + binaryThursday + binaryFriday
-                     + binarySaturday + binarySunday;
-
-
 
 			buttonId = v.getId();
 			switch(buttonId){
@@ -188,8 +175,21 @@ final String LOG_TAG = "myLogs";
 			dialogtime.show(getFragmentManager(), "dlg1");
 			break;
 			case  R.id.buttonSetTask:
+
+                binaryMonday = Integer.parseInt(monday,2);
+                binaryTuesday = Integer.parseInt(tuesday,2);
+                binaryWednesday = Integer.parseInt(wednesday,2);
+                binaryThursday = Integer.parseInt(thursday,2);
+                binaryFriday = Integer.parseInt(friday,2);
+                binarySaturday = Integer.parseInt(saturday,2);
+                binarySunday = Integer.parseInt(sunday,2);
+
+                //загальна сума
+
+                result = binaryMonday + binaryTuesday + binaryWednesday + binaryThursday + binaryFriday
+                        + binarySaturday + binarySunday;
                 Date d = new Date();
-                myDb.insertRow(timeFrom, timeTo, 0, enable/*, result*/);
+                myDb.insertRow(timeFrom, timeTo, result, enable);
 				/*ContentValues cv = new ContentValues();
 
 			    // connect to DB

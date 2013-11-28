@@ -1,11 +1,13 @@
 package com.example.silencer;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
 import com.example.silencer.DialogTime.TimeDialogListener;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.ContentValues;
@@ -19,6 +21,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -31,6 +34,15 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 	Button buttonSet;
 	Button buttonDel;
     Switch switchEnable;
+
+    CheckBox checkBoxMonday;
+    CheckBox checkBoxTuesday;
+    CheckBox checkBoxWednesday;
+    CheckBox checkBoxThursday;
+    CheckBox checkBoxFriday;
+    CheckBox checkBoxSaturday;
+    CheckBox checkBoxSunday;
+
 	final String LOG_TAG = "myLogs";
 	
 	int hourStart =0;
@@ -39,6 +51,25 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 	int minutStop = 0;
 	int temphour = 0;
 	int buttonId=0;
+
+    String monday = "00000000";
+    String tuesday = "00000000";
+    String wednesday = "00000000";
+    String thursday = "00000000";
+    String friday = "00000000";
+    String saturday = "00000000";
+    String sunday = "00000000";
+    String notCheckedDay = "00000000";
+
+    int binaryMonday;
+    int binaryTuesday;
+    int binaryWednesday;
+    int binaryThursday;
+    int binaryFriday;
+    int binarySaturday;
+    int binarySunday;
+    int result;
+
 	boolean sound = false;
 	boolean soundAfter = false;
     boolean enable = false;
@@ -83,8 +114,25 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 		buttonSet.setOnClickListener(new ButtonListener());
 		buttonDel.setOnClickListener(new ButtonListener());
         switchEnable.setOnCheckedChangeListener(new switchListener());
+
+        checkBoxMonday = (CheckBox) findViewById(R.id.checkBoxMondayEdit);
+        checkBoxTuesday = (CheckBox) findViewById(R.id.checkBoxTuesdayEdit);
+        checkBoxWednesday = (CheckBox) findViewById(R.id.checkBoxWednesdayEdit);
+        checkBoxThursday = (CheckBox) findViewById(R.id.checkBoxThursdayEdit);
+        checkBoxFriday = (CheckBox) findViewById(R.id.checkBoxFridayEdit);
+        checkBoxSaturday = (CheckBox) findViewById(R.id.checkBoxSaturdayEdit);
+        checkBoxSunday = (CheckBox) findViewById(R.id.checkBoxSundayEdit);
+
+        checkBoxMonday.setOnCheckedChangeListener(new switchListener());
+        checkBoxTuesday.setOnCheckedChangeListener(new switchListener());
+        checkBoxWednesday.setOnCheckedChangeListener(new switchListener());
+        checkBoxThursday.setOnCheckedChangeListener(new switchListener());
+        checkBoxFriday.setOnCheckedChangeListener(new switchListener());
+        checkBoxSaturday.setOnCheckedChangeListener(new switchListener());
+        checkBoxSunday.setOnCheckedChangeListener(new switchListener());
+
 		Intent intent = getIntent();
-	    
+        Context context = getApplicationContext();
 		//row number
 		id = intent.getLongExtra("id", 0);
         Log.d(LOG_TAG, "row selected, ID = " + id);
@@ -99,9 +147,42 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 	      int idColIndex = c.getColumnIndex("_id");
 	      int timeStartColIndex = c.getColumnIndex("timeStart");
 	      int timeStopColIndex = c.getColumnIndex("timeStop");
+          int dateColIndex = c.getColumnIndex("date");
           int enableColIndex = c.getColumnIndex("enabled");
           long fromTime = c.getLong(timeStartColIndex);
           long toTime = c.getLong(timeStopColIndex);
+          int days = c.getInt(dateColIndex);
+
+        //get week days
+        ArrayList<Integer> week = new TimeService(context).getWeek(days);
+
+        if (week.size() !=0){
+            for (int i = 0; i < week.size(); i++){
+                switch(week.get(i)){
+                    case 1:
+                        checkBoxMonday.setChecked(true);
+                    break;
+                    case 2:
+                        checkBoxTuesday.setChecked(true);
+                    break;
+                    case 3:
+                        checkBoxWednesday.setChecked(true);
+                    break;
+                    case 4:
+                        checkBoxThursday.setChecked(true);
+                    break;
+                    case 5:
+                        checkBoxFriday.setChecked(true);
+                        break;
+                    case 6:
+                        checkBoxSaturday.setChecked(true);
+                    break;
+                    case 7:
+                        checkBoxSunday.setChecked(true);
+                    break;
+                }
+            }
+        }
 
           setTimeFrom.setTimeInMillis(fromTime);
           setTimeTo.setTimeInMillis(toTime);
@@ -151,20 +232,22 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 				dialogtime.show(getFragmentManager(), "dlg1");
 				break;
 				case  R.id.buttonSetTaskEdit:
+                    binaryMonday = Integer.parseInt(monday,2);
+                    binaryTuesday = Integer.parseInt(tuesday,2);
+                    binaryWednesday = Integer.parseInt(wednesday,2);
+                    binaryThursday = Integer.parseInt(thursday,2);
+                    binaryFriday = Integer.parseInt(friday,2);
+                    binarySaturday = Integer.parseInt(saturday,2);
+                    binarySunday = Integer.parseInt(sunday,2);
 
-					//ContentValues cv = new ContentValues();
-				    // connect to DB
+                    //загальна сума
 
-					/*if(changeFromTime) cv.put("timeStart", timeFrom);
-					if(changeToTime) cv.put("timeStop", timeTo);
-				    cv.put("sound", sound); 
-				    cv.put("soundAfter", soundAfter);
-                    cv.put("enabled", enable);
+                    result = binaryMonday + binaryTuesday + binaryWednesday + binaryThursday + binaryFriday
+                            + binarySaturday + binarySunday;
 
-                    long rowID = db.update("mytable", cv, "_id = ?",
-				            new String[] { String.valueOf(id) });*/
+
                     int val = enable? 1 : 0;
-                    myDb.updateRow(id, timeFrom, timeTo,0, 1);
+                    myDb.updateRow(id, timeFrom, timeTo, result, 1);
 
                     Intent intent = new Intent();
 
@@ -193,6 +276,55 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
                             enable = true;
                         } else {
                             enable = false;
+                        }
+                        break;
+                    case R.id.checkBoxMondayEdit:
+                        if (isChecked) {
+                            monday = "00000001";
+                        } else {
+                            monday = notCheckedDay;
+                        }
+                        break;
+                    case R.id.checkBoxTuesdayEdit:
+                        if (isChecked) {
+                            tuesday = "00000010";
+                        } else {
+                            tuesday = notCheckedDay;
+                        }
+                        break;
+                    case R.id.checkBoxWednesdayEdit:
+                        if (isChecked) {
+                            wednesday = "00000100";
+                        } else {
+                            wednesday = notCheckedDay;
+                        }
+                        break;
+                    case R.id.checkBoxThursdayEdit:
+                        if (isChecked) {
+                            thursday = "00001000";
+                        } else {
+                            thursday = notCheckedDay;
+                        }
+                        break;
+                    case R.id.checkBoxFridayEdit:
+                        if (isChecked) {
+                            friday = "00010000";
+                        } else {
+                            friday = notCheckedDay;
+                        }
+                        break;
+                    case R.id.checkBoxSaturdayEdit:
+                        if (isChecked) {
+                            saturday = "00100000";
+                        } else {
+                            saturday = notCheckedDay;
+                        }
+                        break;
+                    case R.id.checkBoxSundayEdit:
+                        if (isChecked) {
+                            sunday = "01000000";
+                        } else {
+                            sunday = notCheckedDay;
                         }
                         break;
 				}
