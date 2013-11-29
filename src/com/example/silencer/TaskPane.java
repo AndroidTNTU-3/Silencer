@@ -78,7 +78,6 @@ public class TaskPane extends Activity implements TimeDialogListener{
     boolean soundAfter = false;
     boolean enable = false;
 
-
     SimpleDateFormat sdf;
 
     DBAdapter myDb;
@@ -88,7 +87,7 @@ public class TaskPane extends Activity implements TimeDialogListener{
     Time timeStart;
     Time timeStop;
 
-final String LOG_TAG = "myLogs";
+    final String LOG_TAG = "myLogs";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -188,25 +187,10 @@ final String LOG_TAG = "myLogs";
 
                 result = binaryMonday + binaryTuesday + binaryWednesday + binaryThursday + binaryFriday
                         + binarySaturday + binarySunday;
-                Date d = new Date();
+
                 myDb.insertRow(timeFrom, timeTo, result, enable);
-				/*ContentValues cv = new ContentValues();
-
-			    // connect to DB
-			    SQLiteDatabase db = dbHelper.getWritableDatabase();
-			    cv.put("timeStart", timeFrom);
-			    cv.put("timeStop", timeTo);
-			    cv.put("sound", sound); 
-			    cv.put("soundAfter", soundAfter);
-                cv.put("enabled", enable);
-			    
-			    long rowID = db.insert("mytable", null, cv);
-			    Log.d(LOG_TAG, "row inserted, ID = " + rowID);*/
-
-
 
                 Intent intent = new Intent();
-
                 intent.putExtra("from", timeFrom);
                 intent.putExtra("to", timeTo);
                 intent.putExtra("enable", enable);

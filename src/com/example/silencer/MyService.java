@@ -13,9 +13,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-/**
- * Created by Alex on 21.11.13.
- */
 public class MyService extends Service {
 
     long timeStart;
@@ -113,8 +110,9 @@ public class MyService extends Service {
                     Log.d(LOG_TAG, "hour: " + calc.get(Calendar.HOUR_OF_DAY));
                     Log.d(LOG_TAG, "minut: " + calc.get(Calendar.MINUTE));
 
-                    soundOff(timeStart, ruleID);
-                    soundOn(timeStop, ruleID);
+                    setTime(timeStart, timeStop, ruleID);
+                    //soundOff(timeStart, ruleID);
+                    //soundOn(timeStop, ruleID);
 
                 }
             }else{                              //if none is selected start current set time
@@ -123,8 +121,10 @@ public class MyService extends Service {
                     timeStop += AlarmManager.INTERVAL_DAY;
                 }
 
-                soundOff(timeStart, ruleID);
-                soundOn(timeStop, ruleID);
+               // soundOff(timeStart, ruleID);
+               // soundOn(timeStop, ruleID);
+
+                setTime(timeStart, timeStop, ruleID);
             }
 
 
@@ -138,10 +138,16 @@ public class MyService extends Service {
 
     }
 
+    private void setTime(long timeStart, long timeStop, long ruleID){
+        if (sound.getRingerMode() != AudioManager.RINGER_MODE_SILENT) {
+            soundOff(timeStart, ruleID);
+            soundOn(timeStop, ruleID);
+        } else soundOff(timeStart, ruleID);
+    }
+
     public void soundOff(long startTime, long ruleID) {
 
         Intent intentOfSound = new Intent(context, offSoundResiver.class);
-        //PendingIntent piOnStart = PendingIntent.getBroadcast(this, (int)ruleID, intentOfSound,0);
         PendingIntent piOnStart = PendingIntent.getBroadcast(this, (int)ruleID, intentOfSound,PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarm = (AlarmManager)getSystemService(ALARM_SERVICE);
         alarm.setRepeating(AlarmManager.RTC_WAKEUP, startTime, AlarmManager.INTERVAL_DAY*7, piOnStart);
@@ -153,20 +159,23 @@ public class MyService extends Service {
     public void soundOn(long stopTime, long ruleID) {
 
         Intent intentOnSound = new Intent(context, onSoundResiver.class);
-        //PendingIntent piOnStop = PendingIntent.getBroadcast(this,-(int) ruleID,intentOnSound,0);
-        PendingIntent piOnStop = PendingIntent.getBroadcast(this, (int)ruleID, intentOnSound,PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent piOnStop = PendingIntent.getBroadcast(this, -(int)ruleID, intentOnSound,PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarm = (AlarmManager)getSystemService(ALARM_SERVICE);
         alarm.setRepeating(AlarmManager.RTC_WAKEUP, stopTime, AlarmManager.INTERVAL_DAY*7, piOnStop);
 
     }
 
     private void removeAlarm(Context context, long ruleID) {
-        Intent removeIntent = new Intent(context, MyService.class);
-        PendingIntent piRemove = PendingIntent.getService(context, (int) ruleID, removeIntent, 0);
-        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        alarmManager.cancel(piRemove);
-    }
+        Intent removeIntentOff = new Intent(context, offSoundResiver.class);
+        PendingIntent piRemoveOff = PendingIntent.getBroadcast(context, (int) ruleID, removeIntentOff, 0);
+        AlarmManager alarmManagerOff = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        alarmManagerOff.cancel(piRemoveOff);
 
+        Intent removeIntentOn = new Intent(context, onSoundResiver.class);
+        PendingIntent piRemoveOn = PendingIntent.getBroadcast(context, -(int) ruleID, removeIntentOn, 0);
+        AlarmManager alarmManagerOn = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        alarmManagerOn.cancel(piRemoveOn);
+    }
 
     public void onDestroy() {
         super.onDestroy();
