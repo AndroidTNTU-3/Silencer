@@ -77,7 +77,7 @@
     </style>
 
     <style name="HabraThemeButton" parent="@android:style/Widget.Button">
-        <item name="android:background">@drawable/button_primary_selector</item>
+        <item name="android:background">@drawable/button_add_selector</item>
     </style>
 
 </resources>

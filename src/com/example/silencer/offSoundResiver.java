@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
+import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -14,11 +15,12 @@ public class offSoundResiver extends BroadcastReceiver {
     final String LOG_TAG = "myLogs";
     @Override
     public void onReceive(Context context, Intent intent) {
-
+        Bundle extras = intent.getExtras();
         AudioManager sound = (AudioManager)context.getSystemService(Context.AUDIO_SERVICE);
-        intent.getBooleanExtra("flag", false);
-        intent.putExtra("flag",true);
-        sound.setRingerMode(AudioManager.RINGER_MODE_SILENT);
+        boolean vibrate = intent.getBooleanExtra("vibrate", false);
+        //intent.putExtra("flag",true);
+        if (vibrate) sound.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
+        else sound.setRingerMode(AudioManager.RINGER_MODE_SILENT);
         Toast.makeText(context, "Sound OFF", Toast.LENGTH_LONG).show();
         Log.d(LOG_TAG, "Sound OFF");
     }

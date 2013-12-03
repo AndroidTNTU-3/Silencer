@@ -44,6 +44,7 @@ public class TaskPane extends Activity implements TimeDialogListener{
     CheckBox checkBoxFriday;
     CheckBox checkBoxSaturday;
     CheckBox checkBoxSunday;
+    CheckBox checkBoxVibrate;
 
     int hourStart = 0;
     int minutStart = 0;
@@ -74,9 +75,8 @@ public class TaskPane extends Activity implements TimeDialogListener{
     Calendar timeFromCalendar;
     Calendar timeToCalendar;
 
-    boolean sound = false;
-    boolean soundAfter = false;
     boolean enable = false;
+    int vibrate = 0;
 
     SimpleDateFormat sdf;
 
@@ -102,6 +102,8 @@ public class TaskPane extends Activity implements TimeDialogListener{
         checkBoxSaturday = (CheckBox) findViewById(R.id.checkBoxSaturday);
         checkBoxSunday = (CheckBox) findViewById(R.id.checkBoxSunday);
 
+        checkBoxVibrate = (CheckBox) findViewById(R.id.checkBoxVibrate);
+
 		buttonFromTime = (Button) findViewById(R.id.button_from);
 		buttonToTime = (Button) findViewById(R.id.button_to);
 		buttonFromDate = (Button) findViewById(R.id.buttonFromDate);
@@ -125,6 +127,8 @@ public class TaskPane extends Activity implements TimeDialogListener{
         checkBoxFriday.setOnCheckedChangeListener(new switchListener());
         checkBoxSaturday.setOnCheckedChangeListener(new switchListener());
         checkBoxSunday.setOnCheckedChangeListener(new switchListener());
+
+        checkBoxVibrate.setOnCheckedChangeListener(new switchListener());
 
         openDB();
 
@@ -188,14 +192,8 @@ public class TaskPane extends Activity implements TimeDialogListener{
                 result = binaryMonday + binaryTuesday + binaryWednesday + binaryThursday + binaryFriday
                         + binarySaturday + binarySunday;
 
-                myDb.insertRow(timeFrom, timeTo, result, enable);
+                myDb.insertRow(timeFrom, timeTo, result, enable, vibrate);
 
-                Intent intent = new Intent();
-                intent.putExtra("from", timeFrom);
-                intent.putExtra("to", timeTo);
-                intent.putExtra("enable", enable);
-
-                setResult(RESULT_OK, intent);
                 finish();
 
 			break;			
@@ -215,6 +213,13 @@ public class TaskPane extends Activity implements TimeDialogListener{
                         enable = true;
                     } else {
                         enable = false;
+                    }
+                    break;
+                case  R.id.checkBoxVibrate:
+                    if (isChecked) {
+                        vibrate = 1;
+                    } else {
+                        vibrate = 0;
                     }
                     break;
                 case R.id.checkBoxMonday:

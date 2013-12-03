@@ -30,6 +30,7 @@ public class MainActivity extends Activity implements OnClickListener{
 
     SharedPreferences sPref;
     boolean enable = false;
+    boolean vabrate = false;
 
     long timeFrom;
     long timeTo;
@@ -88,7 +89,6 @@ public class MainActivity extends Activity implements OnClickListener{
 
 	}
 
-
 	private void openDB() {
 		myDb = new DBAdapter(this);
 		myDb.open();
@@ -128,21 +128,7 @@ public class MainActivity extends Activity implements OnClickListener{
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (data == null) {return;}
-        timeFrom = data.getLongExtra("from", 0); //setted time in mills
-        timeTo = data.getLongExtra("to", 0); //setted time in mills
-        enable = data.getBooleanExtra("enable", false);
 
-        settedTimeFrom.setTimeInMillis(System.currentTimeMillis()); // get current time
-        settedTimeTo.setTimeInMillis(System.currentTimeMillis());   // get current time
-        timeFromDB.setTimeInMillis(timeFrom);                       //object Calendar in mills
-        timeToDB.setTimeInMillis(timeTo);                           //object Calendar in mills
-
-        settedTimeFrom.set(Calendar.HOUR_OF_DAY, timeFromDB.get(Calendar.HOUR_OF_DAY)); //Set silence time from
-        settedTimeFrom.set(Calendar.MINUTE, timeFromDB.get(Calendar.MINUTE));           //Set silence time from
-
-        settedTimeTo.set(Calendar.HOUR_OF_DAY, timeToDB.get(Calendar.HOUR_OF_DAY)); //Set silence time to
-        settedTimeTo.set(Calendar.MINUTE, timeToDB.get(Calendar.MINUTE));           //Set silence time to
     }
 
     private class listItemListener implements OnItemClickListener{
@@ -171,6 +157,7 @@ public class MainActivity extends Activity implements OnClickListener{
             serviceIntent.putExtra("id", rule.getId());
             serviceIntent.putExtra("enable", rule.isEnable());
             serviceIntent.putExtra("days", rule.getDays());
+            serviceIntent.putExtra("vibrate", rule.getVibrate());
             this.startService(serviceIntent);
 
     }

@@ -43,6 +43,8 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
     CheckBox checkBoxSaturday;
     CheckBox checkBoxSunday;
 
+    CheckBox checkBoxVibrateEdit;
+
 	final String LOG_TAG = "myLogs";
 	
 	int hourStart =0;
@@ -70,12 +72,10 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
     int binarySunday;
     int result;
 
-	boolean sound = false;
-	boolean soundAfter = false;
     boolean enable = false;
 	boolean changeFromTime = false;
 	boolean changeToTime = false;
-	
+    int vibrate = 0;
 	
 
 	DialogTime dialogtime;
@@ -123,6 +123,8 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
         checkBoxSaturday = (CheckBox) findViewById(R.id.checkBoxSaturdayEdit);
         checkBoxSunday = (CheckBox) findViewById(R.id.checkBoxSundayEdit);
 
+        checkBoxVibrateEdit = (CheckBox) findViewById(R.id.checkBoxVibrateEdit);
+
         checkBoxMonday.setOnCheckedChangeListener(new switchListener());
         checkBoxTuesday.setOnCheckedChangeListener(new switchListener());
         checkBoxWednesday.setOnCheckedChangeListener(new switchListener());
@@ -130,6 +132,8 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
         checkBoxFriday.setOnCheckedChangeListener(new switchListener());
         checkBoxSaturday.setOnCheckedChangeListener(new switchListener());
         checkBoxSunday.setOnCheckedChangeListener(new switchListener());
+
+        checkBoxVibrateEdit.setOnCheckedChangeListener(new switchListener());
 
 		Intent intent = getIntent();
         Context context = getApplicationContext();
@@ -149,9 +153,11 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 	      int timeStopColIndex = c.getColumnIndex("timeStop");
           int dateColIndex = c.getColumnIndex("date");
           int enableColIndex = c.getColumnIndex("enabled");
+          int vibrateColIndex = c.getColumnIndex("vibrate");
           long fromTime = c.getLong(timeStartColIndex);
           long toTime = c.getLong(timeStopColIndex);
           int days = c.getInt(dateColIndex);
+
 
         //get week days
         ArrayList<Integer> week = new TimeService(context).getWeek(days);
@@ -196,7 +202,9 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
           timeFrom = fromTime;
           timeTo = toTime;
           enable = (c.getInt(enableColIndex) != 0);
+          vibrate = c.getInt(vibrateColIndex);
           switchEnable.setChecked(enable);
+          checkBoxVibrateEdit.setChecked(vibrate != 0);
 	      
 		    timeStart = new Time();
 		    timeStop = new Time();
@@ -247,13 +255,14 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 
 
                     int val = enable? 1 : 0;
-                    myDb.updateRow(id, timeFrom, timeTo, result, 1);
+                    myDb.updateRow(id, timeFrom, timeTo, result, val, vibrate);
 
                     Intent intent = new Intent();
 
                     intent.putExtra("from", timeFrom);
                     intent.putExtra("to", timeTo);
                     intent.putExtra("enable", enable);
+                    intent.putExtra("vibrate", vibrate);
 
                     setResult(RESULT_OK, intent);
                     finish();
@@ -277,6 +286,13 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
                             enable = true;
                         } else {
                             enable = false;
+                        }
+                        break;
+                    case  R.id.checkBoxVibrateEdit:
+                        if(isChecked) {
+                            vibrate = 1;
+                        } else {
+                            vibrate = 0;
                         }
                         break;
                     case R.id.checkBoxMondayEdit:

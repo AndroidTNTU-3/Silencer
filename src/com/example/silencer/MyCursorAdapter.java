@@ -74,11 +74,13 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
         int idtoTime = cursor.getColumnIndex( DBAdapter.KEY_TO_TIME );
         int idDate = cursor.getColumnIndex( DBAdapter.KEY_DATE );
         int idEnable = cursor.getColumnIndex( DBAdapter.KEY_ENABLED );
+        int idVibrate = cursor.getColumnIndex( DBAdapter.KEY_VIBRATE );
         final long id = cursor.getInt(id_id);
         final long fromTime = cursor.getLong(idfromTime);
         final long toTime = cursor.getLong(idtoTime);
         final int date = cursor.getInt(idDate);
         final int enable = cursor.getInt(idEnable);
+        final int vibrate = cursor.getInt(idVibrate);
 
         /*DBHelper dbHelper = new DBHelper(context);
         final SQLiteDatabase db = dbHelper.getWritableDatabase();*/
@@ -135,7 +137,7 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
                         labelSa.setTextColor(resource.getColor(R.color.deepblue));
                         break;
                     case 7:
-                        labelSu.setTextColor(R.color.deepblue);
+                        labelSu.setTextColor(resource.getColor(R.color.deepblue));
                         break;
                 }
             }
@@ -163,16 +165,16 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
 
                 if(checkBox.isChecked()) {
                     //set object rule from service;
-                    Rule rule = new Rule(id, fromTime, toTime, date, true);
+                    Rule rule = new Rule(id, fromTime, toTime, date, true, vibrate);
                     //update DB
-                    myDb.updateRow(id, fromTime, toTime, date, 1);
+                    myDb.updateRow(id, fromTime, toTime, date, 1, vibrate);
                     ((MainActivity) _context).setRule(rule);
                    // ((MainActivity) _context).setTime(fromTime, toTime);
 
                 }
                 else if (!checkBox.isChecked()) {
-                    Rule rule = new Rule(id, fromTime, toTime, date, false);
-                    myDb.updateRow(id, fromTime, toTime, date, 0);
+                    Rule rule = new Rule(id, fromTime, toTime, date, false, vibrate);
+                    myDb.updateRow(id, fromTime, toTime, date, 0, vibrate);
                     ((MainActivity) _context).setRule(rule);
                 }
             }

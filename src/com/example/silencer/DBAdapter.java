@@ -16,6 +16,7 @@ public class DBAdapter {
 	public static final String KEY_TO_TIME = "timeStop";
 	public static final String KEY_DATE = "date";
     public static final String KEY_ENABLED = "enabled";
+    public static final String KEY_VIBRATE = "vibrate";
 	
 	public static final String DATABASE_NAME = "taskDB";
 	public static final String DATABASE_TABLE = "mytable";
@@ -31,7 +32,7 @@ public class DBAdapter {
 
     final static String LOG_TAG = "myLogs";
 	
-	public static final String[] ALL_KEYS = new String[] {KEY_ROWID, KEY_FROM_TIME, KEY_TO_TIME, KEY_DATE, KEY_ENABLED};
+	public static final String[] ALL_KEYS = new String[] {KEY_ROWID, KEY_FROM_TIME, KEY_TO_TIME, KEY_DATE, KEY_ENABLED, KEY_VIBRATE};
 
     private static final String DATABASE_CREATE_SQL =
             "create table " + DATABASE_TABLE + " ( "
@@ -39,7 +40,8 @@ public class DBAdapter {
                     + "timeStart long,"
                     + "timeStop long,"
                     + "date int,"
-                    + "enabled boolean" + ");";
+                    + "enabled boolean,"
+                    + "vibrate int" + ");";
 	
 	public DBAdapter(Context ctx) {
         this.context = ctx;
@@ -55,7 +57,7 @@ public class DBAdapter {
 		myDBHelper.close();
 	}
 
-    public long insertRow(long timeStart, long timeStop, int date, boolean enabler) {
+    public long insertRow(long timeStart, long timeStop, int date, boolean enabler, int vibrate) {
 
         // Create row's data:
 
@@ -64,6 +66,7 @@ public class DBAdapter {
         initialValues.put("timeStop", timeStop);
         initialValues.put("date", date);
         initialValues.put("enabled", enabler);
+        initialValues.put("vibrate", vibrate);
 
 
         // Insert it into the database.
@@ -89,7 +92,7 @@ public class DBAdapter {
         return c;
     }
 
-    public boolean updateRow(long rowId, long timeStart, long timeStop, int date, int enable) {
+    public boolean updateRow(long rowId, long timeStart, long timeStop, int date, int enable, int vibrate) {
         String where = KEY_ROWID + "=" + rowId;
 
         // Create row's data:
@@ -99,6 +102,7 @@ public class DBAdapter {
         newValues.put("timeStop", timeStop);
         newValues.put("date", date);
         newValues.put("enabled", enable);
+        newValues.put("vibrate", vibrate);
         long rowID = db.update(DATABASE_TABLE, newValues, "_id = ?",
                 new String[] { String.valueOf(rowId) });
         Log.d(LOG_TAG, "row inserted, ID = " + rowID);

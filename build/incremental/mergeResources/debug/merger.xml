@@ -292,7 +292,7 @@
                     name="HabraThemeButton"
                     parent="@android:style/Widget.Button" >
                     <item name="android:background">
-@drawable/button_primary_selector
+@drawable/button_add_selector
                     </item>
                 </style>
 
@@ -340,6 +340,11 @@
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
+            <file
+                name="button_add_selector"
+                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable\button_add_selector.xml"
+                qualifiers=""
+                type="drawable" />
         </source>
         <source path="C:\Users\Alex\AndroidStudioProjects\Silencer\build\res\rs\debug" />
     </dataSet>

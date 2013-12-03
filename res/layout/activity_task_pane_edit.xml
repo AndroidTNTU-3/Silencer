@@ -257,7 +257,7 @@
             android:layout_height="wrap_content"
             android:text="@string/checkBoxVibrate"
             android:textColor="@color/deepblue"
-            android:id="@+id/checkBoxVibrate" />
+            android:id="@+id/checkBoxVibrateEdit" />
 
         <CheckBox
             android:layout_width="wrap_content"

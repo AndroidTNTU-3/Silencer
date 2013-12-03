@@ -24,10 +24,9 @@ public class MyService extends Service {
     Context context;
     ArrayList<Rule> rules;
     Calendar startDay;
-    Calendar ruleTimeStart;
-    Calendar ruleTimeStop;
     long ruleID;
     boolean enable;
+    int vibrate;
     int days;
     int currentDayOfWeek;
 
@@ -42,9 +41,12 @@ public class MyService extends Service {
         timeStop = intent.getLongExtra("timeStop", 0);
         ruleID = intent.getLongExtra("id", 0);
         enable = intent.getBooleanExtra("enable", true);
+        vibrate = intent.getIntExtra("vibrate", 0);
         days = intent.getIntExtra("days", 0);
+
         startDay = Calendar.getInstance();
         startDay.setTimeInMillis(System.currentTimeMillis());
+
         long currentTime = startDay.getTimeInMillis();
 
         Calendar timeFromDB = Calendar.getInstance();
@@ -59,21 +61,15 @@ public class MyService extends Service {
         //set midnight
         startDay.set(Calendar.MILLISECOND, 0);
         startDay.set(Calendar.SECOND, 0);
-        //startDay.set(Calendar.MINUTE, 0);
-        //startDay.set(Calendar.HOUR_OF_DAY, 0);
         startDay.set(Calendar.MINUTE, timeFromDB.get(Calendar.MINUTE));
         startDay.set(Calendar.HOUR_OF_DAY, timeFromDB.get(Calendar.HOUR_OF_DAY));
-        long timeStart1 = startDay.getTimeInMillis();
-        //startDayTime = startDay.getTimeInMillis();
-        //timeStart = timeStart + startDayTime;
-       // timeStop = timeStart + startDayTime;
-
-
+        //long timeStart1 = startDay.getTimeInMillis();
+        long timeStart1 = timeStart;
         startDay.set(Calendar.MINUTE, timeToDB.get(Calendar.MINUTE));
         startDay.set(Calendar.HOUR_OF_DAY, timeToDB.get(Calendar.HOUR_OF_DAY));
-        long timeStop1 = startDay.getTimeInMillis();
-
-        currentDayOfWeek = startDay.get(Calendar.DAY_OF_WEEK);
+//        long timeStop1 = startDay.getTimeInMillis();
+        long timeStop1 = timeStop;
+        currentDayOfWeek = startDay.get(Calendar.DAY_OF_WEEK) - 1; //first day of week begin in sunday
         Log.d(LOG_TAG, "---day of month: " + currentDayOfWeek);
         // get rules for this day
         context = getApplicationContext();
@@ -83,17 +79,18 @@ public class MyService extends Service {
       //  test rules when system state changed
         if (enable){
             ArrayList<Integer> week = new TimeService(context).getWeek(days);
+            Calendar calc = Calendar.getInstance();
+            calc.setTimeInMillis(timeStart);
 
             if (week.size() !=0){                               //if any selected day of week
-                Calendar calc = Calendar.getInstance();
-                calc.setTimeInMillis(timeStart);
+                Log.d(LOG_TAG, "---year: " + calc.get(Calendar.YEAR));
+                Log.d(LOG_TAG, "---month: " + calc.get(Calendar.MONTH));
                 Log.d(LOG_TAG, "---day of month: " + calc.get(Calendar.DAY_OF_MONTH));
                 Log.d(LOG_TAG, "---day week: " + calc.get(Calendar.DAY_OF_WEEK));
                 Log.d(LOG_TAG, "---hour: " + calc.get(Calendar.HOUR_OF_DAY));
                 Log.d(LOG_TAG, "---minut: " + calc.get(Calendar.MINUTE));
 
                 for (int i = 0; i < week.size(); i++){
-                    Log.d(LOG_TAG, "---day of week in base: " + week.get(i));
                     if (week.get(i) < currentDayOfWeek){
                         timeStart = timeStart1 + (7 - currentDayOfWeek + week.get(i))*AlarmManager.INTERVAL_DAY;
                         timeStop = timeStop1 + (7 - currentDayOfWeek + week.get(i))*AlarmManager.INTERVAL_DAY;
@@ -111,8 +108,6 @@ public class MyService extends Service {
                     Log.d(LOG_TAG, "minut: " + calc.get(Calendar.MINUTE));
 
                     setTime(timeStart, timeStop, ruleID);
-                    //soundOff(timeStart, ruleID);
-                    //soundOn(timeStop, ruleID);
 
                 }
             }else{                              //if none is selected start current set time
@@ -120,18 +115,8 @@ public class MyService extends Service {
                     timeStart += AlarmManager.INTERVAL_DAY;
                     timeStop += AlarmManager.INTERVAL_DAY;
                 }
-
-               // soundOff(timeStart, ruleID);
-               // soundOn(timeStop, ruleID);
-
-                setTime(timeStart, timeStop, ruleID);
             }
 
-
-           /* if (sound.getRingerMode() != AudioManager.RINGER_MODE_SILENT) {
-                soundOff(timeStart, ruleID);
-                soundOn(timeStop, ruleID);
-            } else soundOff(timeStart, ruleID);*/
         } else removeAlarm(context, ruleID);
 
         return super.onStartCommand(intent, flags, startId);
@@ -148,11 +133,11 @@ public class MyService extends Service {
     public void soundOff(long startTime, long ruleID) {
 
         Intent intentOfSound = new Intent(context, offSoundResiver.class);
+        if (vibrate == 1) intentOfSound.putExtra("vibrate", true);
+        else intentOfSound.putExtra("vibrate", false);
         PendingIntent piOnStart = PendingIntent.getBroadcast(this, (int)ruleID, intentOfSound,PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarm = (AlarmManager)getSystemService(ALARM_SERVICE);
         alarm.setRepeating(AlarmManager.RTC_WAKEUP, startTime, AlarmManager.INTERVAL_DAY*7, piOnStart);
-        Calendar weekalarm = Calendar.getInstance();
-        weekalarm.setTimeInMillis(startTime);
 
     }
 

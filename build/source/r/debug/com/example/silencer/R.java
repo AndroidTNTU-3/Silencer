@@ -28,14 +28,15 @@ public final class R {
         public static final int background_clock=0x7f020000;
         public static final int background_main=0x7f020001;
         public static final int background_main2=0x7f020002;
-        public static final int button_dark2_selector=0x7f020003;
-        public static final int button_dark_selector=0x7f020004;
-        public static final int button_primary_selector=0x7f020005;
-        public static final int check=0x7f020006;
-        public static final int icon=0x7f020007;
-        public static final int nosound=0x7f020008;
-        public static final int rect=0x7f020009;
-        public static final int sound=0x7f02000a;
+        public static final int button_add_selector=0x7f020003;
+        public static final int button_dark2_selector=0x7f020004;
+        public static final int button_dark_selector=0x7f020005;
+        public static final int button_primary_selector=0x7f020006;
+        public static final int check=0x7f020007;
+        public static final int icon=0x7f020008;
+        public static final int nosound=0x7f020009;
+        public static final int rect=0x7f02000a;
+        public static final int sound=0x7f02000b;
     }
     public static final class id {
         public static final int Friday=0x7f090043;
@@ -77,8 +78,8 @@ public final class R {
         public static final int checkBoxThursdayEdit=0x7f09002d;
         public static final int checkBoxTuesday=0x7f09001d;
         public static final int checkBoxTuesdayEdit=0x7f09002b;
-        public static final int checkBoxVibrate=0x7f090031;
-        public static final int checkBoxVibrateEdit=0x7f090025;
+        public static final int checkBoxVibrate=0x7f090025;
+        public static final int checkBoxVibrateEdit=0x7f090031;
         public static final int checkBoxWednesday=0x7f09001e;
         public static final int checkBoxWednesdayEdit=0x7f09002c;
         public static final int clock=0x7f090001;

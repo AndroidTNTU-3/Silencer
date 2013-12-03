@@ -11,13 +11,15 @@ public class Rule {
     private long stopTime;
     private int days;
     private boolean enable;
+    private int vibrate;
 
-    Rule(long num, long stTime, long spTime, int wDays, boolean onOf){
+    Rule(long num, long stTime, long spTime, int wDays, boolean onOf, int vibra){
         id = num;
         startTime =  stTime;
         stopTime = spTime;
         days = wDays;
         enable = onOf;
+        vibrate = vibra;
     }
 
     Rule(long num, long stTime, long spTime){
@@ -66,4 +68,8 @@ public class Rule {
     public void setEnable(boolean enable) {
         this.enable = enable;
     }
+
+    public int getVibrate() { return vibrate; }
+
+    public void setVibrate(int vibrate) { this.vibrate = vibrate; }
 }
