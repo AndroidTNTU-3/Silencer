@@ -3,8 +3,10 @@ package com.example.silencer;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.media.AudioManager;
 import android.os.IBinder;
 import android.util.Log;
@@ -33,7 +35,6 @@ public class MyService extends Service {
     Rule rule;
 
     final String LOG_TAG = "myLogs";
-
 
     public int onStartCommand(Intent intent, int flags, int startId) {
 
@@ -115,6 +116,7 @@ public class MyService extends Service {
                     timeStart += AlarmManager.INTERVAL_DAY;
                     timeStop += AlarmManager.INTERVAL_DAY;
                 }
+                setTime(timeStart, timeStop, ruleID);
             }
 
         } else removeAlarm(context, ruleID);
