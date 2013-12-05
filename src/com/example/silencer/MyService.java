@@ -38,6 +38,8 @@ public class MyService extends Service {
 
     public int onStartCommand(Intent intent, int flags, int startId) {
 
+        boolean onceFlag = false; //Whether or not alarm set once
+
         timeStart = intent.getLongExtra("timeStart", 0);
         timeStop = intent.getLongExtra("timeStop", 0);
         ruleID = intent.getLongExtra("id", 0);
@@ -91,6 +93,8 @@ public class MyService extends Service {
                 Log.d(LOG_TAG, "---hour: " + calc.get(Calendar.HOUR_OF_DAY));
                 Log.d(LOG_TAG, "---minut: " + calc.get(Calendar.MINUTE));
 
+                onceFlag = false;
+
                 for (int i = 0; i < week.size(); i++){
                     if (week.get(i) < currentDayOfWeek){
                         timeStart = timeStart1 + (7 - currentDayOfWeek + week.get(i))*AlarmManager.INTERVAL_DAY;
@@ -108,15 +112,16 @@ public class MyService extends Service {
                     Log.d(LOG_TAG, "hour: " + calc.get(Calendar.HOUR_OF_DAY));
                     Log.d(LOG_TAG, "minut: " + calc.get(Calendar.MINUTE));
 
-                    setTime(timeStart, timeStop, ruleID);
+                    setTime(timeStart, timeStop, ruleID, onceFlag);
 
                 }
             }else{                              //if none is selected start current set time
+                onceFlag = true;
                 if (timeStart < currentTime){
                     timeStart += AlarmManager.INTERVAL_DAY;
                     timeStop += AlarmManager.INTERVAL_DAY;
                 }
-                setTime(timeStart, timeStop, ruleID);
+                setTime(timeStart, timeStop, ruleID, onceFlag);
             }
 
         } else removeAlarm(context, ruleID);
@@ -125,30 +130,32 @@ public class MyService extends Service {
 
     }
 
-    private void setTime(long timeStart, long timeStop, long ruleID){
+    private void setTime(long timeStart, long timeStop, long ruleID, boolean onceFlag){
         if (sound.getRingerMode() != AudioManager.RINGER_MODE_SILENT) {
-            soundOff(timeStart, ruleID);
-            soundOn(timeStop, ruleID);
-        } else soundOff(timeStart, ruleID);
+            soundOff(timeStart, ruleID, onceFlag);
+            soundOn(timeStop, ruleID, onceFlag);
+        } else soundOff(timeStart, ruleID, onceFlag);
     }
 
-    public void soundOff(long startTime, long ruleID) {
+    public void soundOff(long startTime, long ruleID, boolean onceFlag) {
 
         Intent intentOfSound = new Intent(context, offSoundResiver.class);
         if (vibrate == 1) intentOfSound.putExtra("vibrate", true);
         else intentOfSound.putExtra("vibrate", false);
         PendingIntent piOnStart = PendingIntent.getBroadcast(this, (int)ruleID, intentOfSound,PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarm = (AlarmManager)getSystemService(ALARM_SERVICE);
-        alarm.setRepeating(AlarmManager.RTC_WAKEUP, startTime, AlarmManager.INTERVAL_DAY*7, piOnStart);
+        if (onceFlag) alarm.set(AlarmManager.RTC_WAKEUP, startTime, piOnStart);
+        else alarm.setRepeating(AlarmManager.RTC_WAKEUP, startTime, AlarmManager.INTERVAL_DAY*7, piOnStart);
 
     }
 
-    public void soundOn(long stopTime, long ruleID) {
+    public void soundOn(long stopTime, long ruleID, boolean onceFlag) {
 
         Intent intentOnSound = new Intent(context, onSoundResiver.class);
         PendingIntent piOnStop = PendingIntent.getBroadcast(this, -(int)ruleID, intentOnSound,PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarm = (AlarmManager)getSystemService(ALARM_SERVICE);
-        alarm.setRepeating(AlarmManager.RTC_WAKEUP, stopTime, AlarmManager.INTERVAL_DAY*7, piOnStop);
+        if (onceFlag) alarm.set(AlarmManager.RTC_WAKEUP, stopTime, piOnStop);
+        else alarm.setRepeating(AlarmManager.RTC_WAKEUP, stopTime, AlarmManager.INTERVAL_DAY*7, piOnStop);
 
     }
 
