@@ -1,39 +1,35 @@
-package com.example.silencer;
-
-/**
- * Created by silvestr on 11/27/13.
- */
+package com.example.silencer.entity;
 
 public class Rule {
 
-    private long id;
+    private int id;
     private long startTime;
     private long stopTime;
     private int days;
-    private boolean enable;
+    private int enabled;
     private int vibrate;
 
-    Rule(long num, long stTime, long spTime, int wDays, boolean onOf, int vibra){
+/*    public Rule(long num, long stTime, long spTime, int wDays, boolean onOf, int vibra){
         id = num;
         startTime =  stTime;
         stopTime = spTime;
         days = wDays;
-        enable = onOf;
         vibrate = vibra;
+        enabled = onOf;
     }
 
-    Rule(long num, long stTime, long spTime){
+    public Rule(long num, long stTime, long spTime){
         id = num;
         startTime =  stTime;
         stopTime = spTime;
 
-    }
+    }*/
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -61,12 +57,12 @@ public class Rule {
         this.stopTime = stopTime;
     }
 
-    public boolean isEnable() {
-        return enable;
+    public int getEnabled() {
+        return enabled;
     }
 
-    public void setEnable(boolean enable) {
-        this.enable = enable;
+    public void setEnable(int enabled) {
+        this.enabled = enabled;
     }
 
     public int getVibrate() { return vibrate; }

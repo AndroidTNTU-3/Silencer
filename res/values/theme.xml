@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="ClockThemeButton" parent="@android:style/Widget.Button">
+    <item name="android:background">@drawable/button_add_alarm_selector</item>
+    </style>
      <style name="HabraThemeButton" parent="@android:style/Widget.Button">
     	<item name="android:background">@drawable/button_add_selector</item>
 	</style>

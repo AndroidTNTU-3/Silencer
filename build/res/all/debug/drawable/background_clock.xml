@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <gradient
-        android:angle="270"
-        android:endColor="#ff3f50af"
-        android:centerColor="#ff8eb9ff"
-        android:startColor="#ff7890ff"
-        android:type="linear" />
+    <item>
+        <shape
+            android:shape="rectangle">
+        <gradient
+            android:angle="270"
+            android:endColor="#ff3f50af"
+            android:centerColor="#ff8eb9ff"
+            android:startColor="#ff7890ff"
+            android:type="linear" />
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/alarm_clock"/>
 
-</shape><!-- From: file:/C:/Users/Alex/AndroidStudioProjects/Silencer/res/drawable/background_clock.xml -->
+</layer-list><!-- From: file:/C:/Users/Alex/AndroidStudioProjects/Silencer/res/drawable/background_clock.xml -->

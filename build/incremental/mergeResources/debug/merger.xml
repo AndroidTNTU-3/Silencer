@@ -19,6 +19,11 @@
                 qualifiers=""
                 type="drawable" />
             <file
+                name="button_add_selector"
+                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable\button_add_selector.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
                 name="button_dark2_selector"
                 path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable\button_dark2_selector.xml"
                 qualifiers=""
@@ -187,13 +192,27 @@
             <file
                 path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\values\dimens.xml"
                 qualifiers="" >
+                <dimen name="text_size_small" >12sp
+                </dimen>
+                <dimen name="text_size_mini" >10sp
+                </dimen>
+                <dimen name="text_size_large" >18sp
+                </dimen>
                 <dimen name="text_size_days" >10dp
+                </dimen>
+                <dimen name="text_size_medium" >16sp
                 </dimen>
                 <dimen name="activity_horizontal_margin" >16dp
                 </dimen>
+                <dimen name="text_size_biggest" >34sp
+                </dimen>
                 <dimen name="text_size_time" >20dp
                 </dimen>
+                <dimen name="text_size_big" >24sp
+                </dimen>
                 <dimen name="activity_vertical_margin" >16dp
+                </dimen>
+                <dimen name="text_size_normal" >14sp
                 </dimen>
             </file>
             <file
@@ -223,9 +242,9 @@
                 </string>
                 <string name="checkBoxSunday" >Su
                 </string>
-                <string name="edit" >Edit
-                </string>
                 <string name="taskLabelEdit" >Edit Task
+                </string>
+                <string name="edit" >Edit
                 </string>
                 <string name="hello_world" >Hello world!
                 </string>
@@ -237,15 +256,15 @@
                 </string>
                 <string name="title_activity_task_pane" >TaskPane
                 </string>
+                <string name="afterDuring" >After During
+                </string>
                 <string name="SetMode" >Set Mode
                 </string>
-                <string name="afterDuring" >After During
+                <string name="checkBoxWednesday" >We
                 </string>
                 <string name="SetWeek" >Set WeekDay
                 </string>
                 <string name="enable" >Enable
-                </string>
-                <string name="checkBoxWednesday" >We
                 </string>
                 <string name="checkBoxMonday" >Mo
                 </string>
@@ -297,6 +316,14 @@
                 </style>
 
                 <style
+                    name="ClockThemeButton"
+                    parent="@android:style/Widget.Button" >
+                    <item name="android:background">
+@drawable/button_add_alarm_selector
+                    </item>
+                </style>
+
+                <style
                     name="DarkThemeButton2"
                     parent="@android:style/Widget.Button" >
                     <item name="android:background">
@@ -341,12 +368,48 @@
                 </style>
             </file>
             <file
-                name="button_add_selector"
-                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable\button_add_selector.xml"
+                name="alarm_clock"
+                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-xxhdpi\alarm_clock.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="alarm_clock"
+                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-mdpi\alarm_clock.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="alarm_clock"
+                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-xhdpi\alarm_clock.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="alarm_clock"
+                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable-hdpi\alarm_clock.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="button_pressed"
+                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable\button_pressed.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="button_add"
+                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable\button_add.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="button_add_alarm_selector"
+                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable\button_add_alarm_selector.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="button_no_pressed"
+                path="C:\Users\Alex\AndroidStudioProjects\Silencer\res\drawable\button_no_pressed.xml"
                 qualifiers=""
                 type="drawable" />
         </source>
         <source path="C:\Users\Alex\AndroidStudioProjects\Silencer\build\res\rs\debug" />
+        <source path="C:\Users\Alex\AndroidStudioProjects\Silencer\build\res\generated\debug" />
     </dataSet>
     <dataSet config="debug" >
         <source path="C:\Users\Alex\AndroidStudioProjects\Silencer\build-types\debug\res" />

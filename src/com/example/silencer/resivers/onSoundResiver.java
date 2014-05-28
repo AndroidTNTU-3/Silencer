@@ -1,4 +1,4 @@
-package com.example.silencer;
+package com.example.silencer.resivers;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="16"
         android:targetSdkVersion="16" />
 
 
@@ -41,13 +41,13 @@
 
 
         <receiver
-            android:name="com.example.silencer.onSoundResiver" >
+            android:name=".resivers.onSoundResiver" >
         </receiver>
         <receiver
-            android:name="com.example.silencer.offSoundResiver" >
+            android:name=".resivers.offSoundResiver" >
         </receiver>
         <receiver
-            android:name="com.example.silencer.stateSoundResiver">
+            android:name=".resivers.stateSoundResiver">
             <intent-filter>
                 <action android:name="android.media.RINGER_MODE_CHANGED" />
              </intent-filter>

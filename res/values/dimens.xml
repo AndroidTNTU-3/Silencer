@@ -6,4 +6,12 @@
     <dimen name="text_size_days">10dp</dimen>
     <dimen name="text_size_time">20dp</dimen>
 
+    <dimen name="text_size_mini">10sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_big">24sp</dimen>
+    <dimen name="text_size_biggest">34sp</dimen>
+
 </resources>

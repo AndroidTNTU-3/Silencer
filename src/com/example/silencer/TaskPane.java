@@ -1,22 +1,9 @@
 package com.example.silencer;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Formatter;
-
-import com.example.silencer.DialogTime.TimeDialogListener;
-
-import android.content.Intent;
-import android.database.Cursor;
-import android.os.Bundle;
 import android.app.Activity;
-import android.app.DialogFragment;
-import android.content.ContentValues;
-import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.text.format.Time;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -24,10 +11,15 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.SimpleCursorAdapter;
 import android.widget.Switch;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.silencer.DialogTime.TimeDialogListener;
+import com.example.silencer.db.DBAdapter;
+import com.example.silencer.entity.Rule;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class TaskPane extends Activity implements TimeDialogListener{
     Button buttonFromTime;
@@ -75,17 +67,19 @@ public class TaskPane extends Activity implements TimeDialogListener{
     Calendar timeFromCalendar;
     Calendar timeToCalendar;
 
-    boolean enable = false;
+    int enable = 0;
     int vibrate = 0;
 
     SimpleDateFormat sdf;
 
-    DBAdapter myDb;
+    DBAdapter dbAdapter;
 
     DialogTime dialogtime;
 
     Time timeStart;
     Time timeStop;
+
+    Rule rule;
 
     final String LOG_TAG = "myLogs";
 
@@ -130,7 +124,7 @@ public class TaskPane extends Activity implements TimeDialogListener{
 
         checkBoxVibrate.setOnCheckedChangeListener(new switchListener());
 
-        openDB();
+        dbAdapter = new DBAdapter(getApplicationContext());
 
 	    sdf = new SimpleDateFormat("HH:mm:ss");
 	    
@@ -191,9 +185,13 @@ public class TaskPane extends Activity implements TimeDialogListener{
 
                 result = binaryMonday + binaryTuesday + binaryWednesday + binaryThursday + binaryFriday
                         + binarySaturday + binarySunday;
-
-                myDb.insertRow(timeFrom, timeTo, result, enable, vibrate);
-
+                rule = new Rule();
+                rule.setStartTime(timeFrom);
+                rule.setStopTime(timeTo);
+                rule.setDays(result);
+                rule.setEnable(enable);
+                rule.setVibrate(vibrate);
+                dbAdapter.insertRow(rule);
                 finish();
 
 			break;			
@@ -210,9 +208,9 @@ public class TaskPane extends Activity implements TimeDialogListener{
 
                 case  R.id.switch3:
                     if (isChecked) {
-                        enable = true;
+                        enable = 1;
                     } else {
-                        enable = false;
+                        enable = 0;
                     }
                     break;
                 case  R.id.checkBoxVibrate:
@@ -311,10 +309,5 @@ public class TaskPane extends Activity implements TimeDialogListener{
 			break;
 		}
 	}
-
-    private void openDB() {
-        myDb = new DBAdapter(this);
-        myDb.open();
-    }
 
 }

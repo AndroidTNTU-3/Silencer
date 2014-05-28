@@ -6,11 +6,11 @@ import android.util.Log;
 import java.util.ArrayList;
 
 
-public class TimeService {
+public class Utils {
     final String LOG_TAG = "myLogs";
     Context context;
 
-    TimeService(Context context){
+    Utils(Context context){
         this.context = context;
     }
     // get day of week

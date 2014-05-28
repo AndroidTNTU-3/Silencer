@@ -1,14 +1,10 @@
 package com.example.silencer;
 
 
-import android.app.Activity;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,15 +14,13 @@ import android.widget.ImageView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
-import com.example.silencer.DBAdapter;
-import com.example.silencer.R;
+import com.example.silencer.db.DBAdapter;
+import com.example.silencer.db.DBHelper;
+import com.example.silencer.entity.Rule;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-
-import static android.support.v4.app.ActivityCompat.startActivity;
-import static android.support.v4.app.ActivityCompat.startActivityForResult;
 
 /**
  * Created by Alex on 19.11.13.
@@ -47,7 +41,7 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
     String startTime;
     String stopTime;
 
-    DBAdapter myDb;
+    DBAdapter dbAdapter;
 
     public MyCursorAdapter(Context _context, int _layout, Cursor _c, String[] _from, int[] _to) {
         super(_context, _layout, _c, _from, _to);
@@ -65,30 +59,17 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
     }
 
 
-    public void bindView(View view, final Context _context, final Cursor _cursor) {
+    public void bindView(View view, final Context context, Cursor cursor) {
 
-        final Context context =  (MainActivity) _context;
-        final Activity ma = (MainActivity) _context;
-        int id_id = cursor.getColumnIndex( DBAdapter.KEY_ROWID );
-        int idfromTime = cursor.getColumnIndex( DBAdapter.KEY_FROM_TIME );
-        int idtoTime = cursor.getColumnIndex( DBAdapter.KEY_TO_TIME );
-        int idDate = cursor.getColumnIndex( DBAdapter.KEY_DATE );
-        int idEnable = cursor.getColumnIndex( DBAdapter.KEY_ENABLED );
-        int idVibrate = cursor.getColumnIndex( DBAdapter.KEY_VIBRATE );
-        final long id = cursor.getInt(id_id);
-        final long fromTime = cursor.getLong(idfromTime);
-        final long toTime = cursor.getLong(idtoTime);
-        final int date = cursor.getInt(idDate);
-        final int enable = cursor.getInt(idEnable);
-        final int vibrate = cursor.getInt(idVibrate);
+        final int id = cursor.getInt(cursor.getColumnIndex(DBHelper.Table._ID));
+        final long fromTime = cursor.getLong(cursor.getColumnIndex( DBHelper.Table.COLUMN_NAME_TIME_START ));
+        final long toTime = cursor.getLong(cursor.getColumnIndex( DBHelper.Table.COLUMN_NAME_TIME_STOP));
+        final int date = cursor.getInt(cursor.getColumnIndex( DBHelper.Table.COLUMN_NAME_DAYS));
+        final int enable = cursor.getInt(cursor.getColumnIndex( DBHelper.Table.COLUMN_NAME_ENABLED ));
+        final int vibrate = cursor.getInt(cursor.getColumnIndex( DBHelper.Table.COLUMN_NAME_VIBRATE ));
 
-        /*DBHelper dbHelper = new DBHelper(context);
-        final SQLiteDatabase db = dbHelper.getWritableDatabase();*/
-
-        openDB();
-
-        String sql = "SELECT * FROM mytable WHERE _id=" + String.valueOf(id)+";";
-        myDb.getRowQuery(sql);
+        dbAdapter = new DBAdapter(context);
+        Resources resource = context.getResources();
 
         setTimeFrom.setTimeInMillis(fromTime);
         setTimeTo.setTimeInMillis(toTime);
@@ -111,12 +92,22 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
         TextView labelSa = (TextView) view.findViewById(R.id.Saturday);
         TextView labelSu = (TextView) view.findViewById(R.id.Sunday);
 
+        labelMo.setTextColor(resource.getColor(R.color.darkgray));
+        labelTu.setTextColor(resource.getColor(R.color.darkgray));
+        labelWe.setTextColor(resource.getColor(R.color.darkgray));
+        labelTh.setTextColor(resource.getColor(R.color.darkgray));
+        labelFr.setTextColor(resource.getColor(R.color.darkgray));
+        labelSa.setTextColor(resource.getColor(R.color.darkgray));
+        labelSu.setTextColor(resource.getColor(R.color.darkgray));
+
         //get week days
-        ArrayList<Integer> week = new TimeService(context).getWeek(date);
-        Resources resource = context.getResources();
+        ArrayList<Integer> week = new Utils(context).getWeek(date);
+
 
         if (week.size() !=0){
+            String s= "";
             for (int i = 0; i < week.size(); i++){
+
                 switch(week.get(i)){
                     case 1:
                         labelMo.setTextColor(resource.getColor(R.color.deepblue));
@@ -139,13 +130,14 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
                     case 7:
                         labelSu.setTextColor(resource.getColor(R.color.deepblue));
                         break;
+
                 }
             }
         }
 
 
-        if (enable == 1) checkBox.setChecked(true);
-        else checkBox.setChecked(false);
+      if (enable == 1) checkBox.setChecked(true);
+      else checkBox.setChecked(false);
         //select rows on ListView
       view.setOnClickListener(new View.OnClickListener() {
 
@@ -165,22 +157,42 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
 
                 if(checkBox.isChecked()) {
                     //set object rule from service;
-                    Rule rule = new Rule(id, fromTime, toTime, date, true, vibrate);
-                    //update DB
-                    myDb.updateRow(id, fromTime, toTime, date, 1, vibrate);
-                    ((MainActivity) _context).setRule(rule);
-                   // ((MainActivity) _context).setTime(fromTime, toTime);
+                    //Rule rule = new Rule(id, fromTime, toTime, date, true, vibrate);
+                    Rule rule = new Rule();
+                    rule.setId(id);
+                    rule.setStartTime(fromTime);
+                    rule.setStopTime(toTime);
+                    rule.setDays(date);
+                    rule.setEnable(1);
+                    rule.setVibrate(vibrate);
+                    dbAdapter.updateRow(id, rule);
+                    startServ(id);
 
                 }
                 else if (!checkBox.isChecked()) {
-                    Rule rule = new Rule(id, fromTime, toTime, date, false, vibrate);
-                    myDb.updateRow(id, fromTime, toTime, date, 0, vibrate);
-                    ((MainActivity) _context).setRule(rule);
+                    //Rule rule = new Rule(id, fromTime, toTime, date, false, vibrate);
+                    Rule rule = new Rule();
+                    rule.setId(id);
+                    rule.setStartTime(fromTime);
+                    rule.setStopTime(toTime);
+                    rule.setDays(date);
+                    rule.setEnable(0);
+                    rule.setVibrate(vibrate);
+                    //dbAdapter.updateRow(id, fromTime, toTime, date, 0, vibrate);
+                    dbAdapter.updateRow(id, rule);
+                    startServ(id);
                 }
             }
         });
 
     }
+
+    private void startServ(int id){
+        Intent serviceIntent = new Intent(context, MyService.class);
+        serviceIntent.putExtra("id", id);
+        context.startService(serviceIntent);
+    }
+
 
 
     @Override
@@ -189,11 +201,6 @@ public class MyCursorAdapter extends SimpleCursorAdapter {
         View view = inflater.inflate(layout, parent, false);
         return view;
 
-    }
-
-    private void openDB() {
-        myDb = new DBAdapter(context);
-        myDb.open();
     }
 
 }

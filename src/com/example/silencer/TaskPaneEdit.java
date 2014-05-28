@@ -1,19 +1,9 @@
 package com.example.silencer;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-
-import com.example.silencer.DialogTime.TimeDialogListener;
-
-import android.content.Context;
-import android.os.Bundle;
 import android.app.Activity;
-import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.text.format.Time;
 import android.util.Log;
@@ -23,8 +13,17 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.Switch;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.Switch;
+
+import com.example.silencer.DialogTime.TimeDialogListener;
+import com.example.silencer.db.DBAdapter;
+import com.example.silencer.entity.Rule;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class TaskPaneEdit extends Activity implements TimeDialogListener{
 	Button buttonFromTime;
@@ -51,7 +50,6 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 	int minutStart = 0;
 	int hourStop =0;
 	int minutStop = 0;
-	int temphour = 0;
 	int buttonId=0;
 
     String monday = "00000000";
@@ -72,15 +70,15 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
     int binarySunday;
     int result;
 
-    boolean enable = false;
+    int id;
+    int enable = 0;
 	boolean changeFromTime = false;
 	boolean changeToTime = false;
     int vibrate = 0;
-	
 
 	DialogTime dialogtime;
-	long id;
-    DBAdapter myDb;
+
+    DBAdapter dbAdapter;
 	
 	Time timeStart;	
 	Time timeStop;
@@ -92,6 +90,10 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
     String startTime;
     String stopTime;
     SimpleDateFormat sdf;
+
+    Rule rule;
+
+    Context context;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -136,31 +138,23 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
         checkBoxVibrateEdit.setOnCheckedChangeListener(new switchListener());
 
 		Intent intent = getIntent();
-        Context context = getApplicationContext();
+        context = getApplicationContext();
 		//row number
-		id = intent.getLongExtra("id", 0);
+        id = intent.getIntExtra("id", 0);
         Log.d(LOG_TAG, "row selected, ID = " + id);
 	    dialogtime = new DialogTime();
 
-        openDB();
+        dbAdapter = new DBAdapter(getApplicationContext());
+        rule = dbAdapter.getRule(id);
 
-	    String sql = "SELECT * FROM mytable WHERE _id=" + String.valueOf(id)+";";
-        Cursor c = myDb.getRowQuery(sql);
-
-	        // number of column into query
-	      int idColIndex = c.getColumnIndex("_id");
-	      int timeStartColIndex = c.getColumnIndex("timeStart");
-	      int timeStopColIndex = c.getColumnIndex("timeStop");
-          int dateColIndex = c.getColumnIndex("date");
-          int enableColIndex = c.getColumnIndex("enabled");
-          int vibrateColIndex = c.getColumnIndex("vibrate");
-          long fromTime = c.getLong(timeStartColIndex);
-          long toTime = c.getLong(timeStopColIndex);
-          int days = c.getInt(dateColIndex);
-
+        long fromTime = rule.getStartTime();
+        long toTime = rule.getStopTime();
+        int enable = rule.getEnabled();
+        int vibrate = rule.getVibrate();
+        int days = rule.getDays();
 
         //get week days
-        ArrayList<Integer> week = new TimeService(context).getWeek(days);
+        ArrayList<Integer> week = new Utils(context).getWeek(days);
 
         if (week.size() !=0){
             for (int i = 0; i < week.size(); i++){
@@ -201,9 +195,7 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 	      buttonToTime.setText(stopTime);
           timeFrom = fromTime;
           timeTo = toTime;
-          enable = (c.getInt(enableColIndex) != 0);
-          vibrate = c.getInt(vibrateColIndex);
-          switchEnable.setChecked(enable);
+          switchEnable.setChecked(enable != 0);
           checkBoxVibrateEdit.setChecked(vibrate != 0);
 	      
 		    timeStart = new Time();
@@ -248,34 +240,37 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
                     binarySaturday = Integer.parseInt(saturday,2);
                     binarySunday = Integer.parseInt(sunday,2);
 
-                    //загальна сума
+                    //total
 
                     result = binaryMonday + binaryTuesday + binaryWednesday + binaryThursday + binaryFriday
                             + binarySaturday + binarySunday;
 
+                    rule = new Rule();
 
-                    int val = enable? 1 : 0;
-                    myDb.updateRow(id, timeFrom, timeTo, result, val, vibrate);
+                    rule.setStartTime(timeFrom);
+                    rule.setStopTime(timeTo);
+                    rule.setDays(result);
+                    rule.setEnable(enable);
+                    rule.setVibrate(vibrate);
 
-                    Intent intent = new Intent();
-
-                    intent.putExtra("from", timeFrom);
-                    intent.putExtra("to", timeTo);
-                    intent.putExtra("enable", enable);
-                    intent.putExtra("vibrate", vibrate);
-
-                    setResult(RESULT_OK, intent);
+                    dbAdapter.updateRow(id, rule);
                     finish();
 
 				break;	
 				case  R.id.buttonDelete:
-                    myDb.deleteRow(id);
+                    dbAdapter.deleteRow(id);
                     finish();
 				break;
 				}
 			}
 
 		}
+
+        private void startServ(int id){
+            Intent serviceIntent = new Intent(context, MyService.class);
+            serviceIntent.putExtra("id", id);
+            context.startService(serviceIntent);
+        }
 		
 		private class switchListener implements OnCheckedChangeListener{
 			@Override
@@ -283,9 +278,9 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 				switch(v.getId()){
                     case  R.id.switch3Edit:
                         if(isChecked) {
-                            enable = true;
+                            enable = 1;
                         } else {
-                            enable = false;
+                            enable = 0;
                         }
                         break;
                     case  R.id.checkBoxVibrateEdit:
@@ -386,9 +381,4 @@ public class TaskPaneEdit extends Activity implements TimeDialogListener{
 			}
 		}
 
-
-    private void openDB() {
-        myDb = new DBAdapter(this);
-        myDb.open();
-    }
 }
